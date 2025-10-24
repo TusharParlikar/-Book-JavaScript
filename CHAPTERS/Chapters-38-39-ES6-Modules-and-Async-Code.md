@@ -7,13 +7,13 @@
 ## Overview
 ES6 modules allow you to organize code into separate files, export functionality, and import it where needed.
 
-**Timestamp:** [07:34:19]
+
 
 ---
 
 ## 38.1 What are Modules?
 
-**Timestamp:** [07:34:25]
+
 
 **Modules:**
 - Separate JavaScript files
@@ -27,7 +27,7 @@ ES6 modules allow you to organize code into separate files, export functionality
 
 ## 38.2 Module Setup
 
-**Timestamp:** [07:34:50]
+
 
 ### HTML Setup
 
@@ -47,13 +47,13 @@ ES6 modules allow you to organize code into separate files, export functionality
 
 ⚠️ **Important:** Must use `type="module"` attribute!
 
-**Timestamp:** [07:35:10]
+
 
 ---
 
 ## 38.3 Named Exports
 
-**Timestamp:** [07:35:30]
+
 
 ### mathUtils.js
 
@@ -81,13 +81,13 @@ export function divide(a, b) {
 }
 ```
 
-**Timestamp:** [07:36:15]
+
 
 ---
 
 ## 38.4 Named Imports
 
-**Timestamp:** [07:36:40]
+
 
 ### index.js
 
@@ -95,9 +95,12 @@ export function divide(a, b) {
 // Import specific items
 import { PI, add, subtract } from './mathUtils.js';
 
-console.log(PI); // 3.14159
-console.log(add(5, 3)); // 8
-console.log(subtract(10, 4)); // 6
+console.log(PI); 
+// Output: 3.14159
+console.log(add(5, 3)); 
+// Output: 8
+console.log(subtract(10, 4)); 
+// Output: 6
 ```
 
 ⚠️ **Important:** Include `.js` extension!
@@ -106,7 +109,7 @@ console.log(subtract(10, 4)); // 6
 
 ## 38.5 Import All with Wildcard
 
-**Timestamp:** [07:37:25]
+
 
 ```javascript
 // Import everything as an object
@@ -118,13 +121,13 @@ console.log(MathUtils.multiply(4, 2)); // 8
 console.log(MathUtils.divide(10, 2)); // 5
 ```
 
-**Timestamp:** [07:37:50]
+
 
 ---
 
 ## 38.6 Export After Declaration
 
-**Timestamp:** [07:38:10]
+
 
 ### userUtils.js
 
@@ -148,7 +151,7 @@ export { username, getUser, setUser };
 
 ## 38.7 Import with Aliases
 
-**Timestamp:** [07:38:50]
+
 
 ```javascript
 // Rename imports to avoid conflicts
@@ -162,7 +165,7 @@ console.log(multiplyNumbers(4, 2)); // 8
 
 ## 38.8 Default Exports
 
-**Timestamp:** [07:39:35]
+
 
 ### calculator.js
 
@@ -187,13 +190,13 @@ export default class Calculator {
 }
 ```
 
-**Timestamp:** [07:40:10]
+
 
 ---
 
 ## 38.9 Importing Default Exports
 
-**Timestamp:** [07:40:25]
+
 
 ```javascript
 // Import default export (no curly braces)
@@ -215,7 +218,7 @@ import Calc from './calculator.js';
 
 ## 38.10 Mixing Default and Named Exports
 
-**Timestamp:** [07:41:05]
+
 
 ### shapes.js
 
@@ -251,13 +254,13 @@ console.log(getCircumference(5)); // 31.42
 console.log(PI); // 3.14159
 ```
 
-**Timestamp:** [07:42:20]
+
 
 ---
 
 ## 38.11 Practical Example: User Module
 
-**Timestamp:** [07:42:50]
+
 
 ### user.js
 
@@ -302,7 +305,7 @@ if (validateEmail(email)) {
 
 ## 38.12 Module Benefits
 
-**Timestamp:** [07:43:40]
+
 
 ✅ **Code Organization:** Separate concerns into files  
 ✅ **Reusability:** Import same module multiple times  
@@ -331,13 +334,13 @@ if (validateEmail(email)) {
 ## Overview
 Understand synchronous vs asynchronous code execution, and why async is important for JavaScript.
 
-**Timestamp:** [07:38:40]
+
 
 ---
 
 ## 39.1 Synchronous Code
 
-**Timestamp:** [07:38:48]
+
 
 **Synchronous = Sequential**
 - Code executes line by line
@@ -364,13 +367,13 @@ console.log("End");
 
 **Problem:** Page freezes during long operations!
 
-**Timestamp:** [07:39:15]
+
 
 ---
 
 ## 39.2 The Problem with Synchronous Code
 
-**Timestamp:** [07:39:32]
+
 
 ```javascript
 console.log("Task 1");
@@ -401,7 +404,7 @@ console.log("Task 3");
 
 ## 39.3 Asynchronous Code
 
-**Timestamp:** [07:40:05]
+
 
 **Asynchronous = Non-blocking**
 - Code doesn't wait for long operations
@@ -428,13 +431,13 @@ console.log("End");
 
 ✅ **Page remains responsive!**
 
-**Timestamp:** [07:40:45]
+
 
 ---
 
 ## 39.4 Visualizing Execution Order
 
-**Timestamp:** [07:41:10]
+
 
 ### Synchronous
 
@@ -466,7 +469,7 @@ console.log("3");
 
 ## 39.5 Real-World Examples
 
-**Timestamp:** [07:41:50]
+
 
 ### Example 1: Loading Data
 
@@ -490,7 +493,7 @@ console.log("Showing loading spinner...");
 // { name: "John", age: 30 }
 ```
 
-**Timestamp:** [07:42:30]
+
 
 ### Example 2: Multiple Async Operations
 
@@ -523,7 +526,7 @@ console.log("End");
 
 ## 39.6 Common Async Operations
 
-**Timestamp:** [07:43:15]
+
 
 ### Operations That Are Async
 
@@ -547,7 +550,7 @@ console.log("End");
 
 ## 39.7 The Event Loop
 
-**Timestamp:** [07:43:55]
+
 
 JavaScript has:
 1. **Call Stack:** Executes synchronous code
@@ -574,13 +577,13 @@ console.log("C"); // → Stack
 // Output: A, C, B
 ```
 
-**Timestamp:** [07:44:35]
+
 
 ---
 
 ## 39.8 Callback Functions
 
-**Timestamp:** [07:45:03]
+
 
 Most async operations use **callbacks**:
 
@@ -612,7 +615,7 @@ fetchData(displayData);
 
 ## 39.9 Practical Comparison
 
-**Timestamp:** [07:45:40]
+
 
 ### Synchronous (Blocking)
 
@@ -666,7 +669,7 @@ console.log("Doing other things while waiting...");
 
 ## 39.10 Why Async is Important
 
-**Timestamp:** [07:46:25]
+
 
 ### User Experience
 
@@ -697,7 +700,7 @@ console.log("Page loaded!"); // Immediately!
 
 ## 39.11 Key Concepts
 
-**Timestamp:** [07:47:10]
+
 
 ### Synchronous
 - **Sequential execution**

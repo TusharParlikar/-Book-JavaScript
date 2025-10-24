@@ -9,7 +9,7 @@ Variables are fundamental building blocks in programming. They act as containers
 
 **Variables** are containers for storing data values. Think of them as labeled boxes where you can put information and retrieve it later.
 
-**Timestamp:** [00:12:38]
+
 
 ### Analogy:
 Imagine variables like labeled storage boxes:
@@ -23,7 +23,7 @@ Imagine variables like labeled storage boxes:
 
 Creating a variable involves two steps: **declaration** and **assignment**.
 
-**Timestamp:** [00:12:49]
+
 
 ### Step 1: Declaration
 
@@ -33,6 +33,7 @@ Use the `let` keyword to declare (create) a variable:
 let age;
 let price;
 let gpa;
+// Output: Variables declared (no value yet, undefined)
 ```
 
 - `let` - Keyword that declares a variable
@@ -46,6 +47,7 @@ Use the `=` operator to assign (give) a value:
 age = 25;
 price = 10.99;
 gpa = 3.8;
+// Output: Values assigned to variables
 ```
 
 - `=` - Assignment operator (not "equals")
@@ -59,11 +61,12 @@ You can declare and assign in one line:
 let age = 25;
 let price = 10.99;
 let gpa = 3.8;
+// Output: Variables declared and assigned with values
 ```
 
 This is more concise and commonly used.
 
-**Timestamp:** [00:13:58]
+
 
 ---
 
@@ -74,35 +77,52 @@ When creating variables, you must follow these rules:
 ### Required Rules (Must Follow):
 1. **Cannot start with a number**
    ```javascript
-   let 1age = 25;  // Error
-   let age1 = 25;  // OK
+   let 1age = 25;  
+   // Error: Identifier must not start with a digit
+   
+   let age1 = 25;  
+   // Output: Valid variable created
    ```
 
 2. **Cannot contain spaces**
    ```javascript
-   let first name = "John";  // Error
-   let firstName = "John";   // OK (camelCase)
-   let first_name = "John";  // OK (snake_case)
+   let first name = "John";  
+   // Error: Unexpected identifier
+   
+   let firstName = "John";   
+   // Output: Valid variable created (camelCase)
+   
+   let first_name = "John";  
+   // Output: Valid variable created (snake_case)
    ```
 
 3. **Cannot use reserved keywords**
    ```javascript
-   let let = 5;      // Error (let is a keyword)
-   let class = "A";  // Error (class is a keyword)
+   let let = 5;      
+   // Error: let is a reserved word
+   
+   let class = "A";  
+   // Error: class is a reserved word
    ```
 
 4. **Case sensitive**
    ```javascript
    let age = 25;
-   let Age = 30;  // Different variable!
+   let Age = 30;  
+   // Output: Two different variables created
+   console.log(age);  // Output: 25
+   console.log(Age);  // Output: 30
    ```
 
 ### Best Practices (Should Follow):
 
 1. **Use descriptive names**
    ```javascript
-   let x = 25;          // Bad - what does x mean?
-   let userAge = 25;    // Good - clear meaning
+   let x = 25;          
+   // Bad - what does x mean?
+   
+   let userAge = 25;    
+   // Good - clear meaning
    ```
 
 2. **Use camelCase convention**
@@ -110,21 +130,28 @@ When creating variables, you must follow these rules:
    let firstName = "John";
    let lastName = "Doe";
    let phoneNumber = "555-1234";
+   // Output: Three variables created with clear naming
    ```
 
 3. **Start with a lowercase letter**
    ```javascript
-   let name = "John";  // Good
-   let Name = "John";  // Avoid (looks like a class)
+   let name = "John";  
+   // Good
+   
+   let Name = "John";  
+   // Avoid (looks like a class)
    ```
 
 4. **Use meaningful names**
    ```javascript
-   let temp = 72;              // Bad - temp what?
-   let temperatureInFahrenheit = 72;  // Good
+   let temp = 72;              
+   // Bad - temp what?
+   
+   let temperatureInFahrenheit = 72;  
+   // Good
    ```
 
-**Timestamp:** [00:13:06]
+
 
 ---
 
@@ -138,7 +165,7 @@ JavaScript variables can hold different types of data. Let's explore the three f
 
 Numbers can be integers (whole numbers) or decimals (floating-point numbers).
 
-**Timestamp:** [00:14:25]
+
 
 ### Declaring Number Variables
 
@@ -147,17 +174,21 @@ let age = 25;           // Integer
 let price = 10.99;      // Decimal
 let gpa = 3.75;         // Decimal
 let temperature = -5;   // Negative number
+// Output: Four number variables created
 ```
 
 ### Using Numbers in Output
 
 ```javascript
 let age = 25;
-console.log("You are " + age + " years old");  // Concatenation
-console.log(`You are ${age} years old`);       // Template literal
+console.log("You are " + age + " years old");  
+// Output: You are 25 years old
+
+console.log(`You are ${age} years old`);       
+// Output: You are 25 years old
 ```
 
-**Timestamp:** [00:15:28]
+
 
 ---
 
@@ -173,6 +204,7 @@ let age = 25;
 
 // Template literal
 console.log(`My name is ${name} and I am ${age} years old`);
+// Output: My name is John and I am 25 years old
 ```
 
 ### Benefits:
@@ -193,6 +225,12 @@ console.log(`Name: ${firstName}`);
 console.log(`Age: ${age}`);
 console.log(`Price: $${price}`);
 console.log(`GPA: ${gpa}`);
+
+// Output:
+// Name: John
+// Age: 25
+// Price: $10.99
+// GPA: 3.75
 ```
 
 ---
@@ -201,13 +239,14 @@ console.log(`GPA: ${gpa}`);
 
 The `typeof` operator returns the data type of a value or variable.
 
-**Timestamp:** [00:16:38]
+
 
 ### Syntax
 
 ```javascript
 typeof value
 typeof(value)  // Both work
+// Output: Returns a string representing the data type
 ```
 
 ### Example
@@ -216,8 +255,11 @@ typeof(value)  // Both work
 let age = 25;
 let price = 10.99;
 
-console.log(typeof age);    // "number"
-console.log(typeof price);  // "number"
+console.log(typeof age);    
+// Output: "number"
+
+console.log(typeof price);  
+// Output: "number"
 ```
 
 ---
@@ -226,7 +268,7 @@ console.log(typeof price);  // "number"
 
 Strings are sequences of characters (text). They must be enclosed in quotes.
 
-**Timestamp:** [00:17:02]
+
 
 ### Declaring String Variables
 
@@ -234,6 +276,7 @@ Strings are sequences of characters (text). They must be enclosed in quotes.
 let firstName = "John";
 let favoriteFood = 'pizza';  // Single quotes work too
 let email = "john@example.com";
+// Output: Three string variables created
 ```
 
 ### Quotes in Strings
@@ -241,21 +284,29 @@ let email = "john@example.com";
 You can use either single or double quotes, but they must match:
 
 ```javascript
-let name = "John";     // OK
-let name = 'John';     // OK
-let name = "John';     // Error - quotes don't match
+let name = "John";     
+// Output: Valid - double quotes
+
+let name = 'John';     
+// Output: Valid - single quotes
+
+let name = "John';     
+// Error: SyntaxError - quotes don't match
 ```
 
 ### When to Use Each:
 ```javascript
 // Use single quotes if string contains double quotes
 let message = 'He said "Hello"';
+// Output: message = He said "Hello"
 
 // Use double quotes if string contains single quotes
 let message = "It's a beautiful day";
+// Output: message = It's a beautiful day
 
 // Or use template literals
 let message = `He said "Hello" and it's great!`;
+// Output: message = He said "Hello" and it's great!
 ```
 
 ### Strings Can Contain Numbers
@@ -263,6 +314,10 @@ let message = `He said "Hello" and it's great!`;
 ```javascript
 let phoneNumber = "555-1234";
 let zipCode = "12345";
+// Output: Two string variables containing numeric-looking values
+
+console.log(typeof phoneNumber);  
+// Output: "string"
 ```
 
 **Important:** These are strings, not numbers. You cannot perform math operations on them.
@@ -270,10 +325,11 @@ let zipCode = "12345";
 ```javascript
 let a = "5";
 let b = "3";
-console.log(a + b);  // "53" (concatenation, not 8)
+console.log(a + b);  
+// Output: "53" (concatenation, not 8)
 ```
 
-**Timestamp:** [00:19:07]
+
 
 ---
 
@@ -281,7 +337,7 @@ console.log(a + b);  // "53" (concatenation, not 8)
 
 Booleans represent one of two values: `true` or `false`. They're used for yes/no, on/off situations.
 
-**Timestamp:** [00:19:28]
+
 
 ### Declaring Boolean Variables
 
@@ -289,6 +345,7 @@ Booleans represent one of two values: `true` or `false`. They're used for yes/no
 let online = true;
 let forSale = false;
 let isStudent = true;
+// Output: Three boolean variables created
 ```
 
 ### Common Use Cases:
@@ -305,6 +362,8 @@ let isOnSale = false;
 // Feature flags
 let hasPermission = true;
 let isEnabled = false;
+
+// Output: Six boolean variables created
 ```
 
 ### Using Booleans
@@ -319,9 +378,11 @@ if (online) {
 } else {
     console.log("You are offline");
 }
+
+// Output: You are online
 ```
 
-**Timestamp:** [00:21:34]
+
 
 ---
 
@@ -329,7 +390,7 @@ if (online) {
 
 You can display variable values on your webpage using DOM manipulation.
 
-**Timestamp:** [00:21:53]
+
 
 ### HTML Setup
 
@@ -360,6 +421,11 @@ let studentDisplay = document.getElementById("studentDisplay");
 nameDisplay.textContent = firstName;
 ageDisplay.textContent = age;
 studentDisplay.textContent = isStudent;
+
+// Output (displayed on page):
+// Name: John
+// Age: 25
+// Student: true
 ```
 
 ---
@@ -399,12 +465,25 @@ let isStudent = true;
 
 // Console output
 console.log(`Name: ${firstName} ${lastName}`);
+// Output: Name: John Doe
+
 console.log(`Age: ${age}`);
+// Output: Age: 25
+
 console.log(`Email: ${email}`);
+// Output: Email: john.doe@example.com
+
 console.log(`Student: ${isStudent}`);
-console.log(typeof firstName);  // "string"
-console.log(typeof age);        // "number"
-console.log(typeof isStudent);  // "boolean"
+// Output: Student: true
+
+console.log(typeof firstName);  
+// Output: "string"
+
+console.log(typeof age);        
+// Output: "number"
+
+console.log(typeof isStudent);  
+// Output: "boolean"
 
 // Update webpage
 document.getElementById("firstNameDisplay").textContent = firstName;
@@ -412,6 +491,13 @@ document.getElementById("lastNameDisplay").textContent = lastName;
 document.getElementById("ageDisplay").textContent = age;
 document.getElementById("emailDisplay").textContent = email;
 document.getElementById("studentDisplay").textContent = isStudent;
+
+// Output (displayed on page):
+// First Name: John
+// Last Name: Doe
+// Age: 25
+// Email: john.doe@example.com
+// Student: true
 ```
 
 ---
@@ -420,26 +506,39 @@ document.getElementById("studentDisplay").textContent = isStudent;
 
 ### Mistake 1: Not Declaring Variables
 ```javascript
-age = 25;  // Works, but bad practice (creates global variable)
-let age = 25;  // Good - properly declared
+age = 25;  
+// Works, but bad practice (creates global variable)
+
+let age = 25;  
+// Good - properly declared
+
+console.log(age);  // Output: 25
 ```
 
 ### Mistake 2: Re-declaring with let
 ```javascript
 let age = 25;
-let age = 30;  // Error - cannot re-declare
-age = 30;      // OK - reassignment without let
+let age = 30;  
+// Error: Identifier 'age' has already been declared
+
+age = 30;      
+// OK - reassignment without let
+console.log(age);  // Output: 30
 ```
 
 ### Mistake 3: Using Undefined Variables
 ```javascript
-console.log(name);  // Error if name was never declared
+console.log(name);  
+// Error: ReferenceError: name is not defined
 ```
 
 ### Mistake 4: Wrong Data Type Assumptions
 ```javascript
-let age = "25";  // String, not number!
-console.log(typeof age);  // "string"
+let age = "25";  
+// String, not number!
+
+console.log(typeof age);  
+// Output: "string"
 ```
 
 ---

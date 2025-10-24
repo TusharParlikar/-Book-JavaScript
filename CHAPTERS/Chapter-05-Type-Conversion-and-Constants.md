@@ -11,15 +11,17 @@ Learn how to convert data between different types and use constants to protect i
 
 Type conversion is the process of changing a value from one data type to another.
 
-**Timestamp:** [00:39:11]
+
 
 ### Why Convert Types?
 
 User input from text boxes comes as **strings**, even if the user enters numbers:
 
 ```javascript
-let age = document.getElementById("ageInput").value;  // "25" (string!)
-age = age + 1;  // "251" (string concatenation, not 26)
+let age = document.getElementById("ageInput").value;  
+// age = "25" (string!)
+age = age + 1;  
+// Output: "251" (string concatenation, not 26)
 ```
 
 ---
@@ -28,7 +30,7 @@ age = age + 1;  // "251" (string concatenation, not 26)
 
 Use the `Number()` function to convert strings to numbers:
 
-**Timestamp:** [00:40:26]
+
 
 ```javascript
 let age = "25";
@@ -41,7 +43,7 @@ console.log(age + 1);     // 26 (correct math)
 
 ### Invalid Conversions Result in NaN
 
-**Timestamp:** [00:41:35]
+
 
 ```javascript
 let text = "pizza";
@@ -55,12 +57,15 @@ console.log(result);  // NaN (Not a Number)
 
 Use the `String()` function:
 
-**Timestamp:** [00:41:56]
+
 
 ```javascript
 let number = 123;
 let text = String(number);
-console.log(typeof text);  // "string"
+console.log(typeof text);  
+// Output: "string"
+console.log(text);  
+// Output: "123"
 ```
 
 ---
@@ -69,13 +74,16 @@ console.log(typeof text);  // "string"
 
 Use the `Boolean()` function:
 
-**Timestamp:** [00:42:09]
+
 
 ### Truthy Values (convert to true):
 - Non-empty strings: `Boolean("hello")` → `true`
 - Non-zero numbers: `Boolean(42)` → `true`
 
-**Timestamp:** [00:42:56]
+```javascript
+console.log(Boolean("hello"));  // Output: true
+console.log(Boolean(42));       // Output: true
+```
 
 ### Falsy Values (convert to false):
 - Empty strings: `Boolean("")` → `false`
@@ -83,11 +91,18 @@ Use the `Boolean()` function:
 - undefined: `Boolean(undefined)` → `false`
 - null: `Boolean(null)` → `false`
 
-**Timestamp:** [00:43:35]
+```javascript
+console.log(Boolean(""));        // Output: false
+console.log(Boolean(0));         // Output: false
+console.log(Boolean(undefined)); // Output: false
+console.log(Boolean(null));      // Output: false
+```
+
+
 
 ### Practical Use - Checking Empty Input
 
-**Timestamp:** [00:43:48]
+
 
 ```javascript
 let username = document.getElementById("usernameInput").value;
@@ -108,7 +123,7 @@ if (username) {
 
 ## 5.5 Constants (const)
 
-**Timestamp:** [00:44:52]
+
 
 Constants are variables that **cannot be changed** after they're assigned a value.
 
@@ -116,7 +131,7 @@ Constants are variables that **cannot be changed** after they're assigned a valu
 
 **Problem with `let`:**
 
-**Timestamp:** [00:44:55]
+
 
 ```javascript
 let PI = 3.14159;
@@ -128,11 +143,11 @@ PI = 420.69;  // Oops! Accidental reassignment
 // Now all calculations are wrong!
 ```
 
-**Timestamp:** [00:46:36]
+
 
 ### Solution: Use `const`
 
-**Timestamp:** [00:47:12]
+
 
 ```javascript
 const PI = 3.14159;  // Protected constant
@@ -142,7 +157,7 @@ let circumference = 2 * PI * radius;
 PI = 420.69;  // TypeError: Assignment to constant variable
 ```
 
-**Timestamp:** [00:47:56]
+
 
 ---
 
@@ -150,7 +165,7 @@ PI = 420.69;  // TypeError: Assignment to constant variable
 
 Use **UPPERCASE** for constants that hold primitive values (numbers, strings, booleans):
 
-**Timestamp:** [00:47:20], [00:47:31]
+, [00:47:31]
 
 ```javascript
 const PI = 3.14159;
@@ -163,7 +178,7 @@ const COMPANY_NAME = "TechCorp";
 
 ## 5.7 Practical Example: Circle Calculator
 
-**Timestamp:** [00:48:22]
+
 
 ### HTML
 ```html
@@ -180,18 +195,24 @@ const COMPANY_NAME = "TechCorp";
 
 ### JavaScript
 ```javascript
-const PI = 3.14159;  // Constant - cannot change
+const PI = 3.14159;  
+// Constant - cannot change
 
 let radiusInput = document.getElementById("radiusInput");
 let calculateBtn = document.getElementById("calculateBtn");
 let result = document.getElementById("result");
 
 calculateBtn.onclick = function() {
-    let radius = Number(radiusInput.value);  // Convert to number
+    let radius = Number(radiusInput.value);  
+    // Convert to number
+    
     let circumference = 2 * PI * radius;
     
     result.textContent = `Circumference: ${circumference.toFixed(2)}`;
 };
+
+// If user enters radius 5:
+// Output on page: Circumference: 31.42
 ```
 
 ---
@@ -221,13 +242,21 @@ calculateBtn.onclick = function() {
 
 ```javascript
 // Type Conversion
-let num = Number("123");      // String to Number
-let str = String(456);        // Number to String
-let bool = Boolean("hello");  // To Boolean
+let num = Number("123");      
+// Output: num = 123 (number)
+
+let str = String(456);        
+// Output: str = "456" (string)
+
+let bool = Boolean("hello");  
+// Output: bool = true (boolean)
 
 // Constants
-const PI = 3.14159;           // Cannot reassign
+const PI = 3.14159;           
+// Output: Constant created (cannot reassign)
+
 const MAX_SIZE = 100;
+// Output: Constant created (cannot reassign)
 ```
 
 ---

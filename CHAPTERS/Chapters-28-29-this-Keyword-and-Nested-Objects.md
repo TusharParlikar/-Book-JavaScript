@@ -7,13 +7,13 @@
 ## Overview
 The `this` keyword references the object that is executing the current function or code. Its value depends on the context in which it's used.
 
-**Timestamp:** [05:10:42]
+
 
 ---
 
 ## 28.1 What is "this"?
 
-**Timestamp:** [05:10:42], [05:10:49]
+, [05:10:49]
 
 `this` is a reference to:
 - The object **currently executing** the code
@@ -25,7 +25,7 @@ The `this` keyword references the object that is executing the current function 
 
 ## 28.2 "this" in Object Methods
 
-**Timestamp:** [05:11:08]
+
 
 ```javascript
 const person = {
@@ -48,25 +48,31 @@ const person = {
     }
 };
 
-person.greet();                    // "Hello, I'm John"
-console.log(person.getFullName()); // "John Doe"
-person.haveBirthday();             // "Now 31 years old"
+person.greet();                    
+// Output: Hello, I'm John
+
+console.log(person.getFullName()); 
+// Output: John Doe
+
+person.haveBirthday();             
+// Output: Now 31 years old
 ```
 
-**Timestamp:** [05:11:32]
+
 
 ---
 
 ## 28.3 "this" in Regular Functions
 
-**Timestamp:** [05:11:58]
+
 
 ```javascript
 function showThis() {
     console.log(this);
 }
 
-showThis(); // Window object (in browser) or global (in Node.js)
+showThis(); 
+// Output: Window object (in browser) or global (in Node.js)
 ```
 
 In **strict mode**:
@@ -78,14 +84,15 @@ function showThis() {
     console.log(this);
 }
 
-showThis(); // undefined
+showThis(); 
+// Output: undefined
 ```
 
 ---
 
 ## 28.4 "this" in Arrow Functions
 
-**Timestamp:** [05:12:25]
+
 
 Arrow functions **don't have their own `this`**. They inherit `this` from the parent scope:
 
@@ -104,30 +111,37 @@ const person = {
     }
 };
 
-person.greet();      // "Hello, John"
-person.greetArrow(); // "Hello, undefined"
+person.greet();      
+// Output: Hello, John
+
+person.greetArrow(); 
+// Output: Hello, undefined
 ```
 
-**Timestamp:** [05:12:48]
+
 
 ---
 
 ## 28.5 "this" in Event Handlers
 
-**Timestamp:** [05:13:15]
+
 
 ```javascript
 const button = document.getElementById("myButton");
 
 // Regular function - "this" refers to button element
 button.addEventListener("click", function() {
-    console.log(this); // <button id="myButton">
+    console.log(this); 
+    // Output: <button id="myButton">
+    
     this.style.backgroundColor = "blue";
+    // Output: Button background becomes blue
 });
 
 // Arrow function - "this" refers to parent scope
 button.addEventListener("click", () => {
-    console.log(this); // Window object
+    console.log(this); 
+    // Output: Window object
     // this.style.backgroundColor = "blue"; // Won't work!
 });
 ```
@@ -136,7 +150,7 @@ button.addEventListener("click", () => {
 
 ## 28.6 "this" in Classes
 
-**Timestamp:** [05:13:42]
+
 
 ```javascript
 class Person {
@@ -166,12 +180,17 @@ class Person {
 }
 
 const person = new Person("John", "Doe");
-person.greet();              // "Hello, I'm John"
-person.delayedGreet();       // "Hello, undefined"
-person.delayedGreetFixed();  // "Hello, I'm John"
+person.greet();              
+// Output: Hello, I'm John (immediately)
+
+person.delayedGreet();       
+// Output: Hello, undefined (after 1 second)
+
+person.delayedGreetFixed();  
+// Output: Hello, I'm John (after 1 second)
 ```
 
-**Timestamp:** [05:14:08]
+
 
 ---
 
@@ -179,7 +198,7 @@ person.delayedGreetFixed();  // "Hello, I'm John"
 
 ### bind() Method
 
-**Timestamp:** [05:14:35]
+
 
 ```javascript
 const person = {
@@ -198,7 +217,7 @@ boundGreet(); // "Hello, John" (bound to person)
 
 ### call() Method
 
-**Timestamp:** [05:15:02]
+
 
 ```javascript
 function greet(greeting, punctuation) {
@@ -212,7 +231,7 @@ greet.call(person, "Hello", "!"); // "Hello, John!"
 
 ### apply() Method
 
-**Timestamp:** [05:15:28]
+
 
 ```javascript
 function greet(greeting, punctuation) {
@@ -319,13 +338,13 @@ class Counter {
 ## Overview
 Objects can contain other objects (nested objects) and arrays can contain objects, allowing complex data structures.
 
-**Timestamp:** [06:10:14], [06:19:25]
+, [06:19:25]
 
 ---
 
 ## 29.1 Nested Objects
 
-**Timestamp:** [06:10:14]
+
 
 Objects can contain other objects as properties:
 
@@ -343,13 +362,13 @@ const person = {
 };
 ```
 
-**Timestamp:** [06:10:23], [06:11:55]
+, [06:11:55]
 
 ---
 
 ## 29.2 Accessing Nested Properties
 
-**Timestamp:** [06:13:26]
+
 
 ### Dot Notation
 
@@ -369,7 +388,7 @@ console.log(person["address"]["street"]); // "123 Main St"
 
 ## 29.3 Iterating Through Nested Objects
 
-**Timestamp:** [06:14:02]
+
 
 ```javascript
 const person = {
@@ -396,7 +415,7 @@ for (const key in person.address) {
 
 ## 29.4 Nested Objects with Classes
 
-**Timestamp:** [06:14:44]
+
 
 ```javascript
 class Address {
@@ -433,7 +452,7 @@ console.log(person.getInfo());
 
 ## 29.5 Arrays of Objects
 
-**Timestamp:** [06:19:25]
+
 
 Arrays where each element is an object:
 
@@ -446,13 +465,13 @@ const fruits = [
 ];
 ```
 
-**Timestamp:** [06:19:33]
+
 
 ---
 
 ## 29.6 Accessing Array of Objects
 
-**Timestamp:** [06:20:51]
+
 
 ```javascript
 // Access first fruit's name
@@ -469,7 +488,7 @@ console.log(fruits[2].calories); // 62
 
 ## 29.7 Manipulating Arrays of Objects
 
-**Timestamp:** [06:21:46]
+
 
 ```javascript
 // Add new fruit
@@ -486,7 +505,7 @@ fruits.splice(1, 1); // Remove banana
 
 ## 29.8 forEach with Objects
 
-**Timestamp:** [06:22:57]
+
 
 ```javascript
 fruits.forEach(fruit => {
@@ -504,7 +523,7 @@ fruits.forEach(fruit => {
 
 ## 29.9 map with Objects
 
-**Timestamp:** [06:23:34]
+
 
 ```javascript
 // Extract just the names
@@ -527,7 +546,7 @@ console.log(formatted);
 
 ## 29.10 filter with Objects
 
-**Timestamp:** [06:24:47]
+
 
 ```javascript
 // Get fruits with less than 100 calories
@@ -554,7 +573,7 @@ console.log(lowCalNames);
 
 ## 29.11 reduce with Objects
 
-**Timestamp:** [06:26:33]
+
 
 ```javascript
 // Find fruit with maximum calories

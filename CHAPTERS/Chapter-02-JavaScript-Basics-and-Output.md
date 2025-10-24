@@ -16,12 +16,13 @@ JavaScript provides several ways to display information to users and developers.
 ### What is console.log()?
 `console.log()` is a method that outputs information to the browser's developer console. It's primarily used for debugging and testing your code.
 
-**Timestamp:** [00:07:06]
+
 
 ### Basic Syntax
 
 ```javascript
 console.log("Hello World");
+// Output: Hello World
 ```
 
 ### Different Ways to Write Strings
@@ -31,21 +32,24 @@ JavaScript accepts strings in three different formats:
 #### 1. Double Quotes
 ```javascript
 console.log("I like pizza");
+// Output: I like pizza
 ```
 
 #### 2. Single Quotes
 ```javascript
 console.log('I like pizza');
+// Output: I like pizza
 ```
 
 #### 3. Backticks (Template Literals)
 ```javascript
 console.log(`I like pizza`);
+// Output: I like pizza
 ```
 
 **Note:** Template literals (backticks) have special features we'll explore later, like embedding variables.
 
-**Timestamp:** [00:07:21]
+
 
 ---
 
@@ -72,7 +76,7 @@ The console displays:
 - Network requests
 - And much more
 
-**Timestamp:** [00:07:42]
+
 
 ---
 
@@ -81,12 +85,13 @@ The console displays:
 ### What is window.alert()?
 `window.alert()` creates a pop-up dialog box that displays a message to the user. The user must click "OK" to dismiss it.
 
-**Timestamp:** [00:08:21]
+
 
 ### Basic Syntax
 
 ```javascript
 window.alert("I really like pizza!");
+// Output: Displays a pop-up dialog box with the message "I really like pizza!"
 ```
 
 ### Shorthand (Optional)
@@ -95,6 +100,7 @@ Since `window` is the global object in browsers, you can omit it:
 
 ```javascript
 alert("I really like pizza!");
+// Output: Displays a pop-up dialog box with the message "I really like pizza!"
 ```
 
 ### Characteristics:
@@ -119,7 +125,7 @@ alert("I really like pizza!");
 
 Comments are lines of text in your code that are ignored by the JavaScript engine. They're used to explain your code to yourself and other developers.
 
-**Timestamp:** [00:09:04]
+
 
 ### Single-Line Comments
 
@@ -128,6 +134,7 @@ Use `//` for comments on a single line:
 ```javascript
 // This is a single-line comment
 console.log("Hello"); // You can also add comments after code
+// Output: Hello
 ```
 
 ### Multi-Line Comments
@@ -141,6 +148,7 @@ You can write as much as you want here.
 Useful for longer explanations.
 */
 console.log("Hello World");
+// Output: Hello World
 ```
 
 ### Best Practices for Comments:
@@ -149,11 +157,15 @@ console.log("Hello World");
    ```javascript
    // Good: Explains the reason
    // Multiply by 1.13 to add 13% sales tax
+   let price = 100;
    let total = price * 1.13;
+   console.log(total); // Output: 113
    
    // Bad: States the obvious
    // Multiply price by 1.13
+   let price = 100;
    let total = price * 1.13;
+   console.log(total); // Output: 113
    ```
 
 2. **Keep comments up to date** - Outdated comments are worse than no comments
@@ -168,7 +180,7 @@ console.log("Hello World");
 
 One of JavaScript's most powerful features is the ability to dynamically change HTML content on your webpage.
 
-**Timestamp:** [00:09:59]
+
 
 ---
 
@@ -193,7 +205,7 @@ Before JavaScript can manipulate an element, you need a way to select it. IDs ar
 
 **Important:** Each ID should be unique within a page. Don't use the same ID for multiple elements.
 
-**Timestamp:** [00:09:59]
+
 
 ---
 
@@ -201,7 +213,7 @@ Before JavaScript can manipulate an element, you need a way to select it. IDs ar
 
 The `document.getElementById()` method allows you to select an HTML element by its ID.
 
-**Timestamp:** [00:10:37]
+
 
 ### Syntax
 
@@ -214,9 +226,11 @@ document.getElementById("idName");
 ```javascript
 // Select the h1 element
 let myH1 = document.getElementById("myH1");
+// Returns: <h1 id="myH1">Hello World</h1>
 
 // Select the p element
 let myP = document.getElementById("myP");
+// Returns: <p id="myP">This is a paragraph.</p>
 ```
 
 ### Breaking It Down:
@@ -231,7 +245,7 @@ let myP = document.getElementById("myP");
 
 Once you've selected an element, you can change its text using the `.textContent` property.
 
-**Timestamp:** [00:11:06]
+
 
 ### Syntax
 
@@ -249,6 +263,11 @@ let myP = document.getElementById("myP");
 // Change their text content
 myH1.textContent = "Welcome to JavaScript!";
 myP.textContent = "This text was changed using JavaScript!";
+
+// Output: 
+// The page now displays:
+// "Welcome to JavaScript!" (in the h1)
+// "This text was changed using JavaScript!" (in the p)
 ```
 
 ### What Happens:
@@ -268,6 +287,11 @@ myP.textContent = "This text was changed using JavaScript!";
 console.log("Hello World");
 console.log("My name is JavaScript");
 console.log("I'm learning to code!");
+
+// Output:
+// Hello World
+// My name is JavaScript
+// I'm learning to code!
 ```
 
 ### Example 2: Alert Messages
@@ -276,6 +300,8 @@ console.log("I'm learning to code!");
 // Display important information
 alert("Welcome to my website!");
 alert("This is an important message.");
+
+// Output: Two pop-up dialog boxes display with the messages
 ```
 
 ### Example 3: DOM Manipulation
@@ -298,6 +324,13 @@ description.textContent = "This content was updated by JavaScript!";
 
 // Log to console for confirmation
 console.log("Page content updated successfully!");
+
+// Output in console:
+// Page content updated successfully!
+// 
+// Output on page:
+// Page heading changes from "Original Title" to "New Dynamic Title"
+// Paragraph changes from "Original description text." to "This content was updated by JavaScript!"
 ```
 
 ---
@@ -307,23 +340,29 @@ console.log("Page content updated successfully!");
 ### Mistake 1: Forgetting Quotes
 ```javascript
 // Wrong
-console.log(Hello);  // Error: Hello is not defined
+console.log(Hello);  
+// Error: Uncaught ReferenceError: Hello is not defined
 
 // Correct
 console.log("Hello");
+// Output: Hello
 ```
 
 ### Mistake 2: Wrong ID Name
 ```javascript
 // If your HTML has id="myH1"
-document.getElementById("myh1");  // Returns null (case-sensitive!)
-document.getElementById("myH1");  // Correct
+document.getElementById("myh1");  
+// Output: null (case-sensitive!)
+
+document.getElementById("myH1");  
+// Output: <h1 id="myH1">Hello World</h1> (Correct)
 ```
 
 ### Mistake 3: Script Before HTML
 ```javascript
 // If script runs before HTML loads, element might not exist
-let element = document.getElementById("myElement"); // null
+let element = document.getElementById("myElement");
+// Output: null
 ```
 
 **Solution:** Place script at bottom of body, or use `DOMContentLoaded` event (covered later).
@@ -331,10 +370,12 @@ let element = document.getElementById("myElement"); // null
 ### Mistake 4: Typo in Method Name
 ```javascript
 // Wrong
-document.getElementByID("myH1");  // Wrong capitalization
+document.getElementByID("myH1");  
+// Error: document.getElementByID is not a function (wrong capitalization)
 
 // Correct
-document.getElementById("myH1");  // Correct
+document.getElementById("myH1");  
+// Output: <h1 id="myH1">Hello World</h1> (Correct)
 ```
 
 ---
@@ -377,10 +418,14 @@ Take some code you've written and add helpful comments explaining what each part
 ```javascript
 // Console output (for developers)
 console.log("Message");
+// Output: Message (displayed in browser console)
 
 // Alert box (for users)
 window.alert("Message");
-alert("Message");  // Shorthand
+// Output: Pop-up dialog box with "Message"
+
+alert("Message");  
+// Output: Pop-up dialog box with "Message" (shorthand)
 ```
 
 ### Comments
@@ -397,9 +442,11 @@ comment
 ```javascript
 // Select element
 let element = document.getElementById("elementId");
+// Output: Returns the element object
 
 // Change text
 element.textContent = "New text";
+// Output: The element's text changes on the page to "New text"
 ```
 
 ---

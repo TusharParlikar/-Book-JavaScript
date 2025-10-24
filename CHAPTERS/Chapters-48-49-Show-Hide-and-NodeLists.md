@@ -7,13 +7,13 @@
 ## Overview
 Learn different techniques to show and hide HTML elements dynamically.
 
-**Timestamp:** [09:24:54]
+
 
 ---
 
 ## 48.1 Display Property
 
-**Timestamp:** [09:25:01]
+
 
 The `display` CSS property controls element visibility:
 
@@ -24,13 +24,13 @@ element.style.display = "inline"; // Show (inline element)
 element.style.display = "flex"; // Show (flex container)
 ```
 
-**Timestamp:** [09:25:30]
+
 
 ---
 
 ## 48.2 Hide Element with display: none
 
-**Timestamp:** [09:26:00]
+
 
 ```html
 <button id="hideBtn">Hide Box</button>
@@ -46,17 +46,18 @@ const box = document.getElementById("box");
 hideBtn.addEventListener("click", () => {
     box.style.display = "none";
 });
+// Output: Box disappears from view when button clicked
 ```
 
 **Effect:** Element disappears and doesn't take up space.
 
-**Timestamp:** [09:26:50]
+
 
 ---
 
 ## 48.3 Show Element
 
-**Timestamp:** [09:27:20]
+
 
 ```javascript
 const showBtn = document.getElementById("showBtn");
@@ -64,13 +65,14 @@ const showBtn = document.getElementById("showBtn");
 showBtn.addEventListener("click", () => {
     box.style.display = "block"; // or "inline", "flex", etc.
 });
+// Output: Box reappears on screen when button clicked
 ```
 
 ---
 
 ## 48.4 Toggle Visibility
 
-**Timestamp:** [09:28:00]
+
 
 ```html
 <button id="toggleBtn">Toggle Box</button>
@@ -88,6 +90,7 @@ toggleBtn.addEventListener("click", () => {
         box.style.display = "none";
     }
 });
+// Output: Box toggles visibility with each click
 ```
 
 ### Better Toggle
@@ -96,15 +99,16 @@ toggleBtn.addEventListener("click", () => {
 toggleBtn.addEventListener("click", () => {
     box.style.display = box.style.display === "none" ? "block" : "none";
 });
+// Output: Box toggles between visible and hidden states
 ```
 
-**Timestamp:** [09:29:10]
+
 
 ---
 
 ## 48.5 Visibility Property
 
-**Timestamp:** [09:29:40]
+
 
 Alternative to `display`:
 
@@ -127,13 +131,13 @@ element.style.visibility = "visible";
 <div>This is below</div>
 ```
 
-**Timestamp:** [09:30:50]
+
 
 ---
 
 ## 48.6 Opacity Property
 
-**Timestamp:** [09:31:20]
+
 
 Make element transparent:
 
@@ -154,7 +158,7 @@ element.style.opacity = "1";
 
 ## 48.7 Comparison of Methods
 
-**Timestamp:** [09:32:10]
+
 
 | Method | Visible? | Takes Space? | Receives Events? |
 |--------|----------|--------------|------------------|
@@ -166,7 +170,7 @@ element.style.opacity = "1";
 
 ## 48.8 Practical Example: Dropdown Menu
 
-**Timestamp:** [09:33:00]
+
 
 ```html
 <button id="menuBtn">Menu</button>
@@ -190,13 +194,13 @@ menuBtn.addEventListener("click", () => {
 });
 ```
 
-**Timestamp:** [09:34:20]
+
 
 ---
 
 ## 48.9 Modal Example
 
-**Timestamp:** [09:34:50]
+
 
 ```html
 <style>
@@ -251,13 +255,13 @@ modal.addEventListener("click", (e) => {
 });
 ```
 
-**Timestamp:** [09:37:00]
+
 
 ---
 
 ## 48.10 Accordion Example
 
-**Timestamp:** [09:37:30]
+
 
 ```html
 <div class="accordion">
@@ -296,13 +300,13 @@ accordionBtns.forEach(btn => {
 });
 ```
 
-**Timestamp:** [09:39:20]
+
 
 ---
 
 ## 48.11 Fade Effect with Opacity
 
-**Timestamp:** [09:39:50]
+
 
 ```html
 <button id="fadeBtn">Fade Out</button>
@@ -326,7 +330,7 @@ fadeBtn.addEventListener("click", () => {
 });
 ```
 
-**Timestamp:** [09:41:00]
+
 
 ---
 
@@ -346,13 +350,13 @@ fadeBtn.addEventListener("click", () => {
 ## Overview
 Understand NodeLists, how they differ from arrays, and how to work with them.
 
-**Timestamp:** [09:41:32]
+
 
 ---
 
 ## 49.1 What is a NodeList?
 
-**Timestamp:** [09:41:39]
+
 
 **NodeList:**
 - Collection of DOM nodes
@@ -367,13 +371,13 @@ console.log(items); // NodeList [li, li, li]
 console.log(items.length); // 3
 ```
 
-**Timestamp:** [09:42:30]
+
 
 ---
 
 ## 49.2 NodeList vs HTMLCollection
 
-**Timestamp:** [09:43:00]
+
 
 | Feature | NodeList | HTMLCollection |
 |---------|----------|----------------|
@@ -392,13 +396,13 @@ const nodeList = document.querySelectorAll(".item");
 const htmlCollection = document.getElementsByClassName("item");
 ```
 
-**Timestamp:** [09:44:20]
+
 
 ---
 
 ## 49.3 Looping Through NodeList
 
-**Timestamp:** [09:44:50]
+
 
 ### Method 1: forEach()
 
@@ -428,13 +432,13 @@ for (let item of items) {
 }
 ```
 
-**Timestamp:** [09:46:00]
+
 
 ---
 
 ## 49.4 NodeList Doesn't Have Array Methods
 
-**Timestamp:** [09:46:30]
+
 
 ```javascript
 const items = document.querySelectorAll("li");
@@ -447,13 +451,13 @@ items.reduce((acc, item) => acc + 1, 0);  // ERROR
 
 **Solution:** Convert to array first!
 
-**Timestamp:** [09:47:20]
+
 
 ---
 
 ## 49.5 Converting NodeList to Array
 
-**Timestamp:** [09:47:50]
+
 
 ### Method 1: Array.from()
 
@@ -479,13 +483,13 @@ const texts = itemsArray.map(item => item.textContent);
 const itemsArray = Array.prototype.slice.call(items);
 ```
 
-**Timestamp:** [09:49:10]
+
 
 ---
 
 ## 49.6 Practical Example: Using Array Methods
 
-**Timestamp:** [09:49:40]
+
 
 ```html
 <ul>
@@ -516,13 +520,13 @@ const count = itemsArray.reduce((acc) => acc + 1, 0);
 console.log(count); // 4
 ```
 
-**Timestamp:** [09:51:20]
+
 
 ---
 
 ## 49.7 Static vs Live Collections
 
-**Timestamp:** [09:51:50]
+
 
 ### NodeList (Static)
 
@@ -557,13 +561,13 @@ document.body.appendChild(newBox);
 console.log(boxes.length); // 3 (automatically updated!)
 ```
 
-**Timestamp:** [09:53:30]
+
 
 ---
 
 ## 49.8 Modifying Elements in NodeList
 
-**Timestamp:** [09:54:00]
+
 
 ```html
 <ul>
@@ -592,13 +596,13 @@ items[1].textContent = "Second Item";
 items[2].textContent = "Third Item";
 ```
 
-**Timestamp:** [09:55:20]
+
 
 ---
 
 ## 49.9 Adding Event Listeners to NodeList
 
-**Timestamp:** [09:55:50]
+
 
 ```html
 <button class="btn">Button 1</button>
@@ -626,13 +630,13 @@ document.addEventListener("click", (e) => {
 });
 ```
 
-**Timestamp:** [09:57:10]
+
 
 ---
 
 ## 49.10 Practical Example: Checkbox Selection
 
-**Timestamp:** [09:57:40]
+
 
 ```html
 <input type="checkbox" class="item-check" value="1"> Item 1<br>
@@ -659,13 +663,13 @@ getSelected.addEventListener("click", () => {
 });
 ```
 
-**Timestamp:** [09:59:30]
+
 
 ---
 
 ## 49.11 Complete Example: List Manager
 
-**Timestamp:** [10:00:00]
+
 
 ```html
 <button id="selectAll">Select All</button>
@@ -707,13 +711,13 @@ deleteSelected.addEventListener("click", () => {
 });
 ```
 
-**Timestamp:** [10:02:30]
+
 
 ---
 
 ## 49.12 Common NodeList Operations
 
-**Timestamp:** [10:03:00]
+
 
 ```javascript
 const items = document.querySelectorAll("li");

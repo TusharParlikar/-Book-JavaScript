@@ -7,13 +7,13 @@
 ## Overview
 Arrow functions provide a concise syntax for writing function expressions in JavaScript.
 
-**Timestamp:** [04:16:52]
+
 
 ---
 
 ## 24.1 What are Arrow Functions?
 
-**Timestamp:** [04:16:52]
+
 
 Arrow functions are:
 - A compact alternative to traditional function expressions
@@ -42,7 +42,7 @@ console.log(greet("John")); // Hello, John!
 
 ### Arrow Function
 
-**Timestamp:** [04:17:15]
+
 
 ```javascript
 const greet = (name) => {
@@ -58,7 +58,7 @@ console.log(greet("John")); // Hello, John!
 
 ### Single Parameter (No Parentheses Needed)
 
-**Timestamp:** [04:17:38]
+
 
 ```javascript
 // With parentheses
@@ -72,7 +72,7 @@ console.log(double(5)); // 10
 
 ### Single Expression (Implicit Return)
 
-**Timestamp:** [04:17:55]
+
 
 ```javascript
 // With explicit return
@@ -88,7 +88,7 @@ console.log(add(3, 5)); // 8
 
 ### No Parameters
 
-**Timestamp:** [04:18:12]
+
 
 ```javascript
 const greet = () => console.log("Hello!");
@@ -104,7 +104,7 @@ Arrow functions shine when used as callbacks:
 
 ### forEach Example
 
-**Timestamp:** [04:18:35]
+
 
 ```javascript
 let numbers = [1, 2, 3, 4, 5];
@@ -120,7 +120,7 @@ numbers.forEach(num => console.log(num));
 
 ### map Example
 
-**Timestamp:** [04:19:02]
+
 
 ```javascript
 let numbers = [1, 2, 3, 4, 5];
@@ -138,7 +138,7 @@ console.log(squared); // [1, 4, 9, 16, 25]
 
 ### filter Example
 
-**Timestamp:** [04:19:28]
+
 
 ```javascript
 let numbers = [1, 2, 3, 4, 5, 6];
@@ -156,7 +156,7 @@ console.log(evens); // [2, 4, 6]
 
 ### reduce Example
 
-**Timestamp:** [04:19:55]
+
 
 ```javascript
 let numbers = [1, 2, 3, 4, 5];
@@ -176,7 +176,7 @@ console.log(sum); // 15
 
 ## 24.5 Multiple Statements (Need Curly Braces)
 
-**Timestamp:** [04:20:22]
+
 
 ```javascript
 const calculate = (a, b) => {
@@ -195,7 +195,7 @@ calculate(5, 3);
 
 ## 24.6 Returning Objects
 
-**Timestamp:** [04:20:48]
+
 
 Wrap object in parentheses to avoid syntax confusion:
 
@@ -334,13 +334,13 @@ button.addEventListener("click", () => {
 ## Overview
 Objects are collections of related properties and methods. They represent real-world entities with characteristics (properties) and behaviors (methods).
 
-**Timestamp:** [04:47:31]
+
 
 ---
 
 ## 25.1 What are Objects?
 
-**Timestamp:** [04:47:31], [04:47:37]
+, [04:47:37]
 
 Objects are:
 - Collections of related **properties** and/or **methods**
@@ -352,7 +352,7 @@ Objects are:
 
 ## 25.2 Creating Objects
 
-**Timestamp:** [04:47:51]
+
 
 ### Object Literal Syntax
 
@@ -365,13 +365,13 @@ const person = {
 };
 ```
 
-**Timestamp:** [04:48:05], [04:48:18], [04:48:31], [04:48:44]
+, [04:48:18], [04:48:31], [04:48:44]
 
 ---
 
 ## 25.3 Accessing Properties
 
-**Timestamp:** [04:48:58]
+
 
 ### Dot Notation
 
@@ -396,7 +396,7 @@ console.log(person["age"]);       // 30
 
 ## 25.4 Modifying Properties
 
-**Timestamp:** [04:49:18]
+
 
 ```javascript
 const person = {
@@ -417,7 +417,7 @@ console.log(person.email); // "john@example.com"
 
 ## 25.5 Object Methods
 
-**Timestamp:** [04:49:42]
+
 
 **Methods** are functions defined inside objects:
 
@@ -436,13 +436,13 @@ const person = {
 person.greet(); // "Hello, my name is John"
 ```
 
-**Timestamp:** [04:50:02], [04:50:18]
+, [04:50:18]
 
 ---
 
 ## 25.6 The "this" Keyword
 
-**Timestamp:** [04:50:35]
+
 
 `this` refers to the **object** the method belongs to:
 
@@ -459,13 +459,13 @@ const person = {
 console.log(person.getFullName()); // "John Doe"
 ```
 
-**Timestamp:** [04:50:48], [04:51:05]
+, [04:51:05]
 
 ---
 
 ## 25.7 Method Shorthand (ES6)
 
-**Timestamp:** [04:51:22]
+
 
 ```javascript
 const person = {
@@ -491,7 +491,7 @@ person.sayGoodbye(); // "Goodbye!"
 
 ## 25.8 Complete Object Example
 
-**Timestamp:** [04:51:45]
+
 
 ```javascript
 const person = {
@@ -530,13 +530,13 @@ console.log(person.hobbies[0]);    // "reading"
 console.log(person.address.city);  // "Boston"
 ```
 
-**Timestamp:** [04:52:08], [04:52:32], [04:52:55]
+, [04:52:32], [04:52:55]
 
 ---
 
 ## 25.9 Arrays of Objects
 
-**Timestamp:** [04:53:18]
+
 
 ```javascript
 const people = [
@@ -570,13 +570,13 @@ people.forEach(person => {
 // Bob is 35 years old
 ```
 
-**Timestamp:** [04:53:35], [04:53:52]
+, [04:53:52]
 
 ---
 
 ## 25.10 Object Destructuring
 
-**Timestamp:** [04:54:12]
+
 
 Extract properties into variables:
 
@@ -698,7 +698,7 @@ console.log(account.getBalance()); // 1300
 
 ## 25.12 Object.keys(), Object.values(), Object.entries()
 
-**Timestamp:** [04:54:38]
+
 
 ```javascript
 const person = {

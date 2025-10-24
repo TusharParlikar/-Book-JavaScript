@@ -7,13 +7,13 @@
 ## Overview
 Learn how to navigate through the DOM tree using parent, child, and sibling relationships.
 
-**Timestamp:** [08:32:11]
+
 
 ---
 
 ## 44.1 DOM Tree Relationships
 
-**Timestamp:** [08:32:18]
+
 
 ```html
 <div id="parent">
@@ -34,7 +34,7 @@ Learn how to navigate through the DOM tree using parent, child, and sibling rela
 
 ## 44.2 Accessing Parent Element
 
-**Timestamp:** [08:33:05]
+
 
 ### parentElement
 
@@ -47,7 +47,8 @@ Learn how to navigate through the DOM tree using parent, child, and sibling rela
 ```javascript
 const child = document.getElementById("child");
 
-console.log(child.parentElement); // <div id="parent">...</div>
+console.log(child.parentElement); 
+// Output: <div id="parent">...</div>
 
 // Can chain
 const grandparent = child.parentElement.parentElement;
@@ -56,18 +57,19 @@ const grandparent = child.parentElement.parentElement;
 ### parentNode
 
 ```javascript
-console.log(child.parentNode); // Same as parentElement (usually)
+console.log(child.parentNode); 
+// Output: Same as parentElement (usually)
 ```
 
 **Difference:** `parentNode` can return any node type, `parentElement` only returns element nodes.
 
-**Timestamp:** [08:34:00]
+
 
 ---
 
 ## 44.3 Accessing Children
 
-**Timestamp:** [08:34:30]
+
 
 ```html
 <ul id="list">
@@ -90,17 +92,19 @@ console.log(list.children.length); // 3
 ### firstElementChild / lastElementChild
 
 ```javascript
-console.log(list.firstElementChild); // First <li>
-console.log(list.lastElementChild); // Last <li>
+console.log(list.firstElementChild); 
+// Output: First <li>
+console.log(list.lastElementChild); 
+// Output: Last <li>
 ```
 
-**Timestamp:** [08:35:30]
+
 
 ---
 
 ## 44.4 childNodes vs children
 
-**Timestamp:** [08:36:00]
+
 
 ```html
 <div id="container">
@@ -129,13 +133,13 @@ console.log(container.children);
 
 ✅ **Use `children` for elements only**
 
-**Timestamp:** [08:37:10]
+
 
 ---
 
 ## 44.5 Accessing Siblings
 
-**Timestamp:** [08:37:40]
+
 
 ```html
 <div>
@@ -159,13 +163,13 @@ console.log(para.nextElementSibling); // <span id="span">
 console.log(para.previousElementSibling); // <h1 id="title">
 ```
 
-**Timestamp:** [08:38:30]
+
 
 ---
 
 ## 44.6 Practical Navigation Example
 
-**Timestamp:** [08:39:00]
+
 
 ```html
 <div class="container">
@@ -194,13 +198,13 @@ buttons.forEach(button => {
 });
 ```
 
-**Timestamp:** [08:40:20]
+
 
 ---
 
 ## 44.7 Traversing Up the Tree
 
-**Timestamp:** [08:40:50]
+
 
 ```html
 <div class="grandparent">
@@ -226,13 +230,13 @@ const closestParent = btn.closest(".parent");
 const closestGrandparent = btn.closest(".grandparent");
 ```
 
-**Timestamp:** [08:42:00]
+
 
 ---
 
 ## 44.8 closest() Method
 
-**Timestamp:** [08:42:20]
+
 
 Find the nearest ancestor matching a selector:
 
@@ -261,13 +265,13 @@ const notFound = text.closest(".nonexistent"); // null
 
 ✅ **Very useful for event delegation!**
 
-**Timestamp:** [08:43:30]
+
 
 ---
 
 ## 44.9 Complete Navigation Example
 
-**Timestamp:** [08:44:00]
+
 
 ```html
 <ul id="list">
@@ -315,13 +319,13 @@ console.log(list.children[1]); // Second <li>
 ## Overview
 Learn how to create, add, modify, and remove HTML elements dynamically.
 
-**Timestamp:** [08:44:35]
+
 
 ---
 
 ## 45.1 Creating Elements
 
-**Timestamp:** [08:44:42]
+
 
 ### createElement()
 
@@ -336,13 +340,13 @@ console.log(newDiv); // <div></div> (not yet in DOM)
 
 **Note:** Element is created but not yet visible on page!
 
-**Timestamp:** [08:45:20]
+
 
 ---
 
 ## 45.2 Adding Content to Elements
 
-**Timestamp:** [08:45:50]
+
 
 ```javascript
 const para = document.createElement("p");
@@ -361,13 +365,13 @@ para.innerText = "Simple text";
 - `textContent`: Plain text only, faster, safer
 - `innerHTML`: Can include HTML tags
 
-**Timestamp:** [08:46:40]
+
 
 ---
 
 ## 45.3 Adding Attributes
 
-**Timestamp:** [08:47:10]
+
 
 ```javascript
 const link = document.createElement("a");
@@ -390,13 +394,13 @@ link.id = "myLink";
 link.textContent = "Click here";
 ```
 
-**Timestamp:** [08:48:10]
+
 
 ---
 
 ## 45.4 Appending Elements to DOM
 
-**Timestamp:** [08:48:40]
+
 
 ### appendChild()
 
@@ -412,13 +416,13 @@ const container = document.getElementById("container");
 container.appendChild(para);
 ```
 
-**Timestamp:** [08:49:20]
+
 
 ---
 
 ## 45.5 append() vs appendChild()
 
-**Timestamp:** [08:49:50]
+
 
 ### appendChild()
 - Appends **single element node**
@@ -444,13 +448,13 @@ const span = document.createElement("span");
 document.body.append(div, span, "Some text");
 ```
 
-**Timestamp:** [08:50:50]
+
 
 ---
 
 ## 45.6 prepend() - Add at Beginning
 
-**Timestamp:** [08:51:20]
+
 
 ```html
 <ul id="list">
@@ -477,7 +481,7 @@ list.prepend(newItem);
 
 ## 45.7 Inserting Elements
 
-**Timestamp:** [08:52:10]
+
 
 ### insertBefore()
 
@@ -519,13 +523,13 @@ reference.insertAdjacentElement("beforeend", newItem);
 reference.insertAdjacentElement("afterend", newItem);
 ```
 
-**Timestamp:** [08:53:50]
+
 
 ---
 
 ## 45.8 Removing Elements
 
-**Timestamp:** [08:54:20]
+
 
 ### remove()
 
@@ -554,13 +558,13 @@ const item1 = document.getElementById("item1");
 list.removeChild(item1); // Remove item1 from list
 ```
 
-**Timestamp:** [08:55:20]
+
 
 ---
 
 ## 45.9 Replacing Elements
 
-**Timestamp:** [08:55:50]
+
 
 ### replaceWith()
 
@@ -586,13 +590,13 @@ const newChild = document.createElement("div");
 parent.replaceChild(newChild, oldChild);
 ```
 
-**Timestamp:** [08:56:50]
+
 
 ---
 
 ## 45.10 Practical Example: To-Do List
 
-**Timestamp:** [08:57:20]
+
 
 ```html
 <!DOCTYPE html>
@@ -657,13 +661,13 @@ taskInput.addEventListener("keypress", (e) => {
 });
 ```
 
-**Timestamp:** [09:00:30]
+
 
 ---
 
 ## 45.11 Creating Complex Structures
 
-**Timestamp:** [09:01:00]
+
 
 ```javascript
 function createCard(title, content) {
@@ -697,13 +701,13 @@ const myCard = createCard("Card Title", "Card content goes here");
 document.body.appendChild(myCard);
 ```
 
-**Timestamp:** [09:02:30]
+
 
 ---
 
 ## 45.12 innerHTML vs createElement
 
-**Timestamp:** [09:03:11]
+
 
 ### Using innerHTML (simpler but slower)
 
@@ -748,7 +752,7 @@ container.appendChild(card);
 
 ## 45.13 Cloning Elements
 
-**Timestamp:** [09:04:15]
+
 
 ```html
 <div id="original">

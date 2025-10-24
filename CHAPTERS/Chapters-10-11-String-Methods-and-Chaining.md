@@ -7,7 +7,7 @@
 ## Overview
 String methods allow you to manipulate and work with text data. This chapter covers essential string operations and slicing techniques.
 
-**Timestamp:** [01:55:33]
+
 
 ---
 
@@ -15,7 +15,7 @@ String methods allow you to manipulate and work with text data. This chapter cov
 
 String methods are built-in functions that allow you to manipulate and work with text (strings).
 
-**Timestamp:** [01:55:40]
+
 
 ```javascript
 let text = "Hello World";
@@ -28,17 +28,23 @@ let text = "Hello World";
 
 Returns the character at a specific index position.
 
-**Timestamp:** [01:56:02]
+
 
 ```javascript
 let username = "BroCode";
 
-console.log(username.charAt(0));  // "B" (first character)
-console.log(username.charAt(3));  // "C"
-console.log(username.charAt(6));  // "e" (last character)
+console.log(username.charAt(0));  
+// Output: "B" (first character)
+
+console.log(username.charAt(3));  
+// Output: "C"
+
+console.log(username.charAt(6));  
+// Output: "e" (last character)
 
 // Index out of range returns empty string
-console.log(username.charAt(10));  // ""
+console.log(username.charAt(10));  
+// Output: ""
 ```
 
 **Remember:** Strings are zero-indexed (start counting at 0)!
@@ -49,14 +55,19 @@ console.log(username.charAt(10));  // ""
 
 Returns the index of the FIRST occurrence of a substring.
 
-**Timestamp:** [01:57:14]
+
 
 ```javascript
 let username = "BroCode";
 
-console.log(username.indexOf("o"));     // 2 (first 'o')
-console.log(username.indexOf("Code"));  // 3 (starts at index 3)
-console.log(username.indexOf("xyz"));   // -1 (not found)
+console.log(username.indexOf("o"));     
+// Output: 2 (first 'o')
+
+console.log(username.indexOf("Code"));  
+// Output: 3 (starts at index 3)
+
+console.log(username.indexOf("xyz"));   
+// Output: -1 (not found)
 ```
 
 **Returns -1 if substring is not found**
@@ -67,16 +78,20 @@ console.log(username.indexOf("xyz"));   // -1 (not found)
 
 Returns the index of the LAST occurrence of a substring.
 
-**Timestamp:** [01:57:39]
+
 
 ```javascript
 let username = "BroCode";
 
-console.log(username.indexOf("o"));      // 2 (first 'o')
-console.log(username.lastIndexOf("o"));  // 5 (last 'o')
+console.log(username.indexOf("o"));      
+// Output: 2 (first 'o')
+
+console.log(username.lastIndexOf("o"));  
+// Output: 5 (last 'o')
 
 let email = "user@test@example.com";
-console.log(email.lastIndexOf("@"));     // 10 (last @ symbol)
+console.log(email.lastIndexOf("@"));     
+// Output: 10 (last @ symbol)
 ```
 
 ---
@@ -85,19 +100,22 @@ console.log(email.lastIndexOf("@"));     // 10 (last @ symbol)
 
 Returns the number of characters in a string. **Note:** This is a PROPERTY, not a method (no parentheses).
 
-**Timestamp:** [01:57:55]
+
 
 ```javascript
 let username = "BroCode";
-console.log(username.length);  // 7
+console.log(username.length);  
+// Output: 7
 
 let password = "Pass1234!";
-console.log(password.length);  // 9
+console.log(password.length);  
+// Output: 9
 
 // Useful for validation
 if (password.length >= 8) {
     console.log("Password is strong enough");
 }
+// Output: Password is strong enough
 ```
 
 ---
@@ -106,19 +124,24 @@ if (password.length >= 8) {
 
 Removes whitespace from the BEGINNING and END of a string.
 
-**Timestamp:** [01:58:14]
+
 
 ```javascript
 let username = "   BroCode   ";
-console.log(username.length);        // 13
+console.log(username.length);        
+// Output: 13
 
 username = username.trim();
-console.log(username);               // "BroCode"
-console.log(username.length);        // 7
+console.log(username);               
+// Output: "BroCode"
+
+console.log(username.length);        
+// Output: 7
 
 // Useful for cleaning user input
 let userInput = "  hello@example.com  ";
-userInput = userInput.trim();  // "hello@example.com"
+userInput = userInput.trim();  
+// Output: "hello@example.com"
 ```
 
 ---
@@ -127,22 +150,27 @@ userInput = userInput.trim();  // "hello@example.com"
 
 Convert string to all uppercase or all lowercase.
 
-**Timestamp:** [01:58:49], [01:58:59]
+, [01:58:59]
 
 ```javascript
 let username = "BroCode";
 
-console.log(username.toUpperCase());  // "BROCODE"
-console.log(username.toLowerCase());  // "brocode"
+console.log(username.toUpperCase());  
+// Output: "BROCODE"
+
+console.log(username.toLowerCase());  
+// Output: "brocode"
 
 // Original string unchanged
-console.log(username);  // "BroCode"
+console.log(username);  
+// Output: "BroCode"
 
 // Case-insensitive comparison
 let input = "YES";
 if (input.toLowerCase() === "yes") {
     console.log("User confirmed");
 }
+// Output: User confirmed
 ```
 
 ---
@@ -151,17 +179,20 @@ if (input.toLowerCase() === "yes") {
 
 Repeats the string a specified number of times.
 
-**Timestamp:** [01:59:09]
+
 
 ```javascript
 let text = "Hello ";
-console.log(text.repeat(3));  // "Hello Hello Hello "
+console.log(text.repeat(3));  
+// Output: "Hello Hello Hello "
 
 let star = "⭐";
-console.log(star.repeat(5));  // "⭐⭐⭐⭐⭐"
+console.log(star.repeat(5));  
+// Output: "⭐⭐⭐⭐⭐"
 
 // Creating separators
-console.log("-".repeat(30));  // "------------------------------"
+console.log("-".repeat(30));  
+// Output: "------------------------------"
 ```
 
 ---
@@ -170,20 +201,26 @@ console.log("-".repeat(30));  // "------------------------------"
 
 Returns `true` if string starts with specified substring.
 
-**Timestamp:** [01:59:19]
+
 
 ```javascript
 let username = "BroCode";
 
-console.log(username.startsWith("Bro"));   // true
-console.log(username.startsWith("Code"));  // false
-console.log(username.startsWith("bro"));   // false (case-sensitive!)
+console.log(username.startsWith("Bro"));   
+// Output: true
+
+console.log(username.startsWith("Code"));  
+// Output: false
+
+console.log(username.startsWith("bro"));   
+// Output: false (case-sensitive!)
 
 // Checking file extensions
 let filename = "document.pdf";
 if (filename.startsWith("doc")) {
     console.log("This is a document file");
 }
+// Output: This is a document file
 ```
 
 ---
@@ -192,12 +229,13 @@ if (filename.startsWith("doc")) {
 
 Returns `true` if string ends with specified substring.
 
-**Timestamp:** [02:00:38]
+
 
 ```javascript
 let username = "BroCode";
 
-console.log(username.endsWith("Code"));  // true
+console.log(username.endsWith("Code"));  
+// Output: true
 console.log(username.endsWith("Bro"));   // false
 console.log(username.endsWith("code"));  // false (case-sensitive!)
 
@@ -214,7 +252,7 @@ if (filename.endsWith(".jpg") || filename.endsWith(".png")) {
 
 Returns `true` if string contains the specified substring anywhere.
 
-**Timestamp:** [02:00:58]
+
 
 ```javascript
 let username = "BroCode";
@@ -236,7 +274,7 @@ if (email.includes("@") && email.includes(".")) {
 
 Replaces ALL occurrences of a substring with a new substring.
 
-**Timestamp:** [02:01:19]
+
 
 ```javascript
 let phoneNumber = "123-456-7890";
@@ -256,7 +294,7 @@ text = text.replaceAll("apples", "oranges");
 
 Pads the string from the START until it reaches the specified length.
 
-**Timestamp:** [02:02:29]
+
 
 ```javascript
 let number = "42";
@@ -277,7 +315,7 @@ console.log(masked);  // "************1234"
 
 Pads the string from the END until it reaches the specified length.
 
-**Timestamp:** [02:03:14]
+
 
 ```javascript
 let number = "42";
@@ -295,17 +333,17 @@ console.log(label.padEnd(15, " ") + "John Doe");
 
 ## 10.15 String Slicing
 
-**Timestamp:** [02:03:35]
+
 
 Slicing extracts a portion of a string and returns it as a NEW string. The original string is NOT modified.
 
-**Timestamp:** [02:03:43]
+
 
 ---
 
 ## 10.16 slice() Method Basics
 
-**Timestamp:** [02:04:10]
+
 
 ```javascript
 string.slice(startIndex, endIndex)
@@ -314,7 +352,7 @@ string.slice(startIndex, endIndex)
 - **startIndex**: Where to begin (included)
 - **endIndex**: Where to stop (excluded)
 
-**Timestamp:** [02:04:26], [02:04:48]
+, [02:04:48]
 
 ```javascript
 let fullName = "John Doe";
@@ -335,7 +373,7 @@ console.log(lastName);   // "Doe"
 
 If you omit the endIndex, it slices to the END of the string.
 
-**Timestamp:** [02:05:53]
+
 
 ```javascript
 let fullName = "John Doe";
@@ -353,7 +391,7 @@ console.log(text.slice(4));  // "Script"
 
 Negative numbers count from the END of the string.
 
-**Timestamp:** [02:06:32]
+
 
 ```javascript
 let fullName = "John Doe";
@@ -372,13 +410,13 @@ console.log(text.slice(-6));        // "Script"
 
 ## 10.19 Dynamic Slicing with indexOf()
 
-**Timestamp:** [02:07:06]
+
 
 Combine `indexOf()` with `slice()` for dynamic string extraction.
 
 ### Example 1: Extract First and Last Names
 
-**Timestamp:** [02:07:28]
+
 
 ```javascript
 let fullName = "John Doe";
@@ -397,7 +435,7 @@ console.log(lastName);   // "Doe"
 
 ### Example 2: Extract Email Parts
 
-**Timestamp:** [02:09:28]
+
 
 ```javascript
 let email = "john.doe@example.com";
@@ -478,13 +516,13 @@ console.log(initials);  // "J.D.S"
 ## Overview
 Method chaining allows you to call multiple methods on the same object in a single line, making code more concise and readable.
 
-**Timestamp:** [02:11:36]
+
 
 ---
 
 ## 11.1 What is Method Chaining?
 
-**Timestamp:** [02:11:43]
+
 
 Method chaining is calling one method after another in a continuous line of code.
 
@@ -521,7 +559,7 @@ let result = text.toUpperCase().slice(1).toLowerCase();
 
 ## 11.3 Problem: Capitalizing First Letter (Without Chaining)
 
-**Timestamp:** [02:11:58]
+
 
 Let's capitalize the first letter of a username:
 
@@ -551,13 +589,13 @@ console.log(username);  // "Brocode"
 
 **Problem:** Too many variables! Code is verbose.
 
-**Timestamp:** [02:14:43]
+
 
 ---
 
 ## 11.4 Solution: Using Method Chaining
 
-**Timestamp:** [02:14:55]
+
 
 ```javascript
 let username = "  brocode  ";
@@ -645,7 +683,7 @@ console.log(formatted);  // "123-456-7890"
 
 ## 11.6 Advantages of Method Chaining
 
-**Timestamp:** [02:16:47]
+
 
 ### ✅ Pros:
 1. **Less code** - Fewer lines to write

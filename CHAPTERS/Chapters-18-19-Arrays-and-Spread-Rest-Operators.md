@@ -7,13 +7,13 @@
 ## Overview
 Arrays are used to store multiple values in a single variable. They're ordered collections that can hold any data type.
 
-**Timestamp:** [03:10:34]
+
 
 ---
 
 ## 18.1 What are Arrays?
 
-**Timestamp:** [03:10:34], [03:10:37]
+, [03:10:37]
 
 Arrays are:
 - Variables used to store **multiple values**
@@ -27,7 +27,7 @@ Arrays are:
 
 ### Array Literal Syntax
 
-**Timestamp:** [03:10:58]
+
 
 ```javascript
 let fruits = ["apple", "orange", "banana"];
@@ -49,43 +49,50 @@ let emptyArray = [];
 
 ## 18.3 Accessing Elements
 
-**Timestamp:** [03:11:13], [03:11:23]
+, [03:11:23]
 
 Use square brackets with the **index** (starting from 0):
 
 ```javascript
 let fruits = ["apple", "orange", "banana"];
 
-console.log(fruits[0]); // "apple"
-console.log(fruits[1]); // "orange"
-console.log(fruits[2]); // "banana"
+console.log(fruits[0]); 
+// Output: "apple"
+
+console.log(fruits[1]); 
+// Output: "orange"
+
+console.log(fruits[2]); 
+// Output: "banana"
 ```
 
 ---
 
 ## 18.4 Modifying Elements
 
-**Timestamp:** [03:11:35]
+
 
 ```javascript
 let fruits = ["apple", "orange", "banana"];
 
 // Change an element
 fruits[0] = "pear";
-console.log(fruits); // ["pear", "orange", "banana"]
+console.log(fruits); 
+// Output: ["pear", "orange", "banana"]
 ```
 
 ---
 
 ## 18.5 Array Length
 
-**Timestamp:** [03:11:52]
+
 
 Get the number of elements using `.length`:
 
 ```javascript
 let fruits = ["apple", "orange", "banana"];
-console.log(fruits.length); // 3
+console.log(fruits.length); 
+// Output: 3
 ```
 
 ---
@@ -94,7 +101,7 @@ console.log(fruits.length); // 3
 
 ### Push - Add to End
 
-**Timestamp:** [03:12:03]
+
 
 ```javascript
 let fruits = ["apple", "orange", "banana"];
@@ -104,7 +111,7 @@ console.log(fruits); // ["apple", "orange", "banana", "mango"]
 
 ### Unshift - Add to Beginning
 
-**Timestamp:** [03:12:19]
+
 
 ```javascript
 fruits.unshift("grape");
@@ -117,7 +124,7 @@ console.log(fruits); // ["grape", "apple", "orange", "banana", "mango"]
 
 ### Pop - Remove from End
 
-**Timestamp:** [03:12:30]
+
 
 ```javascript
 let fruits = ["apple", "orange", "banana"];
@@ -128,7 +135,7 @@ console.log(fruits);  // ["apple", "orange"]
 
 ### Shift - Remove from Beginning
 
-**Timestamp:** [03:12:42]
+
 
 ```javascript
 let removed = fruits.shift();
@@ -142,7 +149,7 @@ console.log(fruits);  // ["orange"]
 
 ### indexOf - Find Index
 
-**Timestamp:** [03:13:08]
+
 
 ```javascript
 let fruits = ["apple", "orange", "banana"];
@@ -159,7 +166,7 @@ console.log(fruits.indexOf("grape")); // -1
 
 ### For Loop
 
-**Timestamp:** [03:13:28]
+
 
 ```javascript
 let fruits = ["apple", "orange", "banana"];
@@ -173,11 +180,11 @@ for (let i = 0; i < fruits.length; i++) {
 // banana
 ```
 
-**Timestamp:** [03:13:34]
+
 
 ### For...of Loop (Enhanced)
 
-**Timestamp:** [03:14:01]
+
 
 ```javascript
 for (let fruit of fruits) {
@@ -192,7 +199,7 @@ Cleaner and more readable!
 
 ## 18.10 Sorting Arrays
 
-**Timestamp:** [03:14:27]
+
 
 ### Sort Alphabetically
 
@@ -204,7 +211,7 @@ console.log(fruits); // ["apple", "banana", "orange"]
 
 ### Reverse Order
 
-**Timestamp:** [03:14:41]
+
 
 ```javascript
 fruits.reverse();
@@ -215,7 +222,7 @@ console.log(fruits); // ["orange", "banana", "apple"]
 
 ## 18.11 2D Arrays
 
-**Timestamp:** [03:15:00]
+
 
 Arrays within arrays (matrix/grid structure):
 
@@ -232,7 +239,7 @@ console.log(matrix[1][2]); // 6
 console.log(matrix[2][1]); // 8
 ```
 
-**Timestamp:** [03:15:10], [03:15:26], [03:15:36]
+, [03:15:26], [03:15:36]
 
 ---
 
@@ -317,13 +324,13 @@ console.log(`Maximum: ${max}`); // 89
 ## Overview
 The spread operator (`...`) expands iterables (arrays, strings) into individual elements.
 
-**Timestamp:** [03:16:25]
+
 
 ---
 
 ## 19.1 What is the Spread Operator?
 
-**Timestamp:** [03:16:25], [03:16:32]
+, [03:16:32]
 
 - Uses three dots: `...`
 - **Unpacks** elements from an array or string
@@ -348,7 +355,7 @@ console.log(array); // [1, 2, 3] (array)
 
 ## 19.3 Using with Math Functions
 
-**Timestamp:** [03:16:52], [03:17:06]
+, [03:17:06]
 
 ### Find Maximum
 
@@ -362,7 +369,7 @@ let maximum = Math.max(numbers); // NaN
 let maximum = Math.max(...numbers); // 5
 ```
 
-**Timestamp:** [03:17:21]
+
 
 ### Find Minimum
 
@@ -370,13 +377,13 @@ let maximum = Math.max(...numbers); // 5
 let minimum = Math.min(...numbers); // 1
 ```
 
-**Timestamp:** [03:17:28]
+
 
 ---
 
 ## 19.4 Combining Arrays
 
-**Timestamp:** [03:17:48]
+
 
 ### Without Spread
 
@@ -392,7 +399,7 @@ console.log(combined);
 
 ### With Spread
 
-**Timestamp:** [03:18:05]
+
 
 ```javascript
 let foods = [...fruits, ...vegetables];
@@ -406,7 +413,7 @@ Spreads both arrays into a single flat array!
 
 ## 19.5 Inserting in Middle
 
-**Timestamp:** [03:18:42]
+
 
 ```javascript
 let fruits = ["apple", "banana"];
@@ -422,7 +429,7 @@ console.log(foods);
 
 ## 19.6 Copying Arrays
 
-**Timestamp:** [03:19:13]
+
 
 ### Shallow Copy
 
@@ -438,13 +445,13 @@ console.log(original); // [1, 2, 3]
 console.log(copy);     // [1, 2, 3, 4]
 ```
 
-**Timestamp:** [03:19:31]
+
 
 ---
 
 ## 19.7 Spreading Strings
 
-**Timestamp:** [03:19:57]
+
 
 ```javascript
 let username = "John Doe";
@@ -454,7 +461,7 @@ console.log(letters);
 // ["J", "o", "h", "n", " ", "D", "o", "e"]
 ```
 
-**Timestamp:** [03:20:05]
+
 
 ### Joining with Separator
 
@@ -467,13 +474,13 @@ console.log(...username); // J o h n (space-separated)
 
 ## 19.8 Rest Operator (Related)
 
-**Timestamp:** [03:20:20]
+
 
 The **rest operator** uses the same syntax (`...`) but **bundles** elements into an array.
 
 ### In Function Parameters
 
-**Timestamp:** [03:20:39], [03:20:54]
+, [03:20:54]
 
 ```javascript
 function sum(...numbers) {
@@ -492,13 +499,13 @@ console.log(sum(1, 2, 3, 4, 5)); // 15
 
 Accepts any number of arguments!
 
-**Timestamp:** [03:21:08], [03:21:19], [03:21:25]
+, [03:21:19], [03:21:25]
 
 ---
 
 ## 19.9 Rest with Other Parameters
 
-**Timestamp:** [03:22:28]
+
 
 ```javascript
 function getAverage(...numbers) {
@@ -512,13 +519,13 @@ function getAverage(...numbers) {
 console.log(getAverage(10, 20, 30)); // 20
 ```
 
-**Timestamp:** [03:22:51]
+
 
 ---
 
 ## 19.10 Combining Regular and Rest Parameters
 
-**Timestamp:** [03:23:05]
+
 
 ```javascript
 function introduce(firstName, lastName, ...hobbies) {

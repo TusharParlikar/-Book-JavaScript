@@ -16,7 +16,8 @@ Throughout this course, you'll create several practical projects:
 - **Image Slider** - An automatic and manual image carousel
 - **Weather App** - Fetch and display weather data from an API
 
-**Timestamp:** [00:00:04]
+## Overview
+Welcome to the Complete JavaScript Mastery course!
 
 ---
 
@@ -30,7 +31,7 @@ JavaScript is a programming language that enables you to create dynamic and inte
 - **Event-driven** - Responds to user actions like clicks, keyboard input, etc.
 - **Interactive features** - Powers animations, form validation, data fetching, and more
 
-**Timestamp:** [00:00:44]
+
 
 ---
 
@@ -58,7 +59,7 @@ Understanding how these three technologies work together is fundamental:
 - CSS is the paint and decoration
 - JavaScript is the electricity and plumbing that makes it functional
 
-**Timestamp:** [00:00:59]
+
 
 ---
 
@@ -71,7 +72,7 @@ Before starting this course, it's recommended (but not required) that you have:
 
 Don't worry if you're not an expert! This course focuses on JavaScript, and you can learn as you go.
 
-**Timestamp:** [00:01:24]
+
 
 ---
 
@@ -91,7 +92,7 @@ Don't worry if you're not an expert! This course focuses on JavaScript, and you 
 
 **Alternatives:** Sublime Text, Atom, WebStorm, or any text editor you prefer
 
-**Timestamp:** [00:01:40]
+
 
 ---
 
@@ -105,7 +106,7 @@ Don't worry if you're not an expert! This course focuses on JavaScript, and you 
    - File → Open Folder
    - Select your newly created folder
 
-**Timestamp:** [00:02:00]
+
 
 ### Step 2: Create Essential Files
 
@@ -120,7 +121,7 @@ The CSS file for styling your webpage.
 #### 3. `index.js`
 The JavaScript file where you'll write your code.
 
-**Timestamp:** [00:02:22]
+
 
 ---
 
@@ -156,7 +157,7 @@ Create the foundational HTML structure in your `index.html` file:
 - `<title>` - Sets the browser tab title
 - `<body>` - Contains visible page content
 
-**Timestamp:** [00:02:30]
+
 
 ---
 
@@ -175,7 +176,7 @@ In the `<head>` section of your HTML file, add:
 
 This allows your HTML to access the styles defined in `style.css`.
 
-**Timestamp:** [00:03:43]
+
 
 ---
 
@@ -202,7 +203,7 @@ Place the `<script>` tag at the **bottom** of the `<body>` section, just before 
 ### Script Tag Attributes:
 - `src="index.js"` - Path to your JavaScript file
 
-**Timestamp:** [00:04:21], [00:06:39]
+, [00:06:39]
 
 ---
 
@@ -229,7 +230,7 @@ Live Server is a VS Code extension that creates a local development server with 
 - No need to manually refresh browser
 - Simulates a real web server environment
 
-**Timestamp:** [00:04:39]
+
 
 ---
 
@@ -251,7 +252,7 @@ Add some content to your `index.html` to test your setup:
 - `<p>` - Paragraph text
 - **Lorem ipsum** - Placeholder text commonly used in design
 
-**Timestamp:** [00:05:30]
+
 
 ---
 
@@ -270,7 +271,7 @@ body {
 - `font-family` - Sets the typeface (Arial with fallback to any sans-serif font)
 - `font-size` - Sets the text size in pixels
 
-**Timestamp:** [00:06:04]
+
 
 ---
 

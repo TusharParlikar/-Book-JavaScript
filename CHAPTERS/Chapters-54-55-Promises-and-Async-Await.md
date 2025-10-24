@@ -7,13 +7,13 @@
 ## Overview
 Learn how Promises solve callback hell and provide a better way to handle asynchronous operations.
 
-**Timestamp:** [10:39:49]
+
 
 ---
 
 ## 54.1 What is a Promise?
 
-**Timestamp:** [10:39:56]
+
 
 **Promise:**
 - Object representing eventual completion (or failure) of async operation
@@ -26,13 +26,13 @@ Learn how Promises solve callback hell and provide a better way to handle asynch
 - **Fulfilled:** Food delivered successfully
 - **Rejected:** Restaurant closed, order cancelled
 
-**Timestamp:** [10:40:50]
+
 
 ---
 
 ## 54.2 Promise States
 
-**Timestamp:** [10:41:20]
+
 
 ```javascript
 // PENDING - Initial state
@@ -47,6 +47,8 @@ resolve(value);
 reject(error);
 ```
 
+// Output: Promise progresses from pending to fulfilled or rejected state
+
 **Timeline:**
 ```
 Pending → Fulfilled (success)
@@ -55,13 +57,13 @@ Pending → Rejected (failure)
 
 **Once settled, state is permanent!**
 
-**Timestamp:** [10:42:10]
+
 
 ---
 
 ## 54.3 Creating a Promise
 
-**Timestamp:** [10:42:40]
+
 
 ```javascript
 const myPromise = new Promise((resolve, reject) => {
@@ -74,41 +76,44 @@ const myPromise = new Promise((resolve, reject) => {
         reject("Operation failed!"); // Reject
     }
 });
+// Output: Promise either fulfills or rejects immediately
 ```
 
 **`resolve`** - Call when successful  
 **`reject`** - Call when failed
 
-**Timestamp:** [10:43:30]
+
 
 ---
 
 ## 54.4 Consuming a Promise
 
-**Timestamp:** [10:44:00]
+
 
 ### .then() and .catch()
 
 ```javascript
 myPromise
     .then(result => {
-        console.log(result); // "Operation successful!"
+        console.log(result);
+        // Output: Operation successful!
     })
     .catch(error => {
-        console.error(error); // "Operation failed!"
+        console.error(error);
+        // Output: Operation failed! (if promise rejects)
     });
 ```
 
 **`.then()`** - Runs when fulfilled  
 **`.catch()`** - Runs when rejected
 
-**Timestamp:** [10:45:00]
+
 
 ---
 
 ## 54.5 Practical Example: Delayed Task
 
-**Timestamp:** [10:45:30]
+
 
 ```javascript
 function wait(ms) {
@@ -121,17 +126,18 @@ function wait(ms) {
 
 wait(2000)
     .then(message => {
-        console.log(message); // After 2 seconds: "Waited 2000ms"
+        console.log(message); 
+        // Output: Waited 2000ms (after 2 second delay)
     });
 ```
 
-**Timestamp:** [10:46:20]
+
 
 ---
 
 ## 54.6 Promise with Success/Failure
 
-**Timestamp:** [10:46:50]
+
 
 ```javascript
 function checkAge(age) {
@@ -163,13 +169,13 @@ checkAge(15)
     });
 ```
 
-**Timestamp:** [10:48:10]
+
 
 ---
 
 ## 54.7 Chaining Promises
 
-**Timestamp:** [10:48:40]
+
 
 Solve callback hell with promise chaining:
 
@@ -218,13 +224,13 @@ step1()
 
 **Much better than callback hell!**
 
-**Timestamp:** [10:50:40]
+
 
 ---
 
 ## 54.8 Error Handling in Chain
 
-**Timestamp:** [10:51:10]
+
 
 ```javascript
 function task1() {
@@ -264,13 +270,13 @@ task1()
 
 **`.catch()` catches ANY error in the chain!**
 
-**Timestamp:** [10:52:50]
+
 
 ---
 
 ## 54.9 finally() Method
 
-**Timestamp:** [10:53:20]
+
 
 Runs regardless of success or failure:
 
@@ -290,13 +296,13 @@ fetchData()
 
 **Use case:** Hiding loading spinners, closing connections
 
-**Timestamp:** [10:54:20]
+
 
 ---
 
 ## 54.10 Real-World Example: User Registration
 
-**Timestamp:** [10:54:50]
+
 
 ```javascript
 function validateUser(username) {
@@ -359,13 +365,13 @@ validateUser("john")
 
 **Compare this to callback hell version in previous chapter!**
 
-**Timestamp:** [10:57:40]
+
 
 ---
 
 ## 54.11 Promise.all()
 
-**Timestamp:** [10:58:10]
+
 
 Run multiple promises in parallel:
 
@@ -387,13 +393,13 @@ Promise.all([promise1, promise2, promise3])
 **Waits for ALL to complete!**  
 **Rejects if ANY fails!**
 
-**Timestamp:** [10:59:40]
+
 
 ---
 
 ## 54.12 Promise.race()
 
-**Timestamp:** [11:00:10]
+
 
 Returns first promise to settle:
 
@@ -407,7 +413,7 @@ Promise.race([slow, fast])
     });
 ```
 
-**Timestamp:** [11:01:00]
+
 
 ---
 
@@ -429,13 +435,13 @@ Promise.race([slow, fast])
 ## Overview
 Learn async/await syntax - the modern way to write asynchronous code that looks synchronous.
 
-**Timestamp:** [10:57:01]
+
 
 ---
 
 ## 55.1 What is Async/Await?
 
-**Timestamp:** [10:57:08]
+
 
 **Async/Await:**
 - Syntactic sugar over Promises
@@ -447,13 +453,13 @@ Learn async/await syntax - the modern way to write asynchronous code that looks 
 - **`async`** - Declares async function
 - **`await`** - Waits for Promise to resolve
 
-**Timestamp:** [10:57:50]
+
 
 ---
 
 ## 55.2 async Function
 
-**Timestamp:** [10:58:20]
+
 
 ```javascript
 // Regular function
@@ -477,13 +483,13 @@ asyncFunction().then(value => {
 
 **`async` functions ALWAYS return a Promise!**
 
-**Timestamp:** [10:59:30]
+
 
 ---
 
 ## 55.3 await Keyword
 
-**Timestamp:** [11:00:00]
+
 
 **Rules:**
 - Can ONLY use `await` inside `async` function
@@ -510,13 +516,13 @@ async function example() {
 example();
 ```
 
-**Timestamp:** [11:01:20]
+
 
 ---
 
 ## 55.4 Practical Example: Fetching Data
 
-**Timestamp:** [11:02:00]
+
 
 ### Without Async/Await (Promises)
 
@@ -559,13 +565,13 @@ async function getUserData() {
 
 **Much cleaner and easier to read!**
 
-**Timestamp:** [11:04:10]
+
 
 ---
 
 ## 55.5 Error Handling with try/catch
 
-**Timestamp:** [11:04:40]
+
 
 ```javascript
 async function fetchUser(id) {
@@ -589,13 +595,13 @@ async function fetchUser(id) {
 fetchUser(123);
 ```
 
-**Timestamp:** [11:05:50]
+
 
 ---
 
 ## 55.6 Sequential vs Parallel Execution
 
-**Timestamp:** [11:06:20]
+
 
 ### Sequential (One at a time)
 
@@ -658,13 +664,13 @@ async function parallelAll() {
 }
 ```
 
-**Timestamp:** [11:09:00]
+
 
 ---
 
 ## 55.7 Real-World Example: User Registration
 
-**Timestamp:** [11:09:30]
+
 
 ```javascript
 // Promise-returning functions
@@ -740,13 +746,13 @@ registerUser("john");
 
 **Compare to callback hell and promise chain versions!**
 
-**Timestamp:** [11:12:20]
+
 
 ---
 
 ## 55.8 Comparison: Callbacks vs Promises vs Async/Await
 
-**Timestamp:** [11:12:50]
+
 
 ### Callbacks (Hell) ❌
 
@@ -789,13 +795,13 @@ async function doSteps() {
 doSteps();
 ```
 
-**Timestamp:** [11:14:20]
+
 
 ---
 
 ## 55.9 Common Patterns
 
-**Timestamp:** [11:14:50]
+
 
 ### Pattern 1: Loading Data
 
@@ -850,13 +856,13 @@ async function fetchWithTimeout(url, timeout = 5000) {
 }
 ```
 
-**Timestamp:** [11:17:30]
+
 
 ---
 
 ## 55.10 Async/Await with Loops
 
-**Timestamp:** [11:18:00]
+
 
 ```javascript
 const userIds = [1, 2, 3, 4, 5];
@@ -877,13 +883,13 @@ async function processParallel() {
 }
 ```
 
-**Timestamp:** [11:19:10]
+
 
 ---
 
 ## 55.11 Top-Level Await (Modern)
 
-**Timestamp:** [11:19:40]
+
 
 In modern JavaScript (modules):
 

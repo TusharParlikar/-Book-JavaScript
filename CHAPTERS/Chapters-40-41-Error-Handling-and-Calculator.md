@@ -7,13 +7,13 @@
 ## Overview
 Learn how to handle errors gracefully in JavaScript using try, catch, finally, and throw statements.
 
-**Timestamp:** [07:45:03]
+
 
 ---
 
 ## 40.1 What is Error Handling?
 
-**Timestamp:** [07:45:10]
+
 
 **Error Handling:**
 - Mechanism to handle runtime errors
@@ -39,15 +39,17 @@ try {
     console.log("Error caught!");
 }
 console.log("Program continues");
-
-// ✅ Program continues running
+// Output: 
+// Start
+// Error caught!
+// Program continues
 ```
 
 ---
 
 ## 40.2 try...catch Statement
 
-**Timestamp:** [07:45:50]
+
 
 ### Syntax
 
@@ -69,19 +71,18 @@ try {
 } catch(error) {
     console.log("Something went wrong!");
 }
-
 // Output:
-// "Before error"
-// "Something went wrong!"
+// Before error
+// Something went wrong!
 ```
 
-**Timestamp:** [07:46:25]
+
 
 ---
 
 ## 40.3 The Error Object
 
-**Timestamp:** [07:46:45]
+
 
 The `error` parameter contains information:
 
@@ -89,20 +90,24 @@ The `error` parameter contains information:
 try {
     console.lag("Error here");
 } catch(error) {
-    console.log(error); // Full error object
-    console.log(error.name); // "ReferenceError"
-    console.log(error.message); // "console.lag is not a function"
-    console.log(error.stack); // Stack trace
+    console.log(error); 
+    // Output: ReferenceError: console.lag is not a function
+    console.log(error.name); 
+    // Output: ReferenceError
+    console.log(error.message); 
+    // Output: console.lag is not a function
+    console.log(error.stack); 
+    // Output: Stack trace details
 }
 ```
 
-**Timestamp:** [07:47:15]
+
 
 ---
 
 ## 40.4 finally Block
 
-**Timestamp:** [07:47:40]
+
 
 `finally` **always** executes (error or not):
 
@@ -115,6 +120,9 @@ try {
 } finally {
     console.log("This ALWAYS runs");
 }
+// Output:
+// Trying...
+// This ALWAYS runs
 ```
 
 ### Practical Use Case
@@ -136,13 +144,13 @@ function readFile() {
 }
 ```
 
-**Timestamp:** [07:48:20]
+
 
 ---
 
 ## 40.5 throw Statement
 
-**Timestamp:** [07:48:50]
+
 
 Create and throw custom errors:
 
@@ -162,13 +170,13 @@ try {
 }
 ```
 
-**Timestamp:** [07:49:30]
+
 
 ---
 
 ## 40.6 Different Error Types
 
-**Timestamp:** [07:50:05]
+
 
 ### ReferenceError
 
@@ -214,7 +222,7 @@ try {
 
 ## 40.7 Custom Error Messages
 
-**Timestamp:** [07:51:10]
+
 
 ```javascript
 function checkAge(age) {
@@ -238,13 +246,13 @@ try {
 }
 ```
 
-**Timestamp:** [07:52:00]
+
 
 ---
 
 ## 40.8 Nested try...catch
 
-**Timestamp:** [07:52:30]
+
 
 ```javascript
 try {
@@ -300,7 +308,7 @@ console.log(validateUsername("john123")); // Valid
 console.log(validateUsername("john@123")); // Invalid characters
 ```
 
-**Timestamp:** [07:53:40]
+
 
 ### Example 2: Safe JSON Parsing
 
@@ -356,7 +364,7 @@ const user2 = fetchUserData("abc"); // Error
 console.log(user2);
 ```
 
-**Timestamp:** [07:55:10]
+
 
 ---
 
@@ -377,13 +385,13 @@ console.log(user2);
 ## Overview
 Build a functional calculator using HTML, CSS, and JavaScript with error handling.
 
-**Timestamp:** [07:56:16]
+
 
 ---
 
 ## 41.1 Project Setup
 
-**Timestamp:** [07:56:25]
+
 
 ### HTML Structure
 
@@ -431,13 +439,13 @@ Build a functional calculator using HTML, CSS, and JavaScript with error handlin
 </html>
 ```
 
-**Timestamp:** [07:57:40]
+
 
 ---
 
 ## 41.2 CSS Styling
 
-**Timestamp:** [07:58:15]
+
 
 ```css
 * {
@@ -528,13 +536,13 @@ button:active {
 }
 ```
 
-**Timestamp:** [08:00:30]
+
 
 ---
 
 ## 41.3 JavaScript - Basic Structure
 
-**Timestamp:** [08:01:15]
+
 
 ```javascript
 const display = document.getElementById("display");
@@ -553,13 +561,13 @@ buttons.forEach(button => {
 });
 ```
 
-**Timestamp:** [08:02:00]
+
 
 ---
 
 ## 41.4 Handle Input Function
 
-**Timestamp:** [08:02:30]
+
 
 ```javascript
 function handleInput(key) {
@@ -586,7 +594,7 @@ function handleInput(key) {
 
 ## 41.5 Append Number Function
 
-**Timestamp:** [08:03:15]
+
 
 ```javascript
 function appendNumber(number) {
@@ -600,13 +608,13 @@ function appendNumber(number) {
 }
 ```
 
-**Timestamp:** [08:03:50]
+
 
 ---
 
 ## 41.6 Set Operator Function
 
-**Timestamp:** [08:04:20]
+
 
 ```javascript
 function setOperator(op) {
@@ -626,7 +634,7 @@ function setOperator(op) {
 
 ## 41.7 Calculate Function
 
-**Timestamp:** [08:05:05]
+
 
 ```javascript
 function calculate() {
@@ -667,13 +675,13 @@ function calculate() {
 }
 ```
 
-**Timestamp:** [08:06:40]
+
 
 ---
 
 ## 41.8 Clear and Delete Functions
 
-**Timestamp:** [08:07:10]
+
 
 ```javascript
 function clearDisplay() {
@@ -699,7 +707,7 @@ function resetCalculator() {
 
 ## 41.9 Complete Code with Error Handling
 
-**Timestamp:** [08:07:50]
+
 
 ```javascript
 const display = document.getElementById("display");
@@ -845,7 +853,7 @@ function resetCalculator() {
 }
 ```
 
-**Timestamp:** [08:09:25]
+
 
 ---
 

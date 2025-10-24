@@ -7,13 +7,13 @@
 ## Overview
 Learn how to properly randomize the order of elements in an array using the Fisher-Yates shuffle algorithm.
 
-**Timestamp:** [06:36:02]
+
 
 ---
 
 ## 32.1 What is Array Shuffling?
 
-**Timestamp:** [06:36:02]
+
 
 **Shuffling** = Randomizing the order of elements in an array
 
@@ -27,7 +27,7 @@ Common uses:
 
 ## 32.2 Incorrect Method (Don't Use This!)
 
-**Timestamp:** [06:36:44]
+
 
 ```javascript
 let cards = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
@@ -46,7 +46,7 @@ cards.sort(() => Math.random() - 0.5);
 
 ## 32.3 Correct Method: Fisher-Yates Shuffle
 
-**Timestamp:** [06:37:16]
+
 
 Also known as the **Knuth Shuffle**, this is the proper algorithm:
 
@@ -59,7 +59,7 @@ function shuffle(array) {
 }
 ```
 
-**Timestamp:** [06:37:25], [06:37:37]
+, [06:37:37]
 
 ---
 
@@ -67,7 +67,7 @@ function shuffle(array) {
 
 ### Step 1: Iterate Backwards
 
-**Timestamp:** [06:37:37]
+
 
 ```javascript
 for (let i = array.length - 1; i > 0; i--) {
@@ -79,7 +79,7 @@ Start from the end and work backwards to the second element.
 
 ### Step 2: Pick Random Index
 
-**Timestamp:** [06:38:24]
+
 
 ```javascript
 const random = Math.floor(Math.random() * (i + 1));
@@ -89,7 +89,7 @@ For current position `i`, pick a random index from `0` to `i` (inclusive).
 
 ### Step 3: Swap Elements
 
-**Timestamp:** [06:39:01]
+
 
 ```javascript
 [array[i], array[random]] = [array[random], array[i]];
@@ -101,7 +101,7 @@ Swap the element at position `i` with the element at the random position.
 
 ## 32.5 Complete Shuffle Example
 
-**Timestamp:** [06:36:18]
+
 
 ```javascript
 // Fisher-Yates Shuffle Function
@@ -143,8 +143,10 @@ function shuffleCopy(array) {
 const original = [1, 2, 3, 4, 5];
 const shuffled = shuffleCopy(original);
 
-console.log("Original:", original);  // [1, 2, 3, 4, 5] (unchanged)
-console.log("Shuffled:", shuffled);  // Random order
+console.log("Original:", original);  
+// Output: [1, 2, 3, 4, 5]
+console.log("Shuffled:", shuffled);  
+// Output: [randomized order like 3, 1, 5, 2, 4]
 ```
 
 ---
@@ -172,6 +174,11 @@ shuffle(questions);
 questions.forEach((q, i) => {
     console.log(`Question ${i + 1}: ${q}`);
 });
+// Output: (randomized)
+// Question 1: Who wrote Hamlet?
+// Question 2: What is 2+2?
+// Question 3: What is the speed of light?
+// Question 4: What is the capital of France?
 ```
 
 ### Example 2: Random Team Assignment
@@ -192,7 +199,9 @@ const team1 = players.slice(0, 3);
 const team2 = players.slice(3);
 
 console.log("Team 1:", team1);
+// Output: ["Frank", "Alice", "David"]
 console.log("Team 2:", team2);
+// Output: ["Bob", "Eve", "Charlie"]
 ```
 
 ### Example 3: Card Game
@@ -239,13 +248,13 @@ console.log("Shuffled:", deck.slice(0, 5)); // Show first 5 cards
 ## Overview
 Date objects represent dates and times in JavaScript, providing methods to get and set date components.
 
-**Timestamp:** [06:40:08]
+
 
 ---
 
 ## 33.1 What are Date Objects?
 
-**Timestamp:** [06:40:14]
+
 
 Date objects:
 - Represent a specific point in time
@@ -259,7 +268,7 @@ Date objects:
 
 ### Current Date and Time
 
-**Timestamp:** [06:40:30]
+
 
 ```javascript
 const now = new Date();
@@ -269,7 +278,7 @@ console.log(now);
 
 ### Specific Date (Year, Month, Day, ...)
 
-**Timestamp:** [06:41:04]
+
 
 ```javascript
 // new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
@@ -283,7 +292,7 @@ console.log(date);
 
 ### From ISO String
 
-**Timestamp:** [06:41:53]
+
 
 ```javascript
 const date = new Date("2024-01-15T10:30:00");
@@ -292,7 +301,7 @@ console.log(date);
 
 ### From Milliseconds (Epoch Time)
 
-**Timestamp:** [06:42:23]
+
 
 ```javascript
 const date = new Date(1705321800000);
@@ -306,7 +315,7 @@ console.log(date);
 
 ### Get Year
 
-**Timestamp:** [06:43:24]
+
 
 ```javascript
 const date = new Date();
@@ -315,7 +324,7 @@ console.log(date.getFullYear()); // 2024 (4-digit year)
 
 ### Get Month
 
-**Timestamp:** [06:43:43]
+
 
 ```javascript
 console.log(date.getMonth()); // 0-11 (0 = January)
@@ -328,7 +337,7 @@ console.log(months[date.getMonth()]); // "Jan"
 
 ### Get Day of Month
 
-**Timestamp:** [06:44:04]
+
 
 ```javascript
 console.log(date.getDate()); // 1-31
@@ -336,7 +345,7 @@ console.log(date.getDate()); // 1-31
 
 ### Get Day of Week
 
-**Timestamp:** [06:45:18]
+
 
 ```javascript
 console.log(date.getDay()); // 0-6 (0 = Sunday, 6 = Saturday)
@@ -349,7 +358,7 @@ console.log(days[date.getDay()]); // "Monday"
 
 ### Get Time Components
 
-**Timestamp:** [06:44:23], [06:44:53], [06:45:01]
+, [06:44:53], [06:45:01]
 
 ```javascript
 console.log(date.getHours());        // 0-23
@@ -362,7 +371,7 @@ console.log(date.getMilliseconds()); // 0-999
 
 ## 33.4 Setting Date Components
 
-**Timestamp:** [06:45:53]
+
 
 ```javascript
 const date = new Date();
@@ -377,13 +386,13 @@ date.setSeconds(0);             // Set seconds
 console.log(date); // December 25, 2025, 10:30:00
 ```
 
-**Timestamp:** [06:46:06], [06:46:15], [06:46:23], [06:46:37], [06:46:44]
+, [06:46:15], [06:46:23], [06:46:37], [06:46:44]
 
 ---
 
 ## 33.5 Comparing Dates
 
-**Timestamp:** [06:46:53]
+
 
 ```javascript
 const date1 = new Date("2024-01-15");

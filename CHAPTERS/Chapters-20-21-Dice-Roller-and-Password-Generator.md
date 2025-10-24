@@ -7,7 +7,7 @@
 ## Overview
 Create a dice rolling program that generates random dice faces and displays them visually.
 
-**Timestamp:** [03:24:04]
+
 
 ---
 
@@ -19,13 +19,13 @@ Build a dice roller that:
 - Displays dice face images
 - Shows results in text and images
 
-**Timestamp:** [03:24:04]
+
 
 ---
 
 ## 20.2 HTML Structure
 
-**Timestamp:** [03:24:12]
+
 
 ```html
 <!DOCTYPE html>
@@ -59,13 +59,13 @@ Build a dice roller that:
 </html>
 ```
 
-**Timestamp:** [03:24:20], [03:24:33], [03:24:50]
+, [03:24:33], [03:24:50]
 
 ---
 
 ## 20.3 Prepare Dice Images
 
-**Timestamp:** [03:24:57]
+
 
 Ensure you have dice face images:
 - `dice1.png`
@@ -81,21 +81,28 @@ Place in an `images` folder or root directory.
 
 ## 20.4 JavaScript - Get Elements
 
-**Timestamp:** [03:25:13], [03:25:23], [03:25:35], [03:25:43]
+, [03:25:23], [03:25:35], [03:25:43]
 
 ```javascript
 // Get HTML element references
 const numOfDice = document.getElementById("numOfDice");
+// Output: numOfDice element reference obtained
+
 const diceResult = document.getElementById("diceResult");
+// Output: diceResult element reference obtained
+
 const diceImages = document.getElementById("diceImages");
+// Output: diceImages element reference obtained
+
 const rollBtn = document.getElementById("rollBtn");
+// Output: rollBtn element reference obtained
 ```
 
 ---
 
 ## 20.5 JavaScript - Roll Function
 
-**Timestamp:** [03:25:53]
+
 
 ```javascript
 function rollDice() {
@@ -122,7 +129,7 @@ function rollDice() {
 rollBtn.onclick = rollDice;
 ```
 
-**Timestamp:** [03:26:11], [03:26:27], [03:26:46], [03:27:08], [03:27:25], [03:27:42]
+, [03:26:27], [03:26:46], [03:27:08], [03:27:25], [03:27:42]
 
 ---
 
@@ -130,7 +137,7 @@ rollBtn.onclick = rollDice;
 
 ### Step 1: Get Number of Dice
 
-**Timestamp:** [03:26:11]
+
 
 ```javascript
 const numOfDiceValue = numOfDice.value;
@@ -140,7 +147,7 @@ Get the number from the input field.
 
 ### Step 2: Create Storage Arrays
 
-**Timestamp:** [03:26:27]
+
 
 ```javascript
 const values = [];  // Store dice numbers
@@ -149,7 +156,7 @@ const images = [];  // Store image HTML
 
 ### Step 3: Roll Each Die
 
-**Timestamp:** [03:26:46]
+
 
 ```javascript
 for (let i = 0; i < numOfDiceValue; i++) {
@@ -165,7 +172,7 @@ for (let i = 0; i < numOfDiceValue; i++) {
 
 ### Step 4: Display Results
 
-**Timestamp:** [03:27:25], [03:27:42]
+, [03:27:42]
 
 ```javascript
 diceResult.textContent = `Dice: ${values.join(', ')}`;
@@ -338,7 +345,7 @@ function rollDice() {
 ## Overview
 Create a program that generates random passwords based on user-specified criteria.
 
-**Timestamp:** [03:28:15]
+
 
 ---
 
@@ -350,13 +357,13 @@ Build a password generator that:
 - Generates secure random passwords
 - Displays result
 
-**Timestamp:** [03:28:15]
+
 
 ---
 
 ## 21.2 HTML Structure
 
-**Timestamp:** [03:28:27]
+
 
 ```html
 <!DOCTYPE html>
@@ -411,13 +418,13 @@ Build a password generator that:
 </html>
 ```
 
-**Timestamp:** [03:28:40], [03:29:02], [03:29:23], [03:29:40]
+, [03:29:02], [03:29:23], [03:29:40]
 
 ---
 
 ## 21.3 JavaScript - Setup
 
-**Timestamp:** [03:29:55], [03:30:11], [03:30:28], [03:30:46]
+, [03:30:11], [03:30:28], [03:30:46]
 
 ```javascript
 // Get HTML elements
@@ -436,13 +443,13 @@ const numberChars = "0123456789";
 const symbolChars = "!@#$%^&*()_+-=[]{}|;:,.<>?";
 ```
 
-**Timestamp:** [03:31:02], [03:31:15], [03:31:28], [03:31:42]
+, [03:31:15], [03:31:28], [03:31:42]
 
 ---
 
 ## 21.4 JavaScript - Generate Function
 
-**Timestamp:** [03:31:56]
+
 
 ```javascript
 function generatePassword() {
@@ -476,7 +483,7 @@ function generatePassword() {
 generateBtn.onclick = generatePassword;
 ```
 
-**Timestamp:** [03:32:08], [03:32:25], [03:32:46], [03:33:10], [03:33:31], [03:33:48]
+, [03:32:25], [03:32:46], [03:33:10], [03:33:31], [03:33:48]
 
 ---
 
@@ -484,7 +491,7 @@ generateBtn.onclick = generatePassword;
 
 ### Step 1: Get Password Length
 
-**Timestamp:** [03:32:08]
+
 
 ```javascript
 const length = passwordLength.value;
@@ -492,7 +499,7 @@ const length = passwordLength.value;
 
 ### Step 2: Build Character Pool
 
-**Timestamp:** [03:32:25], [03:32:46]
+, [03:32:46]
 
 ```javascript
 let allowedChars = "";
@@ -507,7 +514,7 @@ Uses ternary operator to conditionally add character sets.
 
 ### Step 3: Validate Selection
 
-**Timestamp:** [03:33:10]
+
 
 ```javascript
 if (allowedChars === "") {
@@ -520,7 +527,7 @@ Ensure at least one character type is selected.
 
 ### Step 4: Generate Password
 
-**Timestamp:** [03:33:31]
+
 
 ```javascript
 for (let i = 0; i < length; i++) {
@@ -535,7 +542,7 @@ for (let i = 0; i < length; i++) {
 
 ### Step 5: Display Result
 
-**Timestamp:** [03:33:48]
+
 
 ```javascript
 passwordDisplay.textContent = password;

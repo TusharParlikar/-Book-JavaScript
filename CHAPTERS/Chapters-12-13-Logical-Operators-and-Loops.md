@@ -7,13 +7,13 @@
 ## Overview
 Logical operators allow you to combine or manipulate boolean values in conditions. This chapter also covers the important difference between loose and strict equality.
 
-**Timestamp:** [02:17:02]
+
 
 ---
 
 ## 12.1 What are Logical Operators?
 
-**Timestamp:** [02:17:10]
+
 
 Logical operators work with boolean values (`true`/`false`) to create more complex conditions.
 
@@ -26,20 +26,27 @@ Logical operators work with boolean values (`true`/`false`) to create more compl
 
 ## 12.2 The AND (&&) Operator
 
-**Timestamp:** [02:18:57]
+
 
 Returns `true` only if **BOTH** operands are `true`.
 
 ```javascript
-console.log(true && true);    // true
-console.log(true && false);   // false
-console.log(false && true);   // false
-console.log(false && false);  // false
+console.log(true && true);    
+// Output: true
+
+console.log(true && false);   
+// Output: false
+
+console.log(false && true);   
+// Output: false
+
+console.log(false && false);  
+// Output: false
 ```
 
 ### Practical Example: Temperature Range Check
 
-**Timestamp:** [02:18:47]
+
 
 ```javascript
 let temp = 25;
@@ -47,6 +54,7 @@ let temp = 25;
 if (temp > 0 && temp <= 30) {
     console.log("The weather is good");
 }
+// Output: The weather is good
 
 // Both conditions must be true:
 // temp > 0 (true) AND temp <= 30 (true) = true
@@ -62,26 +70,34 @@ let hasInsurance = true;
 if (age >= 18 && hasLicense && hasInsurance) {
     console.log("You can drive");
 }
+// Output: You can drive
 ```
 
 ---
 
 ## 12.3 The OR (||) Operator
 
-**Timestamp:** [02:19:55]
+
 
 Returns `true` if **AT LEAST ONE** operand is `true`.
 
 ```javascript
-console.log(true || true);    // true
-console.log(true || false);   // true
-console.log(false || true);   // true
-console.log(false || false);  // false
+console.log(true || true);    
+// Output: true
+
+console.log(true || false);   
+// Output: true
+
+console.log(false || true);   
+// Output: true
+
+console.log(false || false);  
+// Output: false
 ```
 
 ### Practical Example: Bad Weather Check
 
-**Timestamp:** [02:20:26]
+
 
 ```javascript
 let temp = -5;
@@ -89,6 +105,7 @@ let temp = -5;
 if (temp <= 0 || temp > 30) {
     console.log("The weather is bad");
 }
+// Output: The weather is bad
 
 // Either condition being true makes it true:
 // temp <= 0 (true) OR temp > 30 (false) = true
@@ -102,27 +119,32 @@ let day = "Saturday";
 if (day === "Saturday" || day === "Sunday") {
     console.log("It's the weekend!");
 }
+// Output: It's the weekend!
 ```
 
 ---
 
 ## 12.4 The NOT (!) Operator
 
-**Timestamp:** [02:21:03]
+
 
 Inverts a boolean value: `true` becomes `false`, `false` becomes `true`.
 
 ```javascript
-console.log(!true);   // false
-console.log(!false);  // true
+console.log(!true);   
+// Output: false
+
+console.log(!false);  
+// Output: true
 
 let online = false;
-console.log(!online); // true
+console.log(!online); 
+// Output: true
 ```
 
 ### Practical Example: Check if NOT Sunny
 
-**Timestamp:** [02:21:47]
+
 
 ```javascript
 let isSunny = false;
@@ -130,6 +152,7 @@ let isSunny = false;
 if (!isSunny) {
     console.log("It's cloudy");
 }
+// Output: It's cloudy
 
 // !isSunny means "if NOT sunny"
 // !false = true, so the code runs
@@ -143,6 +166,7 @@ let age = 15;
 if (!(age >= 18)) {
     console.log("You are a minor");
 }
+// Output: You are a minor
 // Same as: if (age < 18)
 ```
 
@@ -160,6 +184,7 @@ let criminal = false;
 if (age >= 18 && citizen && !criminal) {
     console.log("You can vote");
 }
+// Output: You can vote
 ```
 
 ### Complex Condition Example
@@ -174,6 +199,8 @@ if ((temp >= 20 && temp <= 30) && !isRaining && !isWindy) {
 } else {
     console.log("Stay inside");
 }
+// Output: Stay inside
+// (isWindy is true, so condition fails)
 ```
 
 ---
@@ -189,11 +216,13 @@ Order of operations:
 let result = true || false && false;
 // && evaluated first: false && false = false
 // Then ||: true || false = true
-console.log(result); // true
+console.log(result); 
+// Output: true
 
 // Use parentheses for clarity
 let result = (true || false) && false;
-console.log(result); // false
+console.log(result); 
+// Output: false
 ```
 
 ---
@@ -227,11 +256,11 @@ let username = userInput || "Guest";
 
 ## 12.8 Equality Operators
 
-**Timestamp:** [02:22:47]
+
 
 ### Assignment vs Comparison
 
-**Timestamp:** [02:22:54]
+
 
 ```javascript
 let x = 5;      // = is assignment
@@ -242,7 +271,7 @@ let y = x == 5; // == is comparison
 
 ## 12.9 Loose Equality (==)
 
-**Timestamp:** [02:23:00]
+
 
 Compares values with **type coercion** (converts types if different).
 
@@ -259,7 +288,7 @@ console.log(null == undefined); // true
 
 ## 12.10 Strict Equality (===)
 
-**Timestamp:** [02:23:06]
+
 
 Compares values **AND data types**. No type coercion.
 
@@ -275,7 +304,7 @@ console.log("hi" === "hi"); // true
 
 **Recommended:** Always use `===` for clarity and safety!
 
-**Timestamp:** [02:26:27]
+
 
 ---
 
@@ -283,7 +312,7 @@ console.log("hi" === "hi"); // true
 
 ### Loose Inequality (!=)
 
-**Timestamp:** [02:25:09]
+
 
 ```javascript
 console.log(5 != "5");     // false (values are equal after coercion)
@@ -292,7 +321,7 @@ console.log(5 != 6);       // true
 
 ### Strict Inequality (!==)
 
-**Timestamp:** [02:25:46]
+
 
 ```javascript
 console.log(5 !== "5");    // true (different types)
@@ -383,11 +412,11 @@ Loops allow you to repeat code multiple times. This chapter covers while loops, 
 
 ## 13.1 While Loops
 
-**Timestamp:** [02:26:42]
+
 
 While loops repeat code **while** a condition is `true`.
 
-**Timestamp:** [02:26:46]
+
 
 ### Basic Syntax
 
@@ -412,7 +441,7 @@ while (count <= 10) {
 
 ## 13.2 Infinite Loops (DANGER!)
 
-**Timestamp:** [02:27:16]
+
 
 If the condition never becomes `false`, the loop runs forever!
 
@@ -427,13 +456,13 @@ while (count <= 10) {
 
 **Solution:** Always ensure the condition will eventually be false.
 
-**Timestamp:** [02:28:16]
+
 
 ---
 
 ## 13.3 User Input Validation with While
 
-**Timestamp:** [02:28:21]
+
 
 ```javascript
 let username = "";
@@ -451,13 +480,13 @@ This keeps asking until the user provides valid input.
 
 ## 13.4 Do-While Loops
 
-**Timestamp:** [02:30:03]
+
 
 Do-while loops execute code **at least once**, then check the condition.
 
 ### Syntax
 
-**Timestamp:** [02:30:03]
+
 
 ```javascript
 do {
@@ -467,7 +496,7 @@ do {
 
 ### Difference from While
 
-**Timestamp:** [02:30:16]
+
 
 ```javascript
 // While loop - might not run at all
@@ -486,7 +515,7 @@ do {
 
 ## 13.5 Practical Do-While Example
 
-**Timestamp:** [02:30:31], [02:31:09]
+, [02:31:09]
 
 ```javascript
 let username;
@@ -512,15 +541,15 @@ console.log("Welcome!");
 
 ## 13.6 For Loops
 
-**Timestamp:** [02:34:54]
+
 
 For loops repeat code a **specific number of times**.
 
-**Timestamp:** [02:34:54]
+
 
 ### Syntax
 
-**Timestamp:** [02:35:16]
+
 
 ```javascript
 for (initialization; condition; finalExpression) {
@@ -530,7 +559,7 @@ for (initialization; condition; finalExpression) {
 
 ### Components:
 
-**Timestamp:** [02:35:22], [02:35:46], [02:36:04]
+, [02:35:46], [02:36:04]
 
 1. **Initialization** - Runs once before loop starts
 2. **Condition** - Checked before each iteration
@@ -542,7 +571,7 @@ for (initialization; condition; finalExpression) {
 
 ### Count 1 to 10
 
-**Timestamp:** [02:37:08]
+
 
 ```javascript
 for (let i = 1; i <= 10; i++) {
@@ -553,7 +582,7 @@ for (let i = 1; i <= 10; i++) {
 
 ### Count Down
 
-**Timestamp:** [02:37:45]
+
 
 ```javascript
 for (let i = 10; i >= 1; i--) {
@@ -566,7 +595,7 @@ for (let i = 10; i >= 1; i--) {
 
 ## 13.8 Changing the Step Size
 
-**Timestamp:** [02:37:22]
+
 
 ### Count by 2s
 
@@ -590,7 +619,7 @@ for (let i = 30; i >= 0; i -= 3) {
 
 ## 13.9 The Continue Statement
 
-**Timestamp:** [02:38:34]
+
 
 `continue` skips the rest of the current iteration and moves to the next.
 
@@ -619,7 +648,7 @@ for (let i = 1; i <= 20; i++) {
 
 ## 13.10 The Break Statement
 
-**Timestamp:** [02:39:53]
+
 
 `break` exits the loop entirely.
 

@@ -7,13 +7,13 @@
 ## Overview
 A comprehensive look at working with arrays containing objects - a common and powerful data structure in JavaScript.
 
-**Timestamp:** [06:19:25]
+
 
 ---
 
 ## 30.1 Creating Arrays of Objects
 
-**Timestamp:** [06:19:25]
+
 
 ```javascript
 const fruits = [
@@ -22,28 +22,34 @@ const fruits = [
     { name: "Orange", color: "orange", calories: 62 },
     { name: "Grape", color: "purple", calories: 67 }
 ];
+// Output: Array of 4 fruit objects created
 ```
 
-**Timestamp:** [06:19:33]
+
 
 ---
 
 ## 30.2 Accessing Properties
 
-**Timestamp:** [06:20:51]
+
 
 ```javascript
 // Access by index and property
-console.log(fruits[0].name);      // "Apple"
-console.log(fruits[1].color);     // "yellow"
-console.log(fruits[2].calories);  // 62
+console.log(fruits[0].name);      
+// Output: "Apple"
+
+console.log(fruits[1].color);     
+// Output: "yellow"
+
+console.log(fruits[2].calories);  
+// Output: 62
 ```
 
 ---
 
 ## 30.3 Array Manipulation
 
-**Timestamp:** [06:21:46]
+
 
 ```javascript
 // Add new object
@@ -66,7 +72,7 @@ if (index !== -1) {
 
 ## 30.4 forEach with Objects
 
-**Timestamp:** [06:22:57]
+
 
 Iterate through each object:
 
@@ -74,6 +80,7 @@ Iterate through each object:
 fruits.forEach(fruit => {
     console.log(fruit.name);
 });
+// Output:
 // Apple
 // Banana
 // Orange
@@ -83,6 +90,7 @@ fruits.forEach(fruit => {
 fruits.forEach((fruit, index) => {
     console.log(`${index + 1}. ${fruit.name}`);
 });
+// Output:
 // 1. Apple
 // 2. Banana
 // 3. Orange
@@ -93,7 +101,7 @@ fruits.forEach((fruit, index) => {
 
 ## 30.5 map with Objects
 
-**Timestamp:** [06:23:34]
+
 
 Transform array of objects:
 
@@ -101,14 +109,14 @@ Transform array of objects:
 // Extract single property
 const names = fruits.map(fruit => fruit.name);
 console.log(names);
-// ["Apple", "Banana", "Orange", "Grape"]
+// Output: ["Apple", "Banana", "Orange", "Grape"]
 
 // Create formatted strings
 const formatted = fruits.map(fruit => 
     `${fruit.name} is ${fruit.color}`
 );
 console.log(formatted);
-// ["Apple is red", "Banana is yellow", ...]
+// Output: ["Apple is red", "Banana is yellow", ...]
 
 // Transform objects
 const simplified = fruits.map(fruit => ({
@@ -116,14 +124,14 @@ const simplified = fruits.map(fruit => ({
     cals: fruit.calories
 }));
 console.log(simplified);
-// [{ name: "Apple", cals: 95 }, ...]
+// Output: [{ name: "Apple", cals: 95 }, ...]
 ```
 
 ---
 
 ## 30.6 filter with Objects
 
-**Timestamp:** [06:24:47]
+
 
 Select objects matching criteria:
 
@@ -131,24 +139,25 @@ Select objects matching criteria:
 // Filter by property value
 const yellowFruits = fruits.filter(fruit => fruit.color === "yellow");
 console.log(yellowFruits);
-// [{ name: "Banana", color: "yellow", calories: 105 }]
+// Output: [{ name: "Banana", color: "yellow", calories: 105 }]
 
 // Filter by numeric property
 const lowCalFruits = fruits.filter(fruit => fruit.calories < 100);
 console.log(lowCalFruits.map(f => f.name));
-// ["Apple", "Orange", "Grape"]
+// Output: ["Apple", "Orange", "Grape"]
 
 // Multiple conditions
 const redLowCal = fruits.filter(fruit => 
     fruit.color === "red" && fruit.calories < 100
 );
+// Output: [{ name: "Apple", color: "red", calories: 95 }]
 ```
 
 ---
 
 ## 30.7 reduce with Objects
 
-**Timestamp:** [06:26:33]
+
 
 Reduce array to single value:
 
@@ -158,13 +167,14 @@ const maxCalFruit = fruits.reduce((max, fruit) =>
     fruit.calories > max.calories ? fruit : max
 , fruits[0]);
 console.log(maxCalFruit);
-// { name: "Banana", color: "yellow", calories: 105 }
+// Output: { name: "Banana", color: "yellow", calories: 105 }
 
 // Calculate sum
 const totalCalories = fruits.reduce((sum, fruit) => 
     sum + fruit.calories
 , 0);
-console.log(totalCalories); // 329
+console.log(totalCalories); 
+// Output: 329
 
 // Count by property
 const colorCount = fruits.reduce((acc, fruit) => {
@@ -172,7 +182,7 @@ const colorCount = fruits.reduce((acc, fruit) => {
     return acc;
 }, {});
 console.log(colorCount);
-// { red: 1, yellow: 1, orange: 1, purple: 1 }
+// Output: { red: 1, yellow: 1, orange: 1, purple: 1 }
 ```
 
 ---
@@ -189,7 +199,7 @@ const result = fruits
     .join(", ");
 
 console.log(result);
-// "Apple, Orange, Grape"
+// Output: "Apple, Orange, Grape"
 
 // Calculate average calories of yellow fruits
 const avgYellowCals = fruits
@@ -197,7 +207,8 @@ const avgYellowCals = fruits
     .reduce((sum, fruit) => sum + fruit.calories, 0) 
     / fruits.filter(fruit => fruit.color === "yellow").length;
 
-console.log(avgYellowCals); // 105
+console.log(avgYellowCals); 
+// Output: 105
 ```
 
 ---
@@ -263,13 +274,13 @@ console.log(byCategory);
 ## Overview
 Learn how to sort arrays properly, especially arrays containing numbers and objects.
 
-**Timestamp:** [06:29:24]
+
 
 ---
 
 ## 31.1 Default sort() Behavior
 
-**Timestamp:** [06:29:31]
+
 
 The `.sort()` method sorts elements **as strings** by default:
 
@@ -285,17 +296,17 @@ console.log(numbers);
 // [10, 1000, 25, 40, 5] ✗ Wrong! (lexicographic sort)
 ```
 
-**Timestamp:** [06:30:19]
+
 
 ---
 
 ## 31.2 Sorting Numbers Correctly
 
-**Timestamp:** [06:30:46]
+
 
 Use a **compare function**:
 
-**Timestamp:** [06:30:53]
+
 
 ```javascript
 let numbers = [10, 5, 40, 25, 1000];
@@ -311,13 +322,13 @@ console.log(numbers);
 // [1000, 40, 25, 10, 5] ✓ Correct!
 ```
 
-**Timestamp:** [06:31:16], [06:31:47]
+, [06:31:47]
 
 ---
 
 ## 31.3 How Compare Function Works
 
-**Timestamp:** [06:31:07]
+
 
 The compare function receives two elements (`a` and `b`):
 
@@ -341,7 +352,7 @@ The compare function receives two elements (`a` and `b`):
 
 ## 31.4 Sorting Objects by Numeric Property
 
-**Timestamp:** [06:32:02], [06:33:17]
+, [06:33:17]
 
 ```javascript
 const people = [
@@ -365,13 +376,13 @@ console.log(people);
 people.sort((a, b) => b.age - a.age);
 ```
 
-**Timestamp:** [06:34:03]
+
 
 ---
 
 ## 31.5 Sorting Objects by String Property
 
-**Timestamp:** [06:35:00]
+
 
 Use `.localeCompare()` for strings:
 
@@ -397,13 +408,13 @@ console.log(people);
 people.sort((a, b) => b.name.localeCompare(a.name));
 ```
 
-**Timestamp:** [06:35:25]
+
 
 ---
 
 ## 31.6 Complete Sorting Example
 
-**Timestamp:** [06:33:17]
+
 
 ```javascript
 const students = [
@@ -544,7 +555,7 @@ arr.sort((a, b) => a.prop.localeCompare(b.prop))
 
 ## 31.10 Reversing Arrays
 
-**Timestamp:** [06:31:47]
+
 
 ```javascript
 let numbers = [1, 2, 3, 4, 5];

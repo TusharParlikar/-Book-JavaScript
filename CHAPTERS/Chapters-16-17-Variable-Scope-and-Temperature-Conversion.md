@@ -7,13 +7,13 @@
 ## Overview
 Variable scope determines where a variable is recognized and accessible in your code.
 
-**Timestamp:** [03:00:32]
+
 
 ---
 
 ## 16.1 What is Scope?
 
-**Timestamp:** [03:00:32]
+
 
 **Scope** = Where a variable is recognized and accessible
 
@@ -25,7 +25,7 @@ Two main types:
 
 ## 16.2 Local Scope
 
-**Timestamp:** [03:00:44], [03:00:56]
+, [03:00:56]
 
 Variables declared inside a function:
 - Only accessible **within** that function
@@ -37,27 +37,30 @@ Variables declared inside a function:
 ```javascript
 function function1() {
     let x = 1; // Local to function1
-    console.log(x); // Works! (1)
+    console.log(x); 
+    // Output: 1 (Works! - x is defined locally)
 }
 
 function function2() {
     let x = 2; // Different local variable
-    console.log(x); // Works! (2)
+    console.log(x); 
+    // Output: 2 (Works! - different x in this scope)
 }
 
 function1();
 function2();
 
-console.log(x); // Error! x is not defined globally
+console.log(x); 
+// Error! x is not defined globally
 ```
 
-**Timestamp:** [03:01:25]
+
 
 ---
 
 ## 16.3 Global Scope
 
-**Timestamp:** [03:01:45]
+
 
 Variables declared outside all functions:
 - Accessible **anywhere** in the file
@@ -70,23 +73,26 @@ Variables declared outside all functions:
 let x = 3; // Global variable
 
 function function1() {
-    console.log(x); // Accesses global x (3)
+    console.log(x); 
+    // Output: 3 (Accesses global x)
 }
 
 function function2() {
-    console.log(x); // Also accesses global x (3)
+    console.log(x); 
+    // Output: 3 (Also accesses global x)
 }
 
 function1();
 function2();
-console.log(x); // Works! (3)
+console.log(x); 
+// Output: 3 (Works! - x is accessible globally)
 ```
 
 ---
 
 ## 16.4 Local vs Global Priority
 
-**Timestamp:** [03:02:00]
+
 
 When both exist, **local scope takes priority**:
 
@@ -95,24 +101,27 @@ let x = 3; // Global
 
 function function1() {
     let x = 1; // Local (shadows the global)
-    console.log(x); // Uses local x (1)
+    console.log(x); 
+    // Output: 1 (Uses local x)
 }
 
 function function2() {
     let x = 2; // Different local
-    console.log(x); // Uses local x (2)
+    console.log(x); 
+    // Output: 2 (Uses local x)
 }
 
 function1();
 function2();
-console.log(x); // Uses global x (3)
+console.log(x); 
+// Output: 3 (Uses global x)
 ```
 
 ---
 
 ## 16.5 Practical Example
 
-**Timestamp:** [03:02:38]
+
 
 ```javascript
 // Global scope
@@ -122,11 +131,15 @@ function greetUser() {
     // Local scope
     let greeting = "Hello";
     console.log(`${greeting}, ${userName}!`);
+    // Output: Hello, Alice!
     // Can access both local (greeting) and global (userName)
 }
 
-greetUser(); // Hello, Alice!
-console.log(greeting); // Error! greeting is local
+greetUser(); 
+// Output: Hello, Alice!
+
+console.log(greeting); 
+// Error! greeting is local to greetUser function
 ```
 
 ---
@@ -200,7 +213,7 @@ console.log(y); // Error! var is function-scoped
 ## Overview
 Build a program that converts temperatures between Celsius and Fahrenheit.
 
-**Timestamp:** [03:03:10]
+
 
 ---
 
@@ -212,13 +225,13 @@ Create a temperature converter with:
 - Submit button to perform conversion
 - Display result
 
-**Timestamp:** [03:03:10]
+
 
 ---
 
 ## 17.2 HTML Structure
 
-**Timestamp:** [03:03:24], [03:03:31]
+, [03:03:31]
 
 ```html
 <!DOCTYPE html>
@@ -263,7 +276,7 @@ Create a temperature converter with:
 </html>
 ```
 
-**Timestamp:** [03:04:02], [03:04:34], [03:04:50], [03:05:02], [03:05:31], [03:05:39]
+, [03:04:34], [03:04:50], [03:05:02], [03:05:31], [03:05:39]
 
 ---
 
@@ -330,7 +343,7 @@ button:hover {
 
 ## 17.4 JavaScript - Get HTML Elements
 
-**Timestamp:** [03:05:51], [03:06:08], [03:06:21], [03:06:33], [03:06:42]
+, [03:06:08], [03:06:21], [03:06:33], [03:06:42]
 
 ```javascript
 // Get references to HTML elements
@@ -345,7 +358,7 @@ const submitBtn = document.getElementById("submitBtn");
 
 ## 17.5 JavaScript - Add Event Listener
 
-**Timestamp:** [03:06:57], [03:07:03]
+, [03:07:03]
 
 ```javascript
 // Add click event to submit button
@@ -361,7 +374,7 @@ Alternative using `onclick` in HTML:
 
 ## 17.6 JavaScript - Convert Function
 
-**Timestamp:** [03:07:17]
+
 
 ```javascript
 function convert() {
@@ -384,7 +397,7 @@ function convert() {
 }
 ```
 
-**Timestamp:** [03:07:22], [03:07:38], [03:08:06], [03:08:47], [03:09:22], [03:09:45]
+, [03:07:38], [03:08:06], [03:08:47], [03:09:22], [03:09:45]
 
 ---
 
@@ -392,7 +405,7 @@ function convert() {
 
 ### Step 1: Get Input Value
 
-**Timestamp:** [03:07:22], [03:07:38]
+, [03:07:38]
 
 ```javascript
 let temp = Number(textBox.value);
@@ -403,7 +416,7 @@ let temp = Number(textBox.value);
 
 ### Step 2: Check Celsius to Fahrenheit
 
-**Timestamp:** [03:08:06]
+
 
 ```javascript
 if (toFahrenheit.checked) {
@@ -414,11 +427,11 @@ if (toFahrenheit.checked) {
 
 **Formula:** `F = C × (9/5) + 32`
 
-**Timestamp:** [03:08:20]
+
 
 ### Step 3: Check Fahrenheit to Celsius
 
-**Timestamp:** [03:08:47], [03:09:03]
+, [03:09:03]
 
 ```javascript
 else if (toCelsius.checked) {
@@ -429,11 +442,11 @@ else if (toCelsius.checked) {
 
 **Formula:** `C = (F - 32) × (5/9)`
 
-**Timestamp:** [03:09:22]
+
 
 ### Step 4: Handle No Selection
 
-**Timestamp:** [03:09:45]
+
 
 ```javascript
 else {

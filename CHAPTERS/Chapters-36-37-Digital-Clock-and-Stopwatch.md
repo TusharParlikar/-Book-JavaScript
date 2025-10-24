@@ -7,13 +7,13 @@
 ## Overview
 Build a digital clock that displays the current time and updates every second using JavaScript's Date object and setInterval.
 
-**Timestamp:** [07:05:21]
+
 
 ---
 
 ## 36.1 Project Setup
 
-**Timestamp:** [07:05:28]
+
 
 ### HTML Structure
 
@@ -37,13 +37,13 @@ Build a digital clock that displays the current time and updates every second us
 </html>
 ```
 
-**Timestamp:** [07:05:40]
+
 
 ---
 
 ## 36.2 CSS Styling
 
-**Timestamp:** [07:06:15]
+
 
 ```css
 body {
@@ -82,13 +82,13 @@ body {
 }
 ```
 
-**Timestamp:** [07:07:30]
+
 
 ---
 
 ## 36.3 JavaScript Implementation
 
-**Timestamp:** [07:08:45]
+
 
 ### Basic Clock Function
 
@@ -115,15 +115,16 @@ setInterval(updateClock, 1000);
 
 // Call immediately to avoid 1-second delay
 updateClock();
+// Output: Updates DOM with current time like "14:30:45"
 ```
 
-**Timestamp:** [07:09:20]
+
 
 ---
 
 ## 36.4 Adding 12-Hour Format
 
-**Timestamp:** [07:10:35]
+
 
 ```javascript
 function updateClock() {
@@ -149,15 +150,16 @@ function updateClock() {
 
 setInterval(updateClock, 1000);
 updateClock();
+// Output: Updates DOM with 12-hour time like "02:30:45 PM"
 ```
 
-**Timestamp:** [07:11:48]
+
 
 ---
 
 ## 36.5 Adding Date Display
 
-**Timestamp:** [07:12:20]
+
 
 ```javascript
 function updateClock() {
@@ -192,13 +194,13 @@ setInterval(updateClock, 1000);
 updateClock();
 ```
 
-**Timestamp:** [07:13:55]
+
 
 ---
 
 ## 36.6 Complete Enhanced Version
 
-**Timestamp:** [07:14:30]
+
 
 ```javascript
 function updateClock() {
@@ -265,13 +267,13 @@ updateClock();
 ## Overview
 Build a fully functional stopwatch with start, stop, and reset buttons.
 
-**Timestamp:** [07:15:57]
+
 
 ---
 
 ## 37.1 Project Setup
 
-**Timestamp:** [07:16:05]
+
 
 ### HTML Structure
 
@@ -299,13 +301,13 @@ Build a fully functional stopwatch with start, stop, and reset buttons.
 </html>
 ```
 
-**Timestamp:** [07:16:20]
+
 
 ---
 
 ## 37.2 CSS Styling
 
-**Timestamp:** [07:17:10]
+
 
 ```css
 * {
@@ -393,13 +395,13 @@ button:active {
 }
 ```
 
-**Timestamp:** [07:18:45]
+
 
 ---
 
 ## 37.3 JavaScript Implementation
 
-**Timestamp:** [07:19:30]
+
 
 ### Variable Setup
 
@@ -415,13 +417,13 @@ let timerInterval;
 let isRunning = false;
 ```
 
-**Timestamp:** [07:20:15]
+
 
 ---
 
 ## 37.4 Start Function
 
-**Timestamp:** [07:20:45]
+
 
 ```javascript
 function start() {
@@ -439,7 +441,7 @@ startBtn.addEventListener("click", start);
 
 ## 37.5 Stop Function
 
-**Timestamp:** [07:21:30]
+
 
 ```javascript
 function stop() {
@@ -456,7 +458,7 @@ stopBtn.addEventListener("click", stop);
 
 ## 37.6 Reset Function
 
-**Timestamp:** [07:22:05]
+
 
 ```javascript
 function reset() {
@@ -474,7 +476,7 @@ resetBtn.addEventListener("click", reset);
 
 ## 37.7 Update Function
 
-**Timestamp:** [07:22:50]
+
 
 ```javascript
 function update() {
@@ -495,13 +497,13 @@ function update() {
 }
 ```
 
-**Timestamp:** [07:24:10]
+
 
 ---
 
 ## 37.8 Complete Code
 
-**Timestamp:** [07:24:45]
+
 
 ```javascript
 // Select elements
@@ -566,13 +568,13 @@ stopBtn.addEventListener("click", stop);
 resetBtn.addEventListener("click", reset);
 ```
 
-**Timestamp:** [07:26:20]
+
 
 ---
 
 ## 37.9 How It Works
 
-**Timestamp:** [07:27:05]
+
 
 ### Time Calculation
 
@@ -593,13 +595,13 @@ milliseconds = 125743 % 1000 / 10 = 743 / 10 = 74
 Result: 00:02:05:74
 ```
 
-**Timestamp:** [07:28:30]
+
 
 ---
 
 ## 37.10 Enhanced Version with Lap Times
 
-**Timestamp:** [07:29:15]
+
 
 ### HTML Addition
 

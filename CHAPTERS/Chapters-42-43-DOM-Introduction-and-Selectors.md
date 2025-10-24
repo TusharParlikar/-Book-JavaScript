@@ -7,13 +7,13 @@
 ## Overview
 Learn what the Document Object Model (DOM) is and how JavaScript interacts with HTML elements.
 
-**Timestamp:** [08:09:25]
+
 
 ---
 
 ## 42.1 What is the DOM?
 
-**Timestamp:** [08:09:32]
+
 
 **DOM = Document Object Model**
 
@@ -30,7 +30,7 @@ Learn what the Document Object Model (DOM) is and how JavaScript interacts with 
 
 ## 42.2 DOM Tree Structure
 
-**Timestamp:** [08:10:15]
+
 
 ```html
 <!DOCTYPE html>
@@ -62,21 +62,25 @@ document
 
 Each box is a **node** (element, text, etc.)
 
-**Timestamp:** [08:11:00]
+
 
 ---
 
 ## 42.3 The document Object
 
-**Timestamp:** [08:11:30]
+
 
 `document` is the entry point to the DOM:
 
 ```javascript
-console.log(document); // Entire HTML document
-console.log(document.title); // Page title
-console.log(document.URL); // Page URL
-console.log(document.domain); // Domain name
+console.log(document); 
+// Output: Entire HTML document
+console.log(document.title); 
+// Output: My Page
+console.log(document.URL); 
+// Output: https://example.com/
+console.log(document.domain); 
+// Output: example.com
 ```
 
 ### Common document Properties
@@ -90,13 +94,13 @@ document.images     // All <img> elements
 document.scripts    // All <script> elements
 ```
 
-**Timestamp:** [08:12:20]
+
 
 ---
 
 ## 42.4 Node Types
 
-**Timestamp:** [08:12:50]
+
 
 The DOM has different node types:
 
@@ -111,7 +115,7 @@ The DOM has different node types:
 
 ## 42.5 Accessing Elements
 
-**Timestamp:** [08:13:30]
+
 
 Multiple ways to select elements:
 
@@ -136,7 +140,7 @@ We'll explore these in detail in the next chapter!
 
 ## 42.6 Modifying Content
 
-**Timestamp:** [08:14:15]
+
 
 ### textContent
 
@@ -170,13 +174,13 @@ console.log(container.innerHTML); // "<p>Original</p>"
 container.innerHTML = "<p>New <strong>content</strong></p>";
 ```
 
-**Timestamp:** [08:15:30]
+
 
 ---
 
 ## 42.7 Modifying Attributes
 
-**Timestamp:** [08:16:00]
+
 
 ```html
 <img id="myImage" src="old.jpg" alt="Old Image">
@@ -202,7 +206,7 @@ img.getAttribute("src"); // "new.jpg"
 
 ## 42.8 Modifying Styles
 
-**Timestamp:** [08:17:10]
+
 
 ```html
 <div id="box">Content</div>
@@ -223,13 +227,13 @@ box.style.padding = "10px";
 // font-size → fontSize
 ```
 
-**Timestamp:** [08:18:00]
+
 
 ---
 
 ## 42.9 Adding/Removing Classes
 
-**Timestamp:** [08:18:30]
+
 
 ```html
 <style>
@@ -265,13 +269,13 @@ if (text.classList.contains("highlight")) {
 text.classList.add("highlight", "large");
 ```
 
-**Timestamp:** [08:19:40]
+
 
 ---
 
 ## 42.10 Simple DOM Example
 
-**Timestamp:** [08:20:10]
+
 
 ```html
 <!DOCTYPE html>
@@ -307,7 +311,7 @@ text.classList.add("highlight", "large");
 </html>
 ```
 
-**Timestamp:** [08:21:30]
+
 
 ---
 
@@ -328,13 +332,13 @@ text.classList.add("highlight", "large");
 ## Overview
 Learn different methods to select HTML elements from the DOM.
 
-**Timestamp:** [08:21:48]
+
 
 ---
 
 ## 43.1 getElementById()
 
-**Timestamp:** [08:21:55]
+
 
 Select element by its `id` attribute:
 
@@ -353,13 +357,13 @@ console.log(element.textContent); // "Content"
 ✅ Returns **single element** (or `null`)  
 ❌ Only works with ID (must be unique)
 
-**Timestamp:** [08:22:30]
+
 
 ---
 
 ## 43.2 getElementsByClassName()
 
-**Timestamp:** [08:23:05]
+
 
 Select elements by class name:
 
@@ -382,13 +386,13 @@ console.log(boxes[1]); // Second box
 ✅ Live collection (updates automatically)  
 ❌ Not a real array (limited methods)
 
-**Timestamp:** [08:24:10]
+
 
 ---
 
 ## 43.3 Looping Through HTMLCollection
 
-**Timestamp:** [08:24:40]
+
 
 ```javascript
 const boxes = document.getElementsByClassName("box");
@@ -410,13 +414,13 @@ boxesArray.forEach(box => {
 });
 ```
 
-**Timestamp:** [08:25:40]
+
 
 ---
 
 ## 43.4 getElementsByTagName()
 
-**Timestamp:** [08:26:10]
+
 
 Select elements by tag name:
 
@@ -445,13 +449,13 @@ const allElements = document.getElementsByTagName("*");
 console.log(allElements.length); // Number of all elements
 ```
 
-**Timestamp:** [08:27:20]
+
 
 ---
 
 ## 43.5 querySelector()
 
-**Timestamp:** [08:27:50]
+
 
 Select **first** element matching CSS selector:
 
@@ -482,13 +486,13 @@ const firstChild = document.querySelector("div > p:first-child");
 ✅ Returns **single element** (first match)  
 ✅ Returns `null` if not found
 
-**Timestamp:** [08:29:00]
+
 
 ---
 
 ## 43.6 querySelectorAll()
 
-**Timestamp:** [08:29:30]
+
 
 Select **all** elements matching CSS selector:
 
@@ -515,13 +519,13 @@ boxes.forEach(box => {
 ✅ Any CSS selector works  
 ❌ Static collection (doesn't auto-update)
 
-**Timestamp:** [08:30:40]
+
 
 ---
 
 ## 43.7 Complex Selectors
 
-**Timestamp:** [08:31:10]
+
 
 ```html
 <div class="container">
@@ -552,13 +556,13 @@ const lastItem = document.querySelector("li:last-child");
 const evenItems = document.querySelectorAll("li:nth-child(even)");
 ```
 
-**Timestamp:** [08:32:50]
+
 
 ---
 
 ## 43.8 Comparison of Methods
 
-**Timestamp:** [08:33:20]
+
 
 | Method | Returns | Live? | Selector |
 |--------|---------|-------|----------|
@@ -568,13 +572,13 @@ const evenItems = document.querySelectorAll("li:nth-child(even)");
 | `querySelector` | Element or null | N/A | Any CSS |
 | `querySelectorAll` | NodeList | No | Any CSS |
 
-**Timestamp:** [08:34:10]
+
 
 ---
 
 ## 43.9 Live vs Static Collections
 
-**Timestamp:** [08:34:40]
+
 
 ### Live Collection (getElementsByClassName)
 
@@ -609,13 +613,13 @@ document.body.appendChild(newBox);
 console.log(boxes.length); // Still 2 (not updated)
 ```
 
-**Timestamp:** [08:36:00]
+
 
 ---
 
 ## 43.10 Practical Examples
 
-**Timestamp:** [08:36:30]
+
 
 ### Example 1: Change All Button Colors
 
@@ -681,13 +685,13 @@ items.forEach(item => {
 });
 ```
 
-**Timestamp:** [08:39:10]
+
 
 ---
 
 ## 43.11 When to Use Which?
 
-**Timestamp:** [08:39:40]
+
 
 ### Use getElementById()
 - ✅ Single element with ID
@@ -716,7 +720,7 @@ items.forEach(item => {
 
 ## 43.12 Performance Considerations
 
-**Timestamp:** [08:40:40]
+
 
 **Fastest to Slowest:**
 

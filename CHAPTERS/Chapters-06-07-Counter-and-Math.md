@@ -7,7 +7,7 @@
 ## Overview
 Build your first interactive JavaScript project - a counter with increment, decrement, and reset functionality.
 
-**Timestamp:** [00:52:33]
+
 
 ---
 
@@ -120,27 +120,38 @@ const decreaseBtn = document.getElementById("decreaseBtn");
 const resetBtn = document.getElementById("resetBtn");
 const increaseBtn = document.getElementById("increaseBtn");
 const countLabel = document.getElementById("countLabel");
+// Output: References obtained for all buttons and label
 
 // Counter variable (use let because the value will change)
 let count = 0;
+// Output: count = 0
 
 // Increase button functionality
 increaseBtn.onclick = function() {
     count++;  // Increment count by 1
     countLabel.textContent = count;  // Update display
+    // When clicked: count increases by 1, display updates
 };
 
 // Decrease button functionality
 decreaseBtn.onclick = function() {
     count--;  // Decrement count by 1
     countLabel.textContent = count;  // Update display
+    // When clicked: count decreases by 1, display updates
 };
 
 // Reset button functionality
 resetBtn.onclick = function() {
     count = 0;  // Reset to zero
     countLabel.textContent = count;  // Update display
+    // When clicked: count becomes 0, display updates
 };
+
+// Example interaction:
+// Click Increase: count = 1, display shows "1"
+// Click Increase: count = 2, display shows "2"
+// Click Decrease: count = 1, display shows "1"
+// Click Reset: count = 0, display shows "0"
 ```
 
 **Timestamps:** [00:58:25], [00:59:34], [00:59:47], [01:00:05], [01:00:53], [01:01:21]
@@ -153,7 +164,7 @@ resetBtn.onclick = function() {
 - **`const`** for element references - They won't be reassigned
 - **`let`** for the counter variable - It will change
 
-**Timestamp:** [00:59:47], [00:59:34]
+, [00:59:34]
 
 ### Event Handlers
 Using `.onclick` to attach functions to button clicks
@@ -247,7 +258,7 @@ increaseBtn.onclick = function() {
 ## Overview
 The Math object is a built-in JavaScript object that provides mathematical properties and methods for performing calculations and generating random numbers.
 
-**Timestamp:** [01:01:45]
+
 
 ---
 
@@ -257,7 +268,7 @@ The Math object contains:
 - **Properties** - Mathematical constants (like π and e)
 - **Methods** - Functions for calculations
 
-**Timestamp:** [01:01:53]
+
 
 ```javascript
 // Math is a built-in object - no need to create it
@@ -275,7 +286,7 @@ console.log(Math.PI);  // 3.141592653589793
 console.log(Math.E);   // 2.718281828459045 (Euler's number)
 ```
 
-**Timestamp:** [01:01:54]
+
 
 ### Usage Example
 ```javascript
@@ -291,7 +302,7 @@ console.log(circumference);  // 31.41592653589793
 
 ### Math.round() - Round to Nearest Integer
 
-**Timestamp:** [01:02:47]
+
 
 ```javascript
 let x = 3.7;
@@ -306,7 +317,7 @@ console.log(Math.round(z));  // 4 (rounds up at .5)
 
 ### Math.floor() - Round Down
 
-**Timestamp:** [01:03:16]
+
 
 ```javascript
 let x = 3.9;
@@ -318,7 +329,7 @@ console.log(Math.floor(y));  // -4 (down on number line)
 
 ### Math.ceil() - Round Up
 
-**Timestamp:** [01:03:34]
+
 
 ```javascript
 let x = 3.1;
@@ -330,7 +341,7 @@ console.log(Math.ceil(y));  // -3 (up on number line)
 
 ### Math.trunc() - Remove Decimal Part
 
-**Timestamp:** [01:03:53]
+
 
 ```javascript
 let x = 3.9;
@@ -346,7 +357,7 @@ console.log(Math.trunc(y));  // -3 (just removes decimals)
 
 ### Math.pow() - Exponentiation
 
-**Timestamp:** [01:04:04]
+
 
 ```javascript
 Math.pow(base, exponent)
@@ -361,7 +372,7 @@ console.log(2 ** 3);  // 8
 
 ### Math.sqrt() - Square Root
 
-**Timestamp:** [01:04:23]
+
 
 ```javascript
 console.log(Math.sqrt(16));   // 4
@@ -371,7 +382,7 @@ console.log(Math.sqrt(2));    // 1.4142135623730951
 
 ### Math.log() - Natural Logarithm
 
-**Timestamp:** [01:04:36]
+
 
 ```javascript
 console.log(Math.log(1));     // 0
@@ -383,7 +394,7 @@ console.log(Math.log(10));    // 2.302585092994046
 
 ## 7.5 Trigonometric Methods
 
-**Timestamp:** [01:04:52]
+
 
 **Important:** These methods use **radians**, not degrees!
 
@@ -415,7 +426,7 @@ console.log(Math.sin(toRadians(90)));  // 1
 
 ### Math.abs() - Absolute Value
 
-**Timestamp:** [01:05:24]
+
 
 ```javascript
 console.log(Math.abs(-5));    // 5
@@ -428,7 +439,7 @@ let difference = Math.abs(10 - 25);  // 15
 
 ### Math.sign() - Get Sign of Number
 
-**Timestamp:** [01:05:52]
+
 
 ```javascript
 console.log(Math.sign(-10));  // -1 (negative)
@@ -445,7 +456,7 @@ let direction = Math.sign(-5);  // -1 means moving left/down
 
 ### Math.max() - Find Maximum
 
-**Timestamp:** [01:06:12]
+
 
 ```javascript
 console.log(Math.max(10, 5, 20, 15));  // 20
@@ -458,7 +469,7 @@ console.log(Math.max(a, b, c));  // 70
 
 ### Math.min() - Find Minimum
 
-**Timestamp:** [01:06:45]
+
 
 ```javascript
 console.log(Math.min(10, 5, 20, 15));  // 5
@@ -477,7 +488,7 @@ let cheapest = Math.min(price1, price2, price3);  // 19.99
 
 ### Math.random() - Basic Random
 
-**Timestamp:** [01:07:24], [01:07:35]
+, [01:07:35]
 
 ```javascript
 let random = Math.random();
@@ -496,7 +507,7 @@ console.log(random);
 
 ### Random Integer from 1 to 6 (Dice Roll)
 
-**Timestamp:** [01:08:15], [01:08:30], [01:08:54]
+, [01:08:30], [01:08:54]
 
 ```javascript
 let dice = Math.floor(Math.random() * 6) + 1;
@@ -530,7 +541,7 @@ let dice = Math.floor(Math.random() * 6) + 1;
 
 ## 7.10 Random Integer in Range (Min to Max)
 
-**Timestamp:** [01:09:23]
+
 
 ### Formula
 ```javascript
@@ -566,7 +577,7 @@ let max = 20;
 
 ## 7.11 Project: Random Number Generator
 
-**Timestamp:** [01:10:23]
+
 
 Build a program that rolls multiple dice when a button is clicked.
 
@@ -593,7 +604,7 @@ Build a program that rolls multiple dice when a button is clicked.
 </html>
 ```
 
-**Timestamp:** [01:10:23], [01:10:43]
+, [01:10:43]
 
 ### CSS Styling
 
@@ -639,7 +650,7 @@ h1 {
 
 ### JavaScript Implementation
 
-**Timestamp:** [01:12:02], [01:12:24], [01:12:45], [01:12:52], [01:13:01], [01:13:23]
+, [01:12:24], [01:12:45], [01:12:52], [01:13:01], [01:13:23]
 
 ```javascript
 // Get element references
@@ -671,7 +682,7 @@ myButton.onclick = function() {
 };
 ```
 
-**Timestamp:** [01:14:01]
+
 
 ---
 

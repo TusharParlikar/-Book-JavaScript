@@ -7,13 +7,13 @@
 ## Overview
 Learn how to manipulate CSS classes dynamically using the classList property.
 
-**Timestamp:** [09:43:28]
+
 
 ---
 
 ## 50.1 What is classList?
 
-**Timestamp:** [09:43:35]
+
 
 **classList:**
 - Property that returns DOMTokenList
@@ -23,16 +23,17 @@ Learn how to manipulate CSS classes dynamically using the classList property.
 
 ```javascript
 const element = document.getElementById("myElement");
-console.log(element.classList); // DOMTokenList ["class1", "class2"]
+console.log(element.classList); 
+// Output: DOMTokenList ["class1", "class2"]
 ```
 
-**Timestamp:** [09:44:10]
+
 
 ---
 
 ## 50.2 classList.add()
 
-**Timestamp:** [09:44:40]
+
 
 Add one or more classes:
 
@@ -50,18 +51,15 @@ box.classList.add("highlight");
 box.classList.add("large", "blue", "rounded");
 ```
 
-**Result:**
-```html
-<div id="box" class="highlight large blue rounded">Content</div>
-```
+// Output: class attribute is now "highlight large blue rounded"
 
-**Timestamp:** [09:45:30]
+
 
 ---
 
 ## 50.3 classList.remove()
 
-**Timestamp:** [09:46:00]
+
 
 Remove one or more classes:
 
@@ -74,12 +72,13 @@ box.classList.remove("highlight");
 // Remove multiple classes
 box.classList.remove("large", "blue");
 ```
+// Output: "highlight", "large", and "blue" classes removed from element
 
 ---
 
 ## 50.4 classList.toggle()
 
-**Timestamp:** [09:46:50]
+
 
 Toggle class (add if absent, remove if present):
 
@@ -106,13 +105,13 @@ btn.addEventListener("click", () => {
 **Second click:** Removes `active` class  
 **Third click:** Adds `active` class (repeats)
 
-**Timestamp:** [09:47:50]
+
 
 ---
 
 ## 50.5 classList.contains()
 
-**Timestamp:** [09:48:20]
+
 
 Check if element has a class:
 
@@ -128,13 +127,13 @@ if (box.classList.contains("highlight")) {
 
 Returns `true` or `false`
 
-**Timestamp:** [09:49:10]
+
 
 ---
 
 ## 50.6 classList.replace()
 
-**Timestamp:** [09:49:40]
+
 
 Replace one class with another:
 
@@ -155,13 +154,13 @@ btn.addEventListener("click", () => {
 });
 ```
 
-**Timestamp:** [09:50:40]
+
 
 ---
 
 ## 50.7 Practical Example: Active Menu Item
 
-**Timestamp:** [09:51:10]
+
 
 ```html
 <style>
@@ -197,13 +196,13 @@ menuItems.forEach(item => {
 });
 ```
 
-**Timestamp:** [09:53:00]
+
 
 ---
 
 ## 50.8 Dark Mode Toggle
 
-**Timestamp:** [09:53:30]
+
 
 ```html
 <style>
@@ -240,13 +239,13 @@ toggleBtn.addEventListener("click", () => {
 });
 ```
 
-**Timestamp:** [09:55:10]
+
 
 ---
 
 ## 50.9 Tab Navigation Example
 
-**Timestamp:** [09:55:40]
+
 
 ```html
 <style>
@@ -305,13 +304,13 @@ tabs.forEach(tab => {
 });
 ```
 
-**Timestamp:** [09:58:20]
+
 
 ---
 
 ## 50.10 classList vs className
 
-**Timestamp:** [09:58:50]
+
 
 ### className (Old Way)
 
@@ -346,7 +345,7 @@ box.classList.toggle("active");
 
 ✅ **Always use classList!**
 
-**Timestamp:** [10:00:20]
+
 
 ---
 
@@ -367,13 +366,13 @@ box.classList.toggle("active");
 ## Overview
 Build a complete Rock Paper Scissors game with score tracking and visual feedback.
 
-**Timestamp:** [10:00:48]
+
 
 ---
 
 ## 51.1 Project Setup
 
-**Timestamp:** [10:00:55]
+
 
 ### HTML Structure
 
@@ -421,13 +420,13 @@ Build a complete Rock Paper Scissors game with score tracking and visual feedbac
 </html>
 ```
 
-**Timestamp:** [10:02:30]
+
 
 ---
 
 ## 51.2 CSS Styling
 
-**Timestamp:** [10:03:00]
+
 
 ```css
 * {
@@ -563,13 +562,13 @@ h1 {
 }
 ```
 
-**Timestamp:** [10:06:00]
+
 
 ---
 
 ## 51.3 JavaScript - Variables Setup
 
-**Timestamp:** [10:06:30]
+
 
 ```javascript
 const choiceBtns = document.querySelectorAll(".choice-btn");
@@ -584,13 +583,13 @@ let playerScore = 0;
 let computerScore = 0;
 ```
 
-**Timestamp:** [10:07:20]
+
 
 ---
 
 ## 51.4 Computer Choice Function
 
-**Timestamp:** [10:07:50]
+
 
 ```javascript
 function getComputerChoice() {
@@ -600,13 +599,13 @@ function getComputerChoice() {
 }
 ```
 
-**Timestamp:** [10:08:30]
+
 
 ---
 
 ## 51.5 Determine Winner Function
 
-**Timestamp:** [10:09:00]
+
 
 ```javascript
 function determineWinner(player, computer) {
@@ -626,13 +625,13 @@ function determineWinner(player, computer) {
 }
 ```
 
-**Timestamp:** [10:10:15]
+
 
 ---
 
 ## 51.6 Update Display Function
 
-**Timestamp:** [10:10:45]
+
 
 ```javascript
 function updateDisplay(playerChoice, computerChoice, winner) {
@@ -662,13 +661,13 @@ function updateDisplay(playerChoice, computerChoice, winner) {
 }
 ```
 
-**Timestamp:** [10:12:30]
+
 
 ---
 
 ## 51.7 Play Game Function
 
-**Timestamp:** [10:13:00]
+
 
 ```javascript
 function playGame(playerChoice) {
@@ -682,7 +681,7 @@ function playGame(playerChoice) {
 
 ## 51.8 Event Listeners
 
-**Timestamp:** [10:13:40]
+
 
 ```javascript
 // Add click listener to each choice button
@@ -706,13 +705,13 @@ resetBtn.addEventListener("click", () => {
 });
 ```
 
-**Timestamp:** [10:15:10]
+
 
 ---
 
 ## 51.9 Complete JavaScript Code
 
-**Timestamp:** [10:15:40]
+
 
 ```javascript
 // Select elements
@@ -814,13 +813,13 @@ resetBtn.addEventListener("click", () => {
 });
 ```
 
-**Timestamp:** [10:18:18]
+
 
 ---
 
 ## 51.10 Game Logic Explained
 
-**Timestamp:** [10:18:30]
+
 
 ### Winning Conditions
 

@@ -7,13 +7,13 @@
 ## Overview
 A callback is a function passed as an argument to another function, executed after a task completes.
 
-**Timestamp:** [03:34:20]
+
 
 ---
 
 ## 22.1 What are Callbacks?
 
-**Timestamp:** [03:34:20], [03:34:26]
+, [03:34:26]
 
 **Callback** = A function passed as an argument to another function
 
@@ -27,7 +27,7 @@ Used to handle:
 
 ## 22.2 Basic Callback Example
 
-**Timestamp:** [03:34:38]
+
 
 ```javascript
 function greet(name) {
@@ -43,13 +43,13 @@ processUserInput(greet);
 // Output: Hello, John!
 ```
 
-**Timestamp:** [03:34:51], [03:35:08]
+, [03:35:08]
 
 ---
 
 ## 22.3 Practical Example: Sum and Display
 
-**Timestamp:** [03:35:32]
+
 
 ```javascript
 function sum(x, y) {
@@ -69,13 +69,13 @@ calculate(5, 3, sum);
 // Output: Result: 8
 ```
 
-**Timestamp:** [03:35:45], [03:36:02], [03:36:18]
+, [03:36:02], [03:36:18]
 
 ---
 
 ## 22.4 Multiple Callback Functions
 
-**Timestamp:** [03:36:35]
+
 
 ```javascript
 function sum(x, y) {
@@ -110,13 +110,13 @@ calculate(10, 5, multiply); // 50
 calculate(10, 5, divide);   // 2
 ```
 
-**Timestamp:** [03:36:48], [03:37:04]
+, [03:37:04]
 
 ---
 
 ## 22.5 Anonymous Function Callbacks
 
-**Timestamp:** [03:37:22]
+
 
 ```javascript
 function calculate(x, y, callback) {
@@ -135,7 +135,7 @@ calculate(10, 5, function(a, b) {
 
 ## 22.6 Arrow Function Callbacks
 
-**Timestamp:** [03:37:42]
+
 
 ```javascript
 // Using arrow function
@@ -153,7 +153,7 @@ Cleaner and more concise!
 
 ### setTimeout Example
 
-**Timestamp:** [03:38:05]
+
 
 ```javascript
 function greetLater(name, callback) {
@@ -247,13 +247,13 @@ getData(function(a) {
 ## Overview
 Powerful array methods that use callbacks to iterate and transform arrays.
 
-**Timestamp:** [03:38:30], [03:42:21], [03:45:49], [03:50:34]
+, [03:42:21], [03:45:49], [03:50:34]
 
 ---
 
 # 23.1 forEach Method
 
-**Timestamp:** [03:38:30]
+
 
 ## What is forEach?
 
@@ -270,7 +270,7 @@ array.forEach(callback);
 
 ## forEach Basic Example
 
-**Timestamp:** [03:38:48]
+
 
 ```javascript
 let numbers = [1, 2, 3, 4, 5];
@@ -291,7 +291,7 @@ numbers.forEach(function(element) {
 
 ## forEach with Arrow Function
 
-**Timestamp:** [03:39:12]
+
 
 ```javascript
 numbers.forEach(element => console.log(element));
@@ -303,7 +303,7 @@ Cleaner syntax!
 
 ## forEach with Index
 
-**Timestamp:** [03:39:32]
+
 
 ```javascript
 let fruits = ["apple", "orange", "banana"];
@@ -324,7 +324,7 @@ fruits.forEach((element, index) => {
 
 ### Example 1: Display Prices
 
-**Timestamp:** [03:40:05]
+
 
 ```javascript
 let prices = [10.99, 25.50, 5.75, 15.00];
@@ -354,7 +354,7 @@ numbers.forEach(num => {
 
 ### Example 3: Uppercase Strings
 
-**Timestamp:** [03:40:28]
+
 
 ```javascript
 let fruits = ["apple", "orange", "banana"];
@@ -382,7 +382,7 @@ fruits.forEach(fruit => {
 
 # 23.2 map Method
 
-**Timestamp:** [03:42:21]
+
 
 ## What is map?
 
@@ -396,13 +396,13 @@ fruits.forEach(fruit => {
 const newArray = array.map(callback);
 ```
 
-**Timestamp:** [03:42:33], [03:42:42]
+, [03:42:42]
 
 ---
 
 ## map Basic Example
 
-**Timestamp:** [03:42:55]
+
 
 ```javascript
 let numbers = [1, 2, 3, 4, 5];
@@ -416,13 +416,13 @@ console.log(numbers);
 // [1, 2, 3, 4, 5] (unchanged)
 ```
 
-**Timestamp:** [03:43:12], [03:43:26]
+, [03:43:26]
 
 ---
 
 ## map with Arrow Functions
 
-**Timestamp:** [03:43:42]
+
 
 ```javascript
 let numbers = [1, 2, 3, 4, 5];
@@ -442,7 +442,7 @@ console.log(squared); // [1, 4, 9, 16, 25]
 
 ### Example 1: Uppercase Strings
 
-**Timestamp:** [03:44:08]
+
 
 ```javascript
 let fruits = ["apple", "orange", "banana"];
@@ -453,7 +453,7 @@ console.log(upperFruits);
 // ["APPLE", "ORANGE", "BANANA"]
 ```
 
-**Timestamp:** [03:44:22], [03:44:34]
+, [03:44:34]
 
 ---
 
@@ -475,7 +475,7 @@ console.log(formatted);
 
 ### Example 3: Extract Properties
 
-**Timestamp:** [03:44:49]
+
 
 ```javascript
 let students = [
@@ -516,7 +516,7 @@ console.log(grades); // [85, 92, 78]
 
 # 23.3 filter Method
 
-**Timestamp:** [03:45:49]
+
 
 ## What is filter?
 
@@ -530,13 +530,13 @@ console.log(grades); // [85, 92, 78]
 const newArray = array.filter(callback);
 ```
 
-**Timestamp:** [03:46:01], [03:46:12]
+, [03:46:12]
 
 ---
 
 ## filter Basic Example
 
-**Timestamp:** [03:46:28]
+
 
 ```javascript
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -547,7 +547,7 @@ console.log(evenNumbers);
 // [2, 4, 6, 8, 10]
 ```
 
-**Timestamp:** [03:46:42], [03:46:55]
+, [03:46:55]
 
 ---
 
@@ -555,7 +555,7 @@ console.log(evenNumbers);
 
 ### Example 1: Filter by Age
 
-**Timestamp:** [03:47:15]
+
 
 ```javascript
 let ages = [12, 18, 25, 16, 30, 14, 21];
@@ -566,13 +566,13 @@ console.log(adults);
 // [18, 25, 30, 21]
 ```
 
-**Timestamp:** [03:47:28], [03:47:42]
+, [03:47:42]
 
 ---
 
 ### Example 2: Filter Short Words
 
-**Timestamp:** [03:48:05]
+
 
 ```javascript
 let words = ["apple", "cat", "banana", "dog", "elephant"];
@@ -583,7 +583,7 @@ console.log(shortWords);
 // ["apple", "cat", "dog"]
 ```
 
-**Timestamp:** [03:48:18], [03:48:32]
+, [03:48:32]
 
 ---
 
@@ -620,7 +620,7 @@ console.log(cleanData);
 
 ## filter with Multiple Conditions
 
-**Timestamp:** [03:49:05]
+
 
 ```javascript
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -646,7 +646,7 @@ console.log(filtered);
 
 # 23.4 reduce Method
 
-**Timestamp:** [03:50:34]
+
 
 ## What is reduce?
 
@@ -660,13 +660,13 @@ console.log(filtered);
 const result = array.reduce(callback, initialValue);
 ```
 
-**Timestamp:** [03:50:45], [03:50:58]
+, [03:50:58]
 
 ---
 
 ## reduce Basic Example: Sum
 
-**Timestamp:** [03:51:18]
+
 
 ```javascript
 let numbers = [1, 2, 3, 4, 5];
@@ -686,13 +686,13 @@ console.log(sum); // 15
 - Iteration 4: `6 + 4 = 10`
 - Iteration 5: `10 + 5 = 15`
 
-**Timestamp:** [03:51:32], [03:51:48], [03:52:05]
+, [03:51:48], [03:52:05]
 
 ---
 
 ## reduce Shorthand
 
-**Timestamp:** [03:52:22]
+
 
 ```javascript
 let sum = numbers.reduce((acc, el) => acc + el, 0);
@@ -705,7 +705,7 @@ console.log(sum); // 15
 
 ### Example 1: Find Maximum
 
-**Timestamp:** [03:52:48]
+
 
 ```javascript
 let numbers = [10, 45, 23, 67, 34];
@@ -717,7 +717,7 @@ let max = numbers.reduce((accumulator, element) => {
 console.log(max); // 67
 ```
 
-**Timestamp:** [03:53:05], [03:53:22]
+, [03:53:22]
 
 ---
 
@@ -792,7 +792,7 @@ console.log(total.toFixed(2)); // 12.25
 
 # 23.5 Chaining Array Methods
 
-**Timestamp:** [03:54:15]
+
 
 Combine multiple methods for complex operations:
 

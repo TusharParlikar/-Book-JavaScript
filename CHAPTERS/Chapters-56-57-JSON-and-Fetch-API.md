@@ -7,13 +7,13 @@
 ## Overview
 Learn JSON - the standard format for data exchange between applications.
 
-**Timestamp:** [10:57:01]
+
 
 ---
 
 ## 56.1 What is JSON?
 
-**Timestamp:** [10:57:08]
+
 
 **JSON = JavaScript Object Notation**
 
@@ -28,13 +28,13 @@ Learn JSON - the standard format for data exchange between applications.
 - Data storage
 - Communication between client and server
 
-**Timestamp:** [10:57:50]
+
 
 ---
 
 ## 56.2 JSON Syntax Rules
 
-**Timestamp:** [10:58:20]
+
 
 ✅ **Valid JSON:**
 - Data in key/value pairs
@@ -56,13 +56,13 @@ Learn JSON - the standard format for data exchange between applications.
 }
 ```
 
-**Timestamp:** [10:59:30]
+
 
 ---
 
 ## 56.3 JSON vs JavaScript Object
 
-**Timestamp:** [11:00:00]
+
 
 ### JavaScript Object
 
@@ -91,13 +91,13 @@ const person = {
 - Symbols
 - Comments
 
-**Timestamp:** [11:01:20]
+
 
 ---
 
 ## 56.4 JSON Data Types
 
-**Timestamp:** [11:01:50]
+
 
 ### String
 
@@ -155,13 +155,13 @@ const person = {
 }
 ```
 
-**Timestamp:** [11:03:40]
+
 
 ---
 
 ## 56.5 JSON.stringify()
 
-**Timestamp:** [11:04:10]
+
 
 Convert JavaScript object to JSON string:
 
@@ -180,18 +180,19 @@ const person = {
 const jsonString = JSON.stringify(person);
 
 console.log(jsonString);
-// {"name":"John","age":30,"hobbies":["reading","gaming"],"address":{"city":"New York","country":"USA"}}
+// Output: {"name":"John","age":30,"hobbies":["reading","gaming"],"address":{"city":"New York","country":"USA"}}
 
-console.log(typeof jsonString); // "string"
+console.log(typeof jsonString); 
+// Output: string
 ```
 
-**Timestamp:** [11:05:20]
+
 
 ---
 
 ## 56.6 JSON.stringify() with Formatting
 
-**Timestamp:** [11:05:50]
+
 
 ```javascript
 const person = {
@@ -204,13 +205,12 @@ const person = {
 const prettyJSON = JSON.stringify(person, null, 2);
 
 console.log(prettyJSON);
-/*
-{
-  "name": "John",
-  "age": 30,
-  "city": "New York"
-}
-*/
+// Output:
+// {
+//   "name": "John",
+//   "age": 30,
+//   "city": "New York"
+// }
 ```
 
 **Parameters:**
@@ -218,13 +218,13 @@ console.log(prettyJSON);
 2. Replacer function/array (or null)
 3. Number of spaces for indentation
 
-**Timestamp:** [11:06:50]
+
 
 ---
 
 ## 56.7 JSON.parse()
 
-**Timestamp:** [11:07:20]
+
 
 Convert JSON string back to JavaScript object:
 
@@ -234,18 +234,21 @@ const jsonString = '{"name":"John","age":30,"city":"New York"}';
 // Convert to object
 const person = JSON.parse(jsonString);
 
-console.log(person); // {name: "John", age: 30, city: "New York"}
-console.log(person.name); // "John"
-console.log(person.age); // 30
+console.log(person); 
+// Output: {name: "John", age: 30, city: "New York"}
+console.log(person.name); 
+// Output: John
+console.log(person.age); 
+// Output: 30
 ```
 
-**Timestamp:** [11:08:20]
+
 
 ---
 
 ## 56.8 Handling JSON Parse Errors
 
-**Timestamp:** [11:08:50]
+
 
 ```javascript
 const invalidJSON = '{name: "John"}'; // Invalid: keys must be in quotes
@@ -254,19 +257,19 @@ try {
     const data = JSON.parse(invalidJSON);
 } catch (error) {
     console.error("Invalid JSON:", error.message);
-    // "Unexpected token n in JSON at position 1"
+    // Output: Unexpected token n in JSON at position 1
 }
 ```
 
 **Always use try/catch when parsing JSON!**
 
-**Timestamp:** [11:09:50]
+
 
 ---
 
 ## 56.9 Practical Example: Local Storage
 
-**Timestamp:** [11:10:20]
+
 
 ```javascript
 // Save object to local storage
@@ -283,16 +286,17 @@ localStorage.setItem("user", JSON.stringify(user));
 const savedUser = localStorage.getItem("user");
 const userObject = JSON.parse(savedUser);
 
-console.log(userObject.name); // "John"
+console.log(userObject.name); 
+// Output: John
 ```
 
-**Timestamp:** [11:11:30]
+
 
 ---
 
 ## 56.10 Nested JSON Example
 
-**Timestamp:** [11:12:00]
+
 
 ```javascript
 const company = {
@@ -324,20 +328,23 @@ const company = {
 // Convert to JSON
 const json = JSON.stringify(company, null, 2);
 console.log(json);
+// Output: Pretty-printed JSON structure
 
 // Parse back
 const parsed = JSON.parse(json);
-console.log(parsed.employees[0].name); // "John"
-console.log(parsed.location.coordinates.lat); // 40.7128
+console.log(parsed.employees[0].name); 
+// Output: John
+console.log(parsed.location.coordinates.lat); 
+// Output: 40.7128
 ```
 
-**Timestamp:** [11:14:00]
+
 
 ---
 
 ## 56.11 Common JSON Use Cases
 
-**Timestamp:** [11:14:30]
+
 
 ### 1. Configuration Files
 
@@ -381,7 +388,7 @@ console.log(parsed.location.coordinates.lat); // 40.7128
 }
 ```
 
-**Timestamp:** [11:16:10]
+
 
 ---
 
@@ -402,13 +409,13 @@ console.log(parsed.location.coordinates.lat); // 40.7128
 ## Overview
 Learn to fetch data from APIs using the modern Fetch API.
 
-**Timestamp:** [11:16:28]
+
 
 ---
 
 ## 57.1 What is the Fetch API?
 
-**Timestamp:** [11:16:35]
+
 
 **Fetch API:**
 - Modern way to make HTTP requests
@@ -423,22 +430,24 @@ Learn to fetch data from APIs using the modern Fetch API.
 - Upload files
 - Submit forms
 
-**Timestamp:** [11:17:30]
+
 
 ---
 
 ## 57.2 Basic Fetch Syntax
 
-**Timestamp:** [11:18:00]
+
 
 ```javascript
 fetch(url)
     .then(response => response.json())
     .then(data => {
         console.log(data);
+        // Output: Parsed data from API
     })
     .catch(error => {
         console.error("Error:", error);
+        // Output: Error message if fetch fails
     });
 ```
 
@@ -449,38 +458,43 @@ fetch(url)
 4. Use the data
 5. Handle errors
 
-**Timestamp:** [11:19:10]
+
 
 ---
 
 ## 57.3 Simple GET Request
 
-**Timestamp:** [11:19:40]
+
 
 ```javascript
 fetch("https://jsonplaceholder.typicode.com/users")
     .then(response => {
-        console.log(response); // Response object
-        return response.json(); // Parse JSON
+        console.log(response); 
+        // Output: Response object with status, headers, etc.
+        return response.json(); 
+        // Output: Parse JSON from response
     })
     .then(users => {
-        console.log(users); // Array of users
+        console.log(users); 
+        // Output: Array of user objects
         users.forEach(user => {
             console.log(user.name);
+            // Output: Individual user names (Leanne Graham, Ervin Howell, etc.)
         });
     })
     .catch(error => {
         console.error("Error fetching users:", error);
+        // Output: Error message if fetch fails
     });
 ```
 
-**Timestamp:** [11:20:50]
+
 
 ---
 
 ## 57.4 Fetch with Async/Await
 
-**Timestamp:** [11:21:20]
+
 
 ```javascript
 async function fetchUsers() {
@@ -493,9 +507,11 @@ async function fetchUsers() {
         
         const users = await response.json();
         console.log(users);
+        // Output: Array of users from API
         
     } catch (error) {
         console.error("Error:", error);
+        // Output: Error message if request fails
     }
 }
 
@@ -504,21 +520,26 @@ fetchUsers();
 
 ✅ **Cleaner and easier to read!**
 
-**Timestamp:** [11:22:40]
+
 
 ---
 
 ## 57.5 Response Object
 
-**Timestamp:** [11:23:10]
+
 
 ```javascript
 fetch(url).then(response => {
-    console.log(response.ok);        // true if 200-299
-    console.log(response.status);    // 200, 404, 500, etc.
-    console.log(response.statusText); // "OK", "Not Found", etc.
-    console.log(response.headers);   // Headers object
-    console.log(response.url);       // Request URL
+    console.log(response.ok);        
+    // Output: true (if 200-299) or false
+    console.log(response.status);    
+    // Output: 200, 404, 500, etc.
+    console.log(response.statusText); 
+    // Output: "OK", "Not Found", "Internal Server Error"
+    console.log(response.headers);   
+    // Output: Headers object
+    console.log(response.url);       
+    // Output: Full request URL
 });
 ```
 
@@ -527,13 +548,13 @@ fetch(url).then(response => {
 - `response.text()` - Get as text
 - `response.blob()` - Get as binary data
 
-**Timestamp:** [11:24:20]
+
 
 ---
 
 ## 57.6 Checking Response Status
 
-**Timestamp:** [11:24:50]
+
 
 ```javascript
 async function fetchData(url) {
@@ -547,9 +568,11 @@ async function fetchData(url) {
         
         const data = await response.json();
         return data;
+        // Output: Parsed data from successful response
         
     } catch (error) {
         console.error("Fetch error:", error.message);
+        // Output: Error details if fetch or parsing fails
         return null;
     }
 }
@@ -557,13 +580,13 @@ async function fetchData(url) {
 
 **Important:** Fetch only rejects on network failure, not HTTP errors!
 
-**Timestamp:** [11:26:00]
+
 
 ---
 
 ## 57.7 POST Request (Sending Data)
 
-**Timestamp:** [11:26:30]
+
 
 ```javascript
 async function createUser(userData) {
@@ -600,13 +623,13 @@ const userData = {
 createUser(userData);
 ```
 
-**Timestamp:** [11:28:30]
+
 
 ---
 
 ## 57.8 PUT Request (Update Data)
 
-**Timestamp:** [11:29:00]
+
 
 ```javascript
 async function updateUser(userId, updates) {
@@ -631,13 +654,13 @@ async function updateUser(userId, updates) {
 updateUser(1, { name: "Jane Doe", email: "jane@example.com" });
 ```
 
-**Timestamp:** [11:30:20]
+
 
 ---
 
 ## 57.9 DELETE Request
 
-**Timestamp:** [11:30:50]
+
 
 ```javascript
 async function deleteUser(userId) {
@@ -658,13 +681,13 @@ async function deleteUser(userId) {
 deleteUser(1);
 ```
 
-**Timestamp:** [11:31:40]
+
 
 ---
 
 ## 57.10 Fetch Options
 
-**Timestamp:** [11:32:10]
+
 
 ```javascript
 fetch(url, {
@@ -680,13 +703,13 @@ fetch(url, {
 });
 ```
 
-**Timestamp:** [11:33:20]
+
 
 ---
 
 ## 57.11 Practical Example: Display Users
 
-**Timestamp:** [11:33:50]
+
 
 ```html
 <!DOCTYPE html>
@@ -742,13 +765,13 @@ async function fetchAndDisplayUsers() {
 }
 ```
 
-**Timestamp:** [11:36:30]
+
 
 ---
 
 ## 57.12 Error Handling Best Practices
 
-**Timestamp:** [11:37:00]
+
 
 ```javascript
 async function fetchWithErrorHandling(url) {
@@ -781,13 +804,13 @@ if (result.success) {
 }
 ```
 
-**Timestamp:** [11:38:40]
+
 
 ---
 
 ## 57.13 Timeout for Fetch
 
-**Timestamp:** [11:39:10]
+
 
 ```javascript
 async function fetchWithTimeout(url, timeout = 5000) {
@@ -819,13 +842,13 @@ try {
 }
 ```
 
-**Timestamp:** [11:40:50]
+
 
 ---
 
 ## 57.14 Multiple Fetch Requests
 
-**Timestamp:** [11:41:20]
+
 
 ### Sequential
 
@@ -853,7 +876,7 @@ async function fetchParallel() {
 }
 ```
 
-**Timestamp:** [11:43:00]
+
 
 ---
 

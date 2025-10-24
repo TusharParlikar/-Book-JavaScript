@@ -7,13 +7,13 @@
 ## Overview
 Build an automatic image slider with manual controls (previous/next buttons).
 
-**Timestamp:** [10:18:18]
+
 
 ---
 
 ## 52.1 Project Setup
 
-**Timestamp:** [10:18:25]
+
 
 ### HTML Structure
 
@@ -53,13 +53,13 @@ Build an automatic image slider with manual controls (previous/next buttons).
 </html>
 ```
 
-**Timestamp:** [10:19:40]
+
 
 ---
 
 ## 52.2 CSS Styling
 
-**Timestamp:** [10:20:10]
+
 
 ```css
 * {
@@ -163,13 +163,13 @@ body {
 }
 ```
 
-**Timestamp:** [10:22:30]
+
 
 ---
 
 ## 52.3 JavaScript - Variables Setup
 
-**Timestamp:** [10:23:00]
+
 
 ```javascript
 const slides = document.querySelectorAll(".slide");
@@ -179,15 +179,16 @@ const dots = document.querySelectorAll(".dot");
 
 let currentSlide = 0;
 let autoPlayInterval;
+// Output: Variables initialized to manage slider state and track current position
 ```
 
-**Timestamp:** [10:23:40]
+
 
 ---
 
 ## 52.4 Show Slide Function
 
-**Timestamp:** [10:24:10]
+
 
 ```javascript
 function showSlide(index) {
@@ -216,13 +217,13 @@ function showSlide(index) {
 }
 ```
 
-**Timestamp:** [10:25:40]
+
 
 ---
 
 ## 52.5 Next and Previous Functions
 
-**Timestamp:** [10:26:10]
+
 
 ```javascript
 function nextSlide() {
@@ -238,7 +239,7 @@ function prevSlide() {
 
 ## 52.6 Event Listeners for Buttons
 
-**Timestamp:** [10:26:50]
+
 
 ```javascript
 // Next button
@@ -254,13 +255,13 @@ prevBtn.addEventListener("click", () => {
 });
 ```
 
-**Timestamp:** [10:27:30]
+
 
 ---
 
 ## 52.7 Dot Navigation
 
-**Timestamp:** [10:28:00]
+
 
 ```javascript
 dots.forEach(dot => {
@@ -272,13 +273,13 @@ dots.forEach(dot => {
 });
 ```
 
-**Timestamp:** [10:28:50]
+
 
 ---
 
 ## 52.8 Auto Play Functionality
 
-**Timestamp:** [10:29:20]
+
 
 ```javascript
 function autoPlay() {
@@ -296,13 +297,13 @@ function resetAutoPlay() {
 autoPlay();
 ```
 
-**Timestamp:** [10:30:30]
+
 
 ---
 
 ## 52.9 Keyboard Controls
 
-**Timestamp:** [10:31:00]
+
 
 ```javascript
 document.addEventListener("keydown", (e) => {
@@ -316,13 +317,13 @@ document.addEventListener("keydown", (e) => {
 });
 ```
 
-**Timestamp:** [10:31:50]
+
 
 ---
 
 ## 52.10 Complete JavaScript Code
 
-**Timestamp:** [10:32:20]
+
 
 ```javascript
 // Select elements
@@ -408,13 +409,13 @@ document.addEventListener("keydown", (e) => {
 autoPlay();
 ```
 
-**Timestamp:** [10:35:10]
+
 
 ---
 
 ## 52.11 Enhanced Features
 
-**Timestamp:** [10:35:40]
+
 
 ### Pause on Hover
 
@@ -456,7 +457,7 @@ function handleSwipe() {
 }
 ```
 
-**Timestamp:** [10:37:50]
+
 
 ---
 
@@ -477,13 +478,13 @@ function handleSwipe() {
 ## Overview
 Understand callback hell (pyramid of doom) and why it's a problem in asynchronous JavaScript.
 
-**Timestamp:** [10:38:32]
+
 
 ---
 
 ## 53.1 What is Callback Hell?
 
-**Timestamp:** [10:38:39]
+
 
 **Callback Hell:**
 - Multiple nested callbacks
@@ -504,13 +505,13 @@ doSomething(function() {
 });
 ```
 
-**Timestamp:** [10:39:30]
+
 
 ---
 
 ## 53.2 Simple Callback Example
 
-**Timestamp:** [10:40:00]
+
 
 ```javascript
 function step1(callback) {
@@ -546,13 +547,13 @@ step1(() => {
 
 **Already getting messy with just 3 steps!**
 
-**Timestamp:** [10:41:30]
+
 
 ---
 
 ## 53.3 Real-World Example: User Registration
 
-**Timestamp:** [10:42:00]
+
 
 ```javascript
 function validateUser(username, callback) {
@@ -620,13 +621,13 @@ validateUser("john", (error, username) => {
 });
 ```
 
-**Timestamp:** [10:45:00]
+
 
 ---
 
 ## 53.4 Problems with Callback Hell
 
-**Timestamp:** [10:45:30]
+
 
 ### 1. Readability
 
@@ -677,13 +678,13 @@ step1((err, result1) => {
 - Hard to debug
 - Hard for other developers to understand
 
-**Timestamp:** [10:47:20]
+
 
 ---
 
 ## 53.5 Loading Data Example
 
-**Timestamp:** [10:47:50]
+
 
 ```javascript
 function loadUser(userId, callback) {
@@ -726,13 +727,13 @@ loadUser(1, (user) => {
 });
 ```
 
-**Timestamp:** [10:49:30]
+
 
 ---
 
 ## 53.6 Visual Representation
 
-**Timestamp:** [10:50:00]
+
 
 ```javascript
 // This is callback hell - notice the shape!
@@ -760,7 +761,7 @@ doTask1(() => {
 
 ## 53.7 Why Does This Happen?
 
-**Timestamp:** [10:50:50]
+
 
 **Asynchronous operations need callbacks:**
 
@@ -780,13 +781,13 @@ setTimeout(() => {
 
 **Each step depends on previous step's result.**
 
-**Timestamp:** [10:51:40]
+
 
 ---
 
 ## 53.8 Attempted Solution: Named Functions
 
-**Timestamp:** [10:52:10]
+
 
 ```javascript
 function step1Done() {
@@ -813,13 +814,13 @@ setTimeout(step1Done, 1000);
 - Difficult to pass data between steps
 - Error handling still complex
 
-**Timestamp:** [10:53:20]
+
 
 ---
 
 ## 53.9 The Real Solution: Promises
 
-**Timestamp:** [10:53:50]
+
 
 ```javascript
 // Before (Callback Hell)
@@ -845,13 +846,13 @@ doTask1()
 
 **We'll learn Promises in the next chapter!**
 
-**Timestamp:** [10:55:00]
+
 
 ---
 
 ## 53.10 Comparison
 
-**Timestamp:** [10:55:30]
+
 
 ### Callback Hell
 
@@ -894,13 +895,13 @@ async function doEverything() {
 }
 ```
 
-**Timestamp:** [10:57:20]
+
 
 ---
 
 ## 53.11 Key Takeaways
 
-**Timestamp:** [10:57:50]
+
 
 ❌ **Callback Hell Problems:**
 - Hard to read (pyramid shape)

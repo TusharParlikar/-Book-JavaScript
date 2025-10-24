@@ -7,7 +7,7 @@
 ## Overview
 Control flow allows your program to make decisions and execute different code based on conditions. This chapter covers if statements and working with checkboxes and radio buttons.
 
-**Timestamp:** [01:16:02]
+
 
 ---
 
@@ -15,11 +15,12 @@ Control flow allows your program to make decisions and execute different code ba
 
 If statements execute code **only if** a condition is true or false.
 
-**Timestamp:** [01:16:02]
+
 
 ```javascript
 if (condition) {
     // This code runs if condition is true
+    // Output: Executes if condition is true
 }
 ```
 
@@ -27,7 +28,7 @@ if (condition) {
 
 ## 8.2 Basic If Statement Syntax
 
-**Timestamp:** [01:16:23]
+
 
 ```javascript
 let age = 18;
@@ -35,6 +36,7 @@ let age = 18;
 if (age >= 18) {
     console.log("You are an adult");
 }
+// Output: You are an adult
 ```
 
 ### How It Works:
@@ -46,7 +48,7 @@ if (age >= 18) {
 
 ## 8.3 Comparison Operators
 
-**Timestamp:** [01:16:29]
+
 
 Used to compare values and create conditions:
 
@@ -77,23 +79,26 @@ let temperature = 25;
 if (temperature > 30) {
     console.log("It's hot!");
 }
+// Output: (no output - condition false)
 
 if (temperature < 0) {
     console.log("It's freezing!");
 }
+// Output: (no output - condition false)
 
 let score = 100;
 
 if (score >= 90) {
     console.log("Excellent!");
 }
+// Output: Excellent!
 ```
 
 ---
 
 ## 8.4 The Else Clause
 
-**Timestamp:** [01:17:16]
+
 
 Execute alternative code when the condition is false:
 
@@ -105,6 +110,7 @@ if (age >= 18) {
 } else {
     console.log("You are a minor");
 }
+// Output: You are a minor
 ```
 
 ### Flow:
@@ -115,7 +121,7 @@ if (age >= 18) {
 
 ## 8.5 Using Boolean Variables
 
-**Timestamp:** [01:18:54]
+
 
 You can use boolean variables directly in conditions:
 
@@ -128,11 +134,13 @@ if (online) {
 } else {
     console.log("You are offline");
 }
+// Output: You are online
 
 // Unnecessary - don't do this
 if (online === true) {  // Redundant
     console.log("You are online");
 }
+// Output: You are online
 ```
 
 ### More Examples:
@@ -144,21 +152,24 @@ let isAdmin = false;
 if (isStudent) {
     console.log("Student discount applied");
 }
+// Output: (no output - condition false)
 
 if (hasPaid) {
     console.log("Access granted");
 }
+// Output: Access granted
 
 if (!isAdmin) {  // NOT operator
     console.log("You don't have admin privileges");
 }
+// Output: You don't have admin privileges
 ```
 
 ---
 
 ## 8.6 Nested If Statements
 
-**Timestamp:** [01:20:01]
+
 
 You can place if statements inside other if statements:
 
@@ -177,13 +188,16 @@ if (age >= 18) {
 } else {
     console.log("You are too young to drive");
 }
+// Output:
+// You are old enough
+// You can drive!
 ```
 
 ---
 
 ## 8.7 Else If Clause
 
-**Timestamp:** [01:22:59]
+
 
 Check multiple conditions in sequence:
 
@@ -212,7 +226,7 @@ if (age >= 65) {
 
 ## 8.8 Order Matters!
 
-**Timestamp:** [01:25:04]
+
 
 The order of conditions is crucial:
 
@@ -240,7 +254,7 @@ if (age >= 65) {
 
 ## 8.9 Equality Comparison
 
-**Timestamp:** [01:26:08]
+
 
 ```javascript
 let age = 18;
@@ -264,7 +278,7 @@ if (age === 18) {  // true (same type and value)
 
 ## 8.10 Practical Example: Age Checker Form
 
-**Timestamp:** [01:27:07]
+
 
 ### HTML
 
@@ -292,7 +306,7 @@ if (age === 18) {  // true (same type and value)
 
 ### JavaScript
 
-**Timestamp:** [01:29:46], [01:30:13]
+, [01:30:13]
 
 ```javascript
 const submitBtn = document.getElementById("submitBtn");
@@ -324,11 +338,11 @@ submitBtn.onclick = function() {
 
 ## 8.11 The Checked Property
 
-**Timestamp:** [01:31:51]
+
 
 The `.checked` property determines if a checkbox or radio button is selected.
 
-**Timestamp:** [01:32:00], [01:32:08]
+, [01:32:08]
 
 ### Returns:
 - `true` if checked/selected
@@ -338,7 +352,7 @@ The `.checked` property determines if a checkbox or radio button is selected.
 
 ## 8.12 Working with Checkboxes
 
-**Timestamp:** [01:32:21]
+
 
 ### HTML Setup
 
@@ -370,7 +384,7 @@ submitBtn.onclick = function() {
 
 ## 8.13 Working with Radio Buttons
 
-**Timestamp:** [01:33:16]
+
 
 Radio buttons allow users to select ONE option from a group.
 
@@ -398,7 +412,7 @@ Radio buttons allow users to select ONE option from a group.
 
 ## 8.14 Radio Button JavaScript
 
-**Timestamp:** [01:36:40], [01:38:15], [01:38:34], [01:38:59], [01:39:52]
+, [01:38:15], [01:38:34], [01:38:59], [01:39:52]
 
 ```javascript
 const visaBtn = document.getElementById("visaBtn");
@@ -501,15 +515,15 @@ Learn two more ways to write conditional logic: the ternary operator for simple 
 
 ## 9.1 The Ternary Operator
 
-**Timestamp:** [01:42:07]
+
 
 The ternary operator is a shortcut for simple if/else statements.
 
-**Timestamp:** [01:42:13]
+
 
 ### Syntax
 
-**Timestamp:** [01:42:20]
+
 
 ```javascript
 condition ? expressionIfTrue : expressionIfFalse
@@ -541,7 +555,7 @@ console.log(message);
 ```
 
 ### Ternary Operator:
-**Timestamp:** [01:42:43]
+
 
 ```javascript
 let age = 21;
@@ -557,7 +571,7 @@ console.log(message);
 
 ### Example 1: Age Status
 
-**Timestamp:** [01:42:43]
+
 
 ```javascript
 let age = 25;
@@ -567,7 +581,7 @@ console.log(status);  // "Adult"
 
 ### Example 2: Time-Based Greeting
 
-**Timestamp:** [01:44:37]
+
 
 ```javascript
 let time = 14;  // 2 PM (24-hour format)
@@ -577,7 +591,7 @@ console.log(greeting);  // "Good afternoon"
 
 ### Example 3: Student Status
 
-**Timestamp:** [01:45:39]
+
 
 ```javascript
 let isStudent = true;
@@ -587,7 +601,7 @@ console.log(message);  // "You are a student"
 
 ### Example 4: Purchase Discount
 
-**Timestamp:** [01:46:35]
+
 
 ```javascript
 let purchaseAmount = 125;
@@ -634,17 +648,17 @@ document.getElementById("result").textContent =
 
 ## 9.6 Switch Statements
 
-**Timestamp:** [01:48:50]
+
 
 Switch statements are an efficient replacement for many else if statements. They compare a value against multiple possible matches.
 
-**Timestamp:** [01:48:50], [01:49:50]
+, [01:49:50]
 
 ---
 
 ## 9.7 Switch Statement Syntax
 
-**Timestamp:** [01:49:39]
+
 
 ```javascript
 switch (expression) {
@@ -692,7 +706,7 @@ if (day === 1) {
 
 ### Using Switch Statement:
 
-**Timestamp:** [01:49:03]
+
 
 ```javascript
 let day = 3;
@@ -733,13 +747,13 @@ console.log(dayName);  // "Wednesday"
 
 ## 9.9 The Break Statement
 
-**Timestamp:** [01:50:28]
+
 
 The `break` statement exits the switch after a match is found.
 
 ### Without Break (WRONG):
 
-**Timestamp:** [01:52:19]
+
 
 ```javascript
 let day = 1;
@@ -785,7 +799,7 @@ switch (day) {
 
 ## 9.10 The Default Case
 
-**Timestamp:** [01:51:36]
+
 
 The `default` case runs if no other cases match (like `else`):
 
@@ -810,7 +824,7 @@ switch (day) {
 
 ## 9.11 Switch with Conditions (Advanced)
 
-**Timestamp:** [01:53:13]
+
 
 You can use `switch (true)` to evaluate conditions:
 

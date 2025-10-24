@@ -379,12 +379,10 @@ or
 
 **Happy Coding! 🚀**
 
-*From zero to building a Weather App - Your JavaScript journey starts here!*
+
 
 <sub>Made with ❤️ for JavaScript learners everywhere</sub>
 
 </div>
-#   - B o o k - J a v a S c r i p t 
- 
- #   - B o o k - J a v a S c r i p t  
+#   - B o o k - J a v a S c r i p t  
  

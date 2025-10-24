@@ -7,13 +7,13 @@
 ## Overview
 Closures are functions that have access to variables from their outer (enclosing) scope, even after the outer function has finished executing.
 
-**Timestamp:** [06:48:08]
+
 
 ---
 
 ## 34.1 What are Closures?
 
-**Timestamp:** [06:48:15]
+
 
 A **closure** is:
 - A function defined inside another function
@@ -25,7 +25,7 @@ A **closure** is:
 
 ## 34.2 Basic Closure Example
 
-**Timestamp:** [06:48:49]
+
 
 ```javascript
 function outer() {
@@ -38,7 +38,8 @@ function outer() {
     inner();
 }
 
-outer(); // "Hello"
+outer();
+// Output: Hello
 ```
 
 The `inner` function has access to `message` from the outer scope.
@@ -59,7 +60,8 @@ function outer() {
 }
 
 const myFunction = outer();
-myFunction(); // "Hello" - still has access to message!
+myFunction();
+// Output: Hello
 ```
 
 Even after `outer()` finishes, the returned function remembers `message`.
@@ -68,7 +70,7 @@ Even after `outer()` finishes, the returned function remembers `message`.
 
 ## 34.4 Private Variables
 
-**Timestamp:** [06:49:53]
+
 
 Closures create **private variables** that can't be accessed from outside:
 
@@ -84,21 +86,25 @@ function createCounter() {
 
 const counter = createCounter();
 
-console.log(counter()); // 1
-console.log(counter()); // 2
-console.log(counter()); // 3
+console.log(counter()); 
+// Output: 1
+console.log(counter()); 
+// Output: 2
+console.log(counter()); 
+// Output: 3
 
 // Cannot access 'count' directly
-console.log(count); // Error: count is not defined
+console.log(count); 
+// Output: Error: count is not defined
 ```
 
-**Timestamp:** [06:50:30]
+
 
 ---
 
 ## 34.5 Problem: Simple Counter Without Closure
 
-**Timestamp:** [06:50:37]
+
 
 Without closure, variables reset:
 
@@ -109,16 +115,19 @@ function increment() {
     return count;
 }
 
-console.log(increment()); // 1
-console.log(increment()); // 1 (resets)
-console.log(increment()); // 1 (resets)
+console.log(increment()); 
+// Output: 1
+console.log(increment()); 
+// Output: 1
+console.log(increment()); 
+// Output: 1
 ```
 
 ---
 
 ## 34.6 Solution: Counter with Closure
 
-**Timestamp:** [06:51:22]
+
 
 ```javascript
 function createCounter() {
@@ -134,9 +143,12 @@ function createCounter() {
 
 const counter = createCounter();
 
-counter(); // 1
-counter(); // 2
-counter(); // 3
+counter(); 
+// Output: 1
+counter(); 
+// Output: 2
+counter(); 
+// Output: 3
 ```
 
 The `count` variable persists between calls!
@@ -145,7 +157,7 @@ The `count` variable persists between calls!
 
 ## 34.7 Returning Object with Multiple Methods
 
-**Timestamp:** [06:54:15]
+
 
 ```javascript
 function createCounter() {
@@ -168,10 +180,14 @@ function createCounter() {
 
 const counter = createCounter();
 
-counter.increment(); // 1
-counter.increment(); // 2
-counter.decrement(); // 1
-console.log(counter.getCount()); // 1
+counter.increment(); 
+// Output: 1
+counter.increment(); 
+// Output: 2
+counter.decrement(); 
+// Output: 1
+console.log(counter.getCount()); 
+// Output: 1
 ```
 
 All methods share access to the same `count` variable!
@@ -180,7 +196,7 @@ All methods share access to the same `count` variable!
 
 ## 34.8 Practical Example: Game Score
 
-**Timestamp:** [06:55:13]
+
 
 ```javascript
 function createGame() {
@@ -381,13 +397,13 @@ console.log(message.read()); // "Message is locked!"
 ## Overview
 Learn how to schedule code execution with setTimeout and how to cancel scheduled timeouts.
 
-**Timestamp:** [06:59:08]
+
 
 ---
 
 ## 35.1 What is setTimeout?
 
-**Timestamp:** [06:59:13]
+
 
 `setTimeout()`:
 - Schedules a function to run **once** after a delay
@@ -400,13 +416,13 @@ Learn how to schedule code execution with setTimeout and how to cancel scheduled
 setTimeout(callback, delay);
 ```
 
-**Timestamp:** [06:59:22]
+
 
 ---
 
 ## 35.2 Basic setTimeout Example
 
-**Timestamp:** [06:59:43]
+
 
 ```javascript
 function sayHello() {
@@ -427,7 +443,7 @@ console.log("This runs immediately");
 
 ## 35.3 setTimeout with Anonymous Function
 
-**Timestamp:** [06:59:59]
+
 
 ```javascript
 setTimeout(function() {
@@ -451,7 +467,7 @@ Cleaner and more concise!
 
 ## 35.5 setTimeout Return Value
 
-**Timestamp:** [07:00:59]
+
 
 `setTimeout` returns a **timeout ID** (number):
 
@@ -469,7 +485,7 @@ This ID can be used to cancel the timeout.
 
 ## 35.6 clearTimeout
 
-**Timestamp:** [07:00:59]
+
 
 Cancel a scheduled timeout before it executes:
 
@@ -488,7 +504,7 @@ The callback function never executes!
 
 ## 35.7 Practical Example: Delayed Alert
 
-**Timestamp:** [06:59:43]
+
 
 ```javascript
 console.log("Starting countdown...");
@@ -509,7 +525,7 @@ console.log("Countdown started!");
 
 ## 35.8 Example with Start and Cancel Buttons
 
-**Timestamp:** [07:01:40]
+
 
 ```html
 <button id="startBtn">Start Timer</button>
@@ -535,7 +551,7 @@ cancelBtn.addEventListener("click", () => {
 });
 ```
 
-**Timestamp:** [07:00:59]
+
 
 ---
 

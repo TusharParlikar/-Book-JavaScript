@@ -7,13 +7,13 @@
 ## Overview
 Constructors are special functions used to create and initialize objects with similar properties and methods.
 
-**Timestamp:** [04:55:08]
+
 
 ---
 
 ## 26.1 What are Constructors?
 
-**Timestamp:** [04:55:08], [04:55:15]
+, [04:55:15]
 
 Constructors are:
 - Special functions for creating objects
@@ -25,41 +25,48 @@ Constructors are:
 
 ## 26.2 Creating a Constructor
 
-**Timestamp:** [04:55:32]
+
 
 ```javascript
 function Person(firstName, lastName, age) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.age = age;
+    // Output: Constructor ready to create Person objects
 }
 ```
 
-**Timestamp:** [04:55:48], [04:56:05], [04:56:18]
+, [04:56:05], [04:56:18]
 
 ---
 
 ## 26.3 Creating Objects with Constructors
 
-**Timestamp:** [04:56:35]
+
 
 ```javascript
 const person1 = new Person("John", "Doe", 30);
 const person2 = new Person("Jane", "Smith", 25);
 const person3 = new Person("Bob", "Johnson", 35);
+// Output: Three Person objects created
 
-console.log(person1.firstName); // "John"
-console.log(person2.age);       // 25
-console.log(person3.lastName);  // "Johnson"
+console.log(person1.firstName); 
+// Output: "John"
+
+console.log(person2.age);       
+// Output: 25
+
+console.log(person3.lastName);  
+// Output: "Johnson"
 ```
 
-**Timestamp:** [04:56:52], [04:57:08]
+, [04:57:08]
 
 ---
 
 ## 26.4 Adding Methods to Constructors
 
-**Timestamp:** [04:57:25]
+
 
 ```javascript
 function Person(firstName, lastName, age) {
@@ -77,17 +84,20 @@ function Person(firstName, lastName, age) {
 }
 
 const person1 = new Person("John", "Doe", 30);
-person1.greet(); // "Hello, I'm John!"
-console.log(person1.getFullName()); // "John Doe"
+person1.greet(); 
+// Output: Hello, I'm John!
+
+console.log(person1.getFullName()); 
+// Output: John Doe
 ```
 
-**Timestamp:** [04:57:42], [04:58:02]
+, [04:58:02]
 
 ---
 
 ## 26.5 Complete Constructor Example
 
-**Timestamp:** [04:58:22]
+
 
 ```javascript
 function Car(make, model, year, color) {
@@ -111,13 +121,13 @@ const car1 = new Car("Toyota", "Camry", 2023, "blue");
 const car2 = new Car("Honda", "Accord", 2022, "red");
 
 car1.drive(100);
-// "Toyota Camry drove 100 miles"
+// Output: Toyota Camry drove 100 miles
 
 console.log(car2.getInfo());
-// "2022 red Honda Accord"
+// Output: 2022 red Honda Accord
 ```
 
-**Timestamp:** [04:58:45], [04:59:08]
+, [04:59:08]
 
 ---
 
@@ -138,7 +148,7 @@ console.log(car2.getInfo());
 
 ## 26.7 Problem: Memory Inefficiency
 
-**Timestamp:** [04:59:32]
+
 
 Each object gets its own copy of methods:
 
@@ -154,7 +164,8 @@ const person1 = new Person("John");
 const person2 = new Person("Jane");
 
 // Each has separate greet function
-console.log(person1.greet === person2.greet); // false
+console.log(person1.greet === person2.greet); 
+// Output: false (different memory locations)
 ```
 
 **Solution:** Use prototypes (or classes) to share methods.
@@ -178,13 +189,13 @@ console.log(person1.greet === person2.greet); // false
 ## Overview
 Classes provide a cleaner, more organized way to create objects with shared methods. They're syntactic sugar over constructors and prototypes.
 
-**Timestamp:** [05:00:15]
+
 
 ---
 
 ## 27.1 What are Classes?
 
-**Timestamp:** [05:00:15], [05:00:22]
+, [05:00:22]
 
 Classes:
 - Blueprint for creating objects (ES6 feature)
@@ -197,7 +208,7 @@ Classes:
 
 ## 27.2 Creating a Class
 
-**Timestamp:** [05:00:42]
+
 
 ```javascript
 class Person {
@@ -209,13 +220,13 @@ class Person {
 }
 ```
 
-**Timestamp:** [05:01:02], [05:01:18]
+, [05:01:18]
 
 ---
 
 ## 27.3 Creating Objects from Classes
 
-**Timestamp:** [05:01:35]
+
 
 ```javascript
 class Person {
@@ -233,13 +244,13 @@ console.log(person1.firstName); // "John"
 console.log(person2.age);       // 25
 ```
 
-**Timestamp:** [05:01:52]
+
 
 ---
 
 ## 27.4 Adding Methods to Classes
 
-**Timestamp:** [05:02:12]
+
 
 ```javascript
 class Person {
@@ -269,13 +280,13 @@ console.log(person1.getFullName()); // "John Doe"
 person1.haveBirthday();             // "Happy Birthday! Now 31 years old."
 ```
 
-**Timestamp:** [05:02:32], [05:02:55], [05:03:18]
+, [05:02:55], [05:03:18]
 
 ---
 
 ## 27.5 Complete Class Example: Car
 
-**Timestamp:** [05:03:42]
+
 
 ```javascript
 class Car {
@@ -325,13 +336,13 @@ console.log(car2.getAge());
 // 4 (or current year - 2020)
 ```
 
-**Timestamp:** [05:04:05], [05:04:28]
+, [05:04:28]
 
 ---
 
 ## 27.6 Static Methods
 
-**Timestamp:** [05:04:52]
+
 
 Static methods belong to the class itself, not instances:
 
@@ -358,17 +369,17 @@ const helper = new MathHelper();
 // helper.add(5, 3); // Error!
 ```
 
-**Timestamp:** [05:05:15]
+
 
 ---
 
 ## 27.7 Getters and Setters
 
-**Timestamp:** [05:05:42]
+
 
 ### Getters
 
-**Timestamp:** [05:06:02]
+
 
 ```javascript
 class Circle {
@@ -392,11 +403,11 @@ console.log(circle.diameter); // 10
 console.log(circle.area);     // 78.54
 ```
 
-**Timestamp:** [05:06:25]
+
 
 ### Setters
 
-**Timestamp:** [05:06:48]
+
 
 ```javascript
 class Person {
@@ -425,13 +436,13 @@ person.fullName = "Jane Smith";
 console.log(person.fullName); // "Jane Smith"
 ```
 
-**Timestamp:** [05:07:12]
+
 
 ---
 
 ## 27.8 Private Fields (ES2022)
 
-**Timestamp:** [05:07:38]
+
 
 ```javascript
 class BankAccount {
@@ -471,13 +482,13 @@ console.log(account.getBalance()); // 1500
 // console.log(account.#balance); // Error!
 ```
 
-**Timestamp:** [05:08:02]
+
 
 ---
 
 ## 27.9 Inheritance
 
-**Timestamp:** [05:08:32]
+
 
 Classes can inherit from other classes:
 
@@ -526,13 +537,13 @@ dog.fetch();  // "Buddy fetches the ball"
 cat.speak();  // "Whiskers meows"
 ```
 
-**Timestamp:** [05:08:55], [05:09:18], [05:09:42]
+, [05:09:18], [05:09:42]
 
 ---
 
 ## 27.10 Practical Example: Student Management
 
-**Timestamp:** [05:10:05]
+
 
 ```javascript
 class Student {

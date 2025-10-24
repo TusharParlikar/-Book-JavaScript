@@ -9,7 +9,7 @@ Operators are symbols that perform operations on values and variables. In this c
 
 Arithmetic operators perform mathematical calculations on numeric values.
 
-**Timestamp:** [00:25:28]
+
 
 ### Operands and Operators
 
@@ -17,35 +17,44 @@ Arithmetic operators perform mathematical calculations on numeric values.
 - **Operators**: Symbols that perform operations
 
 ```javascript
-let x = 5 + 3;  // 5 and 3 are operands, + is the operator
+let x = 5 + 3;  
+// x = 8
 ```
 
-**Timestamp:** [00:25:28]
+
 
 ---
 
 ## 4.2 Basic Arithmetic Operators
 
-**Timestamp:** [00:26:16]
+
 
 ### Addition (+)
 ```javascript
-let sum = 5 + 3;  // 8
+let sum = 5 + 3;  
+// Output: sum = 8
+console.log(sum);  // 8
 ```
 
 ### Subtraction (-)
 ```javascript
-let difference = 10 - 4;  // 6
+let difference = 10 - 4;  
+// Output: difference = 6
+console.log(difference);  // 6
 ```
 
 ### Multiplication (*)
 ```javascript
-let product = 6 * 7;  // 42
+let product = 6 * 7;  
+// Output: product = 42
+console.log(product);  // 42
 ```
 
 ### Division (/)
 ```javascript
-let quotient = 20 / 4;  // 5
+let quotient = 20 / 4;  
+// Output: quotient = 5
+console.log(quotient);  // 5
 ```
 
 ---
@@ -54,12 +63,20 @@ let quotient = 20 / 4;  // 5
 
 The exponentiation operator raises a number to a power.
 
-**Timestamp:** [00:27:09]
+
 
 ```javascript
-let result = 2 ** 3;  // 2³ = 8
-let square = 5 ** 2;  // 5² = 25
-let cube = 3 ** 3;    // 3³ = 27
+let result = 2 ** 3;  
+// Output: result = 8 (2³ = 8)
+console.log(result);  // 8
+
+let square = 5 ** 2;  
+// Output: square = 25 (5² = 25)
+console.log(square);  // 25
+
+let cube = 3 ** 3;    
+// Output: cube = 27 (3³ = 27)
+console.log(cube);  // 27
 ```
 
 ---
@@ -68,11 +85,16 @@ let cube = 3 ** 3;    // 3³ = 27
 
 The modulus operator returns the **remainder** of a division operation.
 
-**Timestamp:** [00:27:46]
+
 
 ```javascript
-let remainder = 10 % 3;  // 1 (10 ÷ 3 = 3 remainder 1)
-let result = 15 % 4;     // 3 (15 ÷ 4 = 3 remainder 3)
+let remainder = 10 % 3;  
+// Output: remainder = 1 (10 ÷ 3 = 3 remainder 1)
+console.log(remainder);  // 1
+
+let result = 15 % 4;     
+// Output: result = 3 (15 ÷ 4 = 3 remainder 3)
+console.log(result);  // 3
 ```
 
 ### Common Use Cases:
@@ -86,6 +108,7 @@ if (number % 2 === 0) {
 } else {
     console.log("Odd");
 }
+// Output: Even
 ```
 
 #### Check Divisibility
@@ -94,6 +117,7 @@ let num = 15;
 if (num % 5 === 0) {
     console.log("Divisible by 5");
 }
+// Output: Divisible by 5
 ```
 
 ---
@@ -102,57 +126,72 @@ if (num % 5 === 0) {
 
 These operators combine an arithmetic operation with assignment, providing a shorthand notation.
 
-**Timestamp:** [00:28:55]
+
 
 ### Addition Assignment (+=)
 ```javascript
 let x = 10;
-x += 5;  // Same as: x = x + 5 (result: 15)
+x += 5;  
+// Output: x = 15 (Same as: x = x + 5)
+console.log(x);  // 15
 ```
 
 ### Subtraction Assignment (-=)
 ```javascript
 let x = 10;
-x -= 3;  // Same as: x = x - 3 (result: 7)
+x -= 3;  
+// Output: x = 7 (Same as: x = x - 3)
+console.log(x);  // 7
 ```
 
 ### Multiplication Assignment (*=)
 ```javascript
 let x = 5;
-x *= 2;  // Same as: x = x * 2 (result: 10)
+x *= 2;  
+// Output: x = 10 (Same as: x = x * 2)
+console.log(x);  // 10
 ```
 
 ### Division Assignment (/=)
 ```javascript
 let x = 20;
-x /= 4;  // Same as: x = x / 4 (result: 5)
+x /= 4;  
+// Output: x = 5 (Same as: x = x / 4)
+console.log(x);  // 5
 ```
 
 ### Exponentiation Assignment (**=)
 ```javascript
 let x = 2;
-x **= 3;  // Same as: x = x ** 3 (result: 8)
+x **= 3;  
+// Output: x = 8 (Same as: x = x ** 3)
+console.log(x);  // 8
 ```
 
 ### Modulus Assignment (%=)
 ```javascript
 let x = 10;
-x %= 3;  // Same as: x = x % 3 (result: 1)
+x %= 3;  
+// Output: x = 1 (Same as: x = x % 3)
+console.log(x);  // 1
 ```
 
 ---
 
 ## 4.6 Increment and Decrement Operators
 
-**Timestamp:** [00:30:19]
+
 
 ### Increment (++)
 Increases a value by 1.
 
 ```javascript
 let count = 0;
-count++;  // count is now 1
-count++;  // count is now 2
+count++;  
+// Output: count = 1
+count++;  
+// Output: count = 2
+console.log(count);  // 2
 ```
 
 ### Decrement (--)
@@ -160,8 +199,11 @@ Decreases a value by 1.
 
 ```javascript
 let count = 5;
-count--;  // count is now 4
-count--;  // count is now 3
+count--;  
+// Output: count = 4
+count--;  
+// Output: count = 3
+console.log(count);  // 3
 ```
 
 ### Prefix vs Postfix
@@ -169,17 +211,19 @@ count--;  // count is now 3
 #### Postfix (count++)
 ```javascript
 let x = 5;
-let y = x++;  // y = 5, then x becomes 6
-console.log(y);  // 5
-console.log(x);  // 6
+let y = x++;  
+// y = 5 (gets value before increment), then x becomes 6
+console.log(y);  // Output: 5
+console.log(x);  // Output: 6
 ```
 
 #### Prefix (++count)
 ```javascript
 let x = 5;
-let y = ++x;  // x becomes 6 first, then y = 6
-console.log(y);  // 6
-console.log(x);  // 6
+let y = ++x;  
+// x becomes 6 first, then y = 6
+console.log(y);  // Output: 6
+console.log(x);  // Output: 6
 ```
 
 ---
@@ -188,7 +232,7 @@ console.log(x);  // 6
 
 When multiple operators are in an expression, they follow a specific order of operations (like PEMDAS in math).
 
-**Timestamp:** [00:30:47]
+
 
 ### Order (Highest to Lowest):
 1. **Parentheses** `()`
@@ -199,17 +243,25 @@ When multiple operators are in an expression, they follow a specific order of op
 ### Examples:
 
 ```javascript
-let result = 5 + 3 * 2;  // 11 (not 16)
+let result = 5 + 3 * 2;  
+// Output: 11 (not 16)
 // Multiplication first: 3 * 2 = 6, then 5 + 6 = 11
+console.log(result);  // 11
 
-let result = (5 + 3) * 2;  // 16
+let result = (5 + 3) * 2;  
+// Output: 16
 // Parentheses first: 5 + 3 = 8, then 8 * 2 = 16
+console.log(result);  // 16
 
-let result = 10 + 5 ** 2;  // 35
+let result = 10 + 5 ** 2;  
+// Output: 35
 // Exponent first: 5 ** 2 = 25, then 10 + 25 = 35
+console.log(result);  // 35
 
-let result = 20 / 4 + 3 * 2;  // 11
+let result = 20 / 4 + 3 * 2;  
+// Output: 11
 // 20 / 4 = 5, 3 * 2 = 6, then 5 + 6 = 11
+console.log(result);  // 11
 ```
 
 ---
@@ -218,7 +270,7 @@ let result = 20 / 4 + 3 * 2;  // 11
 
 Making your programs interactive by accepting user input.
 
-**Timestamp:** [00:33:48]
+
 
 ---
 
@@ -226,17 +278,20 @@ Making your programs interactive by accepting user input.
 
 The `window.prompt()` method displays a dialog box that prompts the user for input.
 
-**Timestamp:** [00:34:08]
+
 
 ### Syntax
 ```javascript
 let userInput = window.prompt("Enter your name:");
+// Output: A dialog box appears asking for input
 ```
 
 ### Example:
 ```javascript
 let username = window.prompt("What's your name?");
 console.log(`Hello, ${username}!`);
+// If user enters "Alice":
+// Output: Hello, Alice!
 ```
 
 ### Characteristics:
@@ -251,7 +306,7 @@ console.log(`Hello, ${username}!`);
 
 Using HTML input elements is the standard, professional way to accept user input.
 
-**Timestamp:** [00:33:57], [00:35:26]
+, [00:35:26]
 
 ### HTML Setup
 
@@ -266,7 +321,7 @@ Using HTML input elements is the standard, professional way to accept user input
 </body>
 ```
 
-**Timestamp:** [00:35:56]
+
 
 ---
 
@@ -298,7 +353,7 @@ Using HTML input elements is the standard, professional way to accept user input
 
 ## 4.12 Handling Button Clicks with JavaScript
 
-**Timestamp:** [00:36:35]
+
 
 ### Step 1: Get References to Elements
 ```javascript
@@ -308,7 +363,7 @@ let myH1 = document.getElementById("myH1");
 ```
 
 ### Step 2: Add Click Event Handler
-**Timestamp:** [00:36:56]
+
 
 ```javascript
 myButton.onclick = function() {
@@ -317,7 +372,7 @@ myButton.onclick = function() {
 ```
 
 ### Step 3: Get Input Value
-**Timestamp:** [00:37:46]
+
 
 ```javascript
 myButton.onclick = function() {
@@ -327,7 +382,7 @@ myButton.onclick = function() {
 ```
 
 ### Step 4: Update HTML Content
-**Timestamp:** [00:38:11]
+
 
 ```javascript
 myButton.onclick = function() {

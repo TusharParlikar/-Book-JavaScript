@@ -7,13 +7,13 @@
 ## Overview
 Learn how to handle user mouse interactions like clicks, hovers, and movements.
 
-**Timestamp:** [09:03:11]
+
 
 ---
 
 ## 46.1 What are Events?
 
-**Timestamp:** [09:03:18]
+
 
 **Events:**
 - Actions that happen in the browser
@@ -25,7 +25,7 @@ Learn how to handle user mouse interactions like clicks, hovers, and movements.
 
 ## 46.2 addEventListener()
 
-**Timestamp:** [09:03:45]
+
 
 **Syntax:**
 ```javascript
@@ -43,35 +43,41 @@ const btn = document.getElementById("myBtn");
 btn.addEventListener("click", () => {
     console.log("Button clicked!");
 });
+// Output: Button clicked! (every time button is clicked)
 ```
 
-**Timestamp:** [09:04:30]
+
 
 ---
 
 ## 46.3 The Event Object
 
-**Timestamp:** [09:05:00]
+
 
 Every event handler receives an **event object**:
 
 ```javascript
 btn.addEventListener("click", (event) => {
-    console.log(event); // Event object
-    console.log(event.type); // "click"
-    console.log(event.target); // Element that triggered event
-    console.log(event.clientX); // Mouse X position
-    console.log(event.clientY); // Mouse Y position
+    console.log(event); 
+    // Output: PointerEvent object
+    console.log(event.type); 
+    // Output: click
+    console.log(event.target); 
+    // Output: <button id="myBtn">
+    console.log(event.clientX); 
+    // Output: 245
+    console.log(event.clientY); 
+    // Output: 120
 });
 ```
 
-**Timestamp:** [09:05:50]
+
 
 ---
 
 ## 46.4 Click Event
 
-**Timestamp:** [09:06:20]
+
 
 ```html
 <button id="btn">Click Me</button>
@@ -87,15 +93,16 @@ btn.addEventListener("click", () => {
     count++;
     output.textContent = `Clicked ${count} times`;
 });
+// Output: Display updates as "Clicked 1 times", "Clicked 2 times", etc.
 ```
 
-**Timestamp:** [09:07:00]
+
 
 ---
 
 ## 46.5 Double Click Event
 
-**Timestamp:** [09:07:30]
+
 
 ```javascript
 const box = document.getElementById("box");
@@ -110,7 +117,7 @@ box.addEventListener("dblclick", () => {
 
 ## 46.6 Mouse Enter & Mouse Leave
 
-**Timestamp:** [09:08:10]
+
 
 ```html
 <div id="box" style="width: 200px; height: 200px; background: lightblue;">
@@ -138,13 +145,13 @@ box.addEventListener("mouseleave", () => {
 });
 ```
 
-**Timestamp:** [09:09:20]
+
 
 ---
 
 ## 46.7 Mouse Over & Mouse Out
 
-**Timestamp:** [09:09:50]
+
 
 Similar to enter/leave but **bubble** (trigger on children too):
 
@@ -162,13 +169,13 @@ box.addEventListener("mouseout", () => {
 
 **Use mouseenter/mouseleave** for cleaner behavior!
 
-**Timestamp:** [09:10:40]
+
 
 ---
 
 ## 46.8 Mouse Move Event
 
-**Timestamp:** [09:11:10]
+
 
 Track mouse position:
 
@@ -199,13 +206,13 @@ document.addEventListener("mousemove", (e) => {
 });
 ```
 
-**Timestamp:** [09:12:50]
+
 
 ---
 
 ## 46.9 Mouse Down & Mouse Up
 
-**Timestamp:** [09:13:20]
+
 
 ```javascript
 const btn = document.getElementById("btn");
@@ -225,7 +232,7 @@ btn.addEventListener("mouseup", () => {
 
 ## 46.10 Context Menu (Right Click)
 
-**Timestamp:** [09:14:10]
+
 
 ```javascript
 const box = document.getElementById("box");
@@ -237,13 +244,13 @@ box.addEventListener("contextmenu", (e) => {
 });
 ```
 
-**Timestamp:** [09:15:00]
+
 
 ---
 
 ## 46.11 Practical Example: Hover Card
 
-**Timestamp:** [09:15:30]
+
 
 ```html
 <style>
@@ -280,13 +287,13 @@ card.addEventListener("mouseleave", () => {
 });
 ```
 
-**Timestamp:** [09:17:00]
+
 
 ---
 
 ## 46.12 Event Delegation
 
-**Timestamp:** [09:17:30]
+
 
 Handle events on multiple elements efficiently:
 
@@ -327,7 +334,7 @@ list.addEventListener("click", (e) => {
 ✅ **One listener instead of many!**  
 ✅ **Works for dynamically added elements!**
 
-**Timestamp:** [09:19:10]
+
 
 ---
 
@@ -346,7 +353,7 @@ list.addEventListener("click", (e) => {
 | `mousemove` | Mouse moves over element |
 | `contextmenu` | Right mouse button clicked |
 
-**Timestamp:** [09:20:00]
+
 
 ---
 
@@ -366,13 +373,13 @@ list.addEventListener("click", (e) => {
 ## Overview
 Learn how to handle keyboard input with JavaScript.
 
-**Timestamp:** [09:20:30]
+
 
 ---
 
 ## 47.1 Keyboard Events
 
-**Timestamp:** [09:20:37]
+
 
 Three main keyboard events:
 
@@ -386,7 +393,7 @@ Three main keyboard events:
 
 ## 47.2 keydown Event
 
-**Timestamp:** [09:21:15]
+
 
 Fires when key is first pressed:
 
@@ -398,13 +405,13 @@ document.addEventListener("keydown", (e) => {
 
 **Try typing in the page!**
 
-**Timestamp:** [09:21:50]
+
 
 ---
 
 ## 47.3 keyup Event
 
-**Timestamp:** [09:22:20]
+
 
 Fires when key is released:
 
@@ -418,7 +425,7 @@ document.addEventListener("keyup", (e) => {
 
 ## 47.4 The Key Property
 
-**Timestamp:** [09:22:50]
+
 
 ```javascript
 document.addEventListener("keydown", (e) => {
@@ -438,13 +445,13 @@ document.addEventListener("keydown", (e) => {
 | Arrow Up | "ArrowUp" | "ArrowUp" |
 | Shift | "Shift" | "ShiftLeft" or "ShiftRight" |
 
-**Timestamp:** [09:24:00]
+
 
 ---
 
 ## 47.5 Detecting Specific Keys
 
-**Timestamp:** [09:24:30]
+
 
 ```javascript
 document.addEventListener("keydown", (e) => {
@@ -466,13 +473,13 @@ document.addEventListener("keydown", (e) => {
 });
 ```
 
-**Timestamp:** [09:25:30]
+
 
 ---
 
 ## 47.6 Modifier Keys
 
-**Timestamp:** [09:25:54]
+
 
 Detect Shift, Ctrl, Alt:
 
@@ -504,13 +511,13 @@ document.addEventListener("keydown", (e) => {
 });
 ```
 
-**Timestamp:** [09:27:30]
+
 
 ---
 
 ## 47.7 Input Field Events
 
-**Timestamp:** [09:28:00]
+
 
 ```html
 <input type="text" id="textInput" placeholder="Type here">
@@ -537,13 +544,13 @@ input.addEventListener("keyup", () => {
 });
 ```
 
-**Timestamp:** [09:29:20]
+
 
 ---
 
 ## 47.8 Practical Example: Character Movement
 
-**Timestamp:** [09:29:50]
+
 
 ```html
 <style>
@@ -583,13 +590,13 @@ document.addEventListener("keydown", (e) => {
 });
 ```
 
-**Timestamp:** [09:31:40]
+
 
 ---
 
 ## 47.9 Preventing Default Behavior
 
-**Timestamp:** [09:32:10]
+
 
 ```javascript
 // Prevent spacebar from scrolling page
@@ -609,13 +616,13 @@ document.addEventListener("keydown", (e) => {
 });
 ```
 
-**Timestamp:** [09:33:10]
+
 
 ---
 
 ## 47.10 Key Event Example: Search Filter
 
-**Timestamp:** [09:33:40]
+
 
 ```html
 <input type="text" id="search" placeholder="Search items...">
@@ -647,13 +654,13 @@ search.addEventListener("keyup", () => {
 });
 ```
 
-**Timestamp:** [09:35:20]
+
 
 ---
 
 ## 47.11 Complete Game Controls Example
 
-**Timestamp:** [09:35:50]
+
 
 ```javascript
 const player = document.getElementById("player");
@@ -691,13 +698,13 @@ function gameLoop() {
 gameLoop();
 ```
 
-**Timestamp:** [09:37:40]
+
 
 ---
 
 ## 47.12 Input Validation Example
 
-**Timestamp:** [09:38:10]
+
 
 ```html
 <input type="text" id="numberInput" placeholder="Numbers only">
@@ -728,13 +735,13 @@ numberInput.addEventListener("keydown", (e) => {
 });
 ```
 
-**Timestamp:** [09:40:00]
+
 
 ---
 
 ## 47.13 Common Key Values
 
-**Timestamp:** [09:40:30]
+
 
 ```javascript
 // Letters: "a", "b", "c", ... "z" (lowercase)

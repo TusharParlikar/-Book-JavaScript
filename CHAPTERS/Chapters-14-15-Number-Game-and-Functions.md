@@ -7,7 +7,7 @@
 ## Overview
 Build a complete number guessing game that combines loops, conditionals, user input, and random numbers.
 
-**Timestamp:** [02:40:38]
+
 
 ---
 
@@ -24,31 +24,35 @@ Create a game where:
 
 ## 14.2 Setup Variables
 
-**Timestamp:** [02:40:49], [02:41:11], [02:43:06]
+, [02:41:11], [02:43:06]
 
 ```javascript
 // Define the range
 const minNum = 1;
 const maxNum = 100;
+// Output: Constants set for game range
 
 // Generate the answer
 const answer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+// Output: Random number generated between 1-100
 
 // Game state variables
 let attempts = 0;
 let guess;
 let running = true;
+// Output: Game state variables initialized
 ```
 
 ---
 
 ## 14.3 Main Game Loop
 
-**Timestamp:** [02:43:35]
+
 
 ```javascript
 while (running) {
     // Game logic here
+    // Output: Loop continues while running is true
 }
 ```
 
@@ -56,18 +60,20 @@ while (running) {
 
 ## 14.4 Get User Input
 
-**Timestamp:** [02:44:09]
+
 
 ```javascript
 while (running) {
     guess = window.prompt(`Guess a number between ${minNum} and ${maxNum}:`);
+    // Output: Dialog box appears asking for guess
     
     // Convert to number
     guess = Number(guess);
+    // Output: String input converted to number
 }
 ```
 
-**Timestamp:** [02:44:59]
+
 
 ---
 
@@ -75,7 +81,7 @@ while (running) {
 
 ### Check for NaN
 
-**Timestamp:** [02:45:42]
+
 
 ```javascript
 if (isNaN(guess)) {
@@ -86,7 +92,7 @@ if (isNaN(guess)) {
 
 ### Check Range
 
-**Timestamp:** [02:46:15], [02:45:54]
+, [02:45:54]
 
 ```javascript
 if (guess < minNum || guess > maxNum) {
@@ -99,20 +105,25 @@ if (guess < minNum || guess > maxNum) {
 
 ## 14.6 Process Valid Guess
 
-**Timestamp:** [02:47:01], [02:47:13], [02:47:31], [02:47:45]
+, [02:47:13], [02:47:31], [02:47:45]
 
 ```javascript
 // Increment attempts
 attempts++;
+// Output: attempts increased by 1
 
 // Check guess
 if (guess < answer) {
     window.alert("Too low! Try again.");
+    // Output: Alert shown - guess is too low
 } else if (guess > answer) {
     window.alert("Too high! Try again.");
+    // Output: Alert shown - guess is too high
 } else {
     window.alert(`Correct! The answer was ${answer}. It took you ${attempts} attempts.`);
+    // Output: Alert shows correct answer and attempt count
     running = false; // End game
+    // Output: Game ends
 }
 ```
 
@@ -242,13 +253,13 @@ console.log(`Final score: ${score}`);
 ## Overview
 Functions are reusable blocks of code that perform specific tasks. They help organize code and avoid repetition.
 
-**Timestamp:** [02:49:33]
+
 
 ---
 
 ## 15.1 What are Functions?
 
-**Timestamp:** [02:49:33], [02:49:41]
+, [02:49:41]
 
 Functions are:
 - Reusable sections of code
@@ -260,7 +271,7 @@ Functions are:
 
 ## 15.2 Function Declaration
 
-**Timestamp:** [02:49:51]
+
 
 ```javascript
 function functionName() {
@@ -285,7 +296,7 @@ sayHello(); // Output: Hello!
 
 ## 15.3 Calling Functions
 
-**Timestamp:** [02:50:44]
+
 
 To execute a function, write its name followed by parentheses:
 
@@ -309,7 +320,7 @@ greet(); // Welcome!
 
 ## 15.4 Function Parameters
 
-**Timestamp:** [02:52:44]
+
 
 **Parameters** are variables defined in the function declaration (placeholders).
 
@@ -335,7 +346,7 @@ greet("Mike");  // Hello, Mike!
 
 ## 15.5 Function Arguments
 
-**Timestamp:** [02:52:39]
+
 
 **Arguments** are the actual values passed when calling the function.
 
@@ -351,7 +362,7 @@ add(5, 3);  // 5 and 3 are arguments
 
 ## 15.6 Multiple Parameters
 
-**Timestamp:** [02:51:35]
+
 
 ```javascript
 function happyBirthday(username, age) {
@@ -374,7 +385,7 @@ happyBirthday("Sarah", 30);
 
 ## 15.7 Parameter Order Matters
 
-**Timestamp:** [02:53:51]
+
 
 ```javascript
 function introduce(firstName, lastName, age) {
@@ -392,7 +403,7 @@ introduce("Doe", "John", 25);
 
 ## 15.8 The Return Statement
 
-**Timestamp:** [02:54:13], [02:54:53]
+, [02:54:53]
 
 The `return` keyword sends a value back from the function.
 
@@ -404,7 +415,7 @@ function functionName() {
 
 ### Example: Addition Function
 
-**Timestamp:** [02:54:23]
+
 
 ```javascript
 function add(x, y) {
@@ -415,7 +426,7 @@ let sum = add(5, 3);
 console.log(sum); // 8
 ```
 
-**Timestamp:** [02:55:08], [02:55:14]
+, [02:55:14]
 
 ---
 
@@ -444,7 +455,7 @@ console.log(total); // 25
 
 ### Arithmetic Functions
 
-**Timestamp:** [02:56:02]
+
 
 ```javascript
 function subtract(x, y) {
@@ -470,7 +481,7 @@ console.log(divide(20, 4));   // 5
 
 ### Example: Check Even Number
 
-**Timestamp:** [02:57:07]
+
 
 ```javascript
 // Using if/else
@@ -497,7 +508,7 @@ console.log(isEven(7));  // false
 
 ### Example: Email Validation
 
-**Timestamp:** [02:59:07]
+
 
 ```javascript
 // Using if/else
