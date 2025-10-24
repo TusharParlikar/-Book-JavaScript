@@ -790,4 +790,22 @@ fetchData((data) => {
 
 ---
 
-**Next: Chapters 40 & 41 - Error Handling + Calculator Project**
+## 📚 Navigation
+
+<div align="center">
+
+| **Previous** | **Home** | **Next** |
+|:------------:|:--------:|:--------:|
+| [◀️ Digital Clock & Stopwatch](Chapters-36-37-Digital-Clock-and-Stopwatch.md) | [📑 Index](../README.md) | [Error Handling & Calculator ▶️](Chapters-40-41-Error-Handling-and-Calculator.md) |
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Back to Top](#chapters-38--39-es6-modules--asynchronous-code)**
+
+Made with ❤️ for JavaScript learners
+
+</div>

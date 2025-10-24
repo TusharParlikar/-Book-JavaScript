@@ -970,4 +970,24 @@ const [result1, result2, result3] = await Promise.all([
 
 ---
 
+## 📚 Navigation
+
+<div align="center">
+
+| **Previous** | **Home** | **Next** |
+|:------------:|:--------:|:--------:|
+| [◀️ Chapters 52 & 53: Image Slider + Callback Hell](Chapters-52-53-Image-Slider-and-Callback-Hell.md) | [📑 Index](../README.md) | [Chapters 56 & 57: JSON + Fetch API ▶️](Chapters-56-57-JSON-and-Fetch-API.md) |
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Back to Top](#chapters-54--55-promises--asyncawait)**
+
+Made with ❤️ for JavaScript learners
+
+</div>
+
 **Next: Chapters 56 & 57 - JSON + Fetch API**

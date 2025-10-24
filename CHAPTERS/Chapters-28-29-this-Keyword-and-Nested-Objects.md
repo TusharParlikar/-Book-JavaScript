@@ -773,4 +773,24 @@ const result = arr
 
 ---
 
+## 📚 Navigation
+
+<div align="center">
+
+| **Previous** | **Home** | **Next** |
+|:------------:|:--------:|:--------:|
+| [◀️ Constructors & Classes](Chapters-26-27-Constructors-and-Classes.md) | [📑 Index](../README.md) | [Arrays of Objects & Sorting ▶️](Chapters-30-31-Arrays-of-Objects-and-Sorting.md) |
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Back to Top](#chapters-28--29-this-keyword--nested-objects)**
+
+Made with ❤️ for JavaScript learners
+
+</div>
+
 **Next: Chapters 30 & 31 - Arrays of Objects + Sorting**

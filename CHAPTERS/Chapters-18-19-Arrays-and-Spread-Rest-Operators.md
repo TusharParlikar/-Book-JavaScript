@@ -693,3 +693,25 @@ function greet(name, ...hobbies) {
 ---
 
 **Next: Chapters 20 & 21 - Dice Roller + Password Generator Projects**
+
+---
+
+## 📚 Navigation
+
+<div align="center">
+
+| **Previous** | **Home** | **Next** |
+|:------------:|:--------:|:--------:|
+| [◀️ Chapters 16-17: Scope & Temperature](Chapters-16-17-Variable-Scope-and-Temperature-Conversion.md) | [📑 Index](../README.md) | [Chapters 20-21: Dice & Password Projects ▶️](Chapters-20-21-Dice-Roller-and-Password-Generator.md) |
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Back to Top](#chapters-18--19-arrays--spread--rest-operators)**
+
+Made with ❤️ for JavaScript learners
+
+</div>

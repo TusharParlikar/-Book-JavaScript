@@ -830,3 +830,25 @@ let processed = input
 ---
 
 **Next: Chapters 12 & 13 - Logical Operators & Loops**
+
+---
+
+## 📚 Navigation
+
+<div align="center">
+
+| **Previous** | **Home** | **Next** |
+|:------------:|:--------:|:--------:|
+| [◀️ Chapters 8-9: Control Flow](Chapters-08-09-Control-Flow-and-Switches.md) | [📑 Index](../README.md) | [Chapters 12-13: Logical Operators & Loops ▶️](Chapters-12-13-Logical-Operators-and-Loops.md) |
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Back to Top](#chapters-10--11-string-methodsslicing--method-chaining)**
+
+Made with ❤️ for JavaScript learners
+
+</div>

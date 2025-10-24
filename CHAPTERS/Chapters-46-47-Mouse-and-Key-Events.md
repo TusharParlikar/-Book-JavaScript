@@ -824,4 +824,22 @@ e.preventDefault() // Stop default
 
 ---
 
-**Next: Chapters 48 & 49 - Show/Hide Elements + NodeLists**
+## 📚 Navigation
+
+<div align="center">
+
+| **Previous** | **Home** | **Next** |
+|:------------:|:--------:|:--------:|
+| [◀️ DOM Navigation & Manipulation](Chapters-44-45-DOM-Navigation-and-Manipulation.md) | [📑 Index](../README.md) | [Show/Hide & NodeLists ▶️](Chapters-48-49-Show-Hide-and-NodeLists.md) |
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Back to Top](#chapters-46--47-mouse-events--key-events)**
+
+Made with ❤️ for JavaScript learners
+
+</div>

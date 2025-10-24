@@ -815,3 +815,25 @@ for (let i = 0; i < length; i++) {
 ---
 
 **Next: Chapters 22 & 23 - Callbacks + Array Methods (forEach, map, filter, reduce)**
+
+---
+
+## 📚 Navigation
+
+<div align="center">
+
+| **Previous** | **Home** | **Next** |
+|:------------:|:--------:|:--------:|
+| [◀️ Chapters 18-19: Arrays & Spread/Rest](Chapters-18-19-Arrays-and-Spread-Rest-Operators.md) | [📑 Index](../README.md) | [Chapters 22-23: Callbacks & Array Methods ▶️](Chapters-22-23-Callbacks-and-Array-Methods.md) |
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Back to Top](#chapters-20--21-dice-roller--password-generator-projects)**
+
+Made with ❤️ for JavaScript learners
+
+</div>

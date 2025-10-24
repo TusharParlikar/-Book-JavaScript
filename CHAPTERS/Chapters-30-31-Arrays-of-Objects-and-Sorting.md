@@ -617,4 +617,22 @@ const sorted = [...arr].sort((a, b) => a - b);
 
 ---
 
-**Next: Chapters 32 & 33 - Shuffling Arrays + Date Objects**
+## 📚 Navigation
+
+<div align="center">
+
+| **Previous** | **Home** | **Next** |
+|:------------:|:--------:|:--------:|
+| [◀️ this Keyword & Nested Objects](Chapters-28-29-this-Keyword-and-Nested-Objects.md) | [📑 Index](../README.md) | [Shuffling Arrays & Date Objects ▶️](Chapters-32-33-Shuffling-Arrays-and-Date-Objects.md) |
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Back to Top](#chapters-30--31-arrays-of-objects-review--sorting-arrays)**
+
+Made with ❤️ for JavaScript learners
+
+</div>

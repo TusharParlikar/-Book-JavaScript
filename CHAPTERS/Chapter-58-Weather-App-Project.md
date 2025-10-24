@@ -960,6 +960,28 @@ Now go build amazing things! 🚀
 
 ---
 
+## 📚 Navigation
+
+<div align="center">
+
+| **Previous** | **Home** |
+|:------------:|:--------:|
+| [◀️ Chapters 56 & 57: JSON + Fetch API](Chapters-56-57-JSON-and-Fetch-API.md) | [📑 Index](../README.md) |
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Back to Top](#chapter-58-weather-app-project-final-project)**
+
+🎉 **CONGRATULATIONS!** You've completed the entire JavaScript course! 🎉
+
+Made with ❤️ for JavaScript learners
+
+</div>
+
 **End of Course**  
 **Total Duration:** ~12 hours  
 **Projects Completed:** 10+  

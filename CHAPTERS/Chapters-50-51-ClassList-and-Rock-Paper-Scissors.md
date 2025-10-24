@@ -899,4 +899,24 @@ const random = choices[Math.floor(Math.random() * 3)];
 
 ---
 
+## 📚 Navigation
+
+<div align="center">
+
+| **Previous** | **Home** | **Next** |
+|:------------:|:--------:|:--------:|
+| [◀️ Chapters 48 & 49: Show/Hide Elements + NodeLists](Chapters-48-49-Show-Hide-and-NodeLists.md) | [📑 Index](../README.md) | [Chapters 52 & 53: Image Slider + Callback Hell ▶️](Chapters-52-53-Image-Slider-and-Callback-Hell.md) |
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Back to Top](#chapters-50--51-classlist--rock-paper-scissors-project)**
+
+Made with ❤️ for JavaScript learners
+
+</div>
+
 **Next: Chapters 52 & 53 - Image Slider + Callback Hell**

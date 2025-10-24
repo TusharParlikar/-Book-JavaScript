@@ -636,4 +636,22 @@ now.toLocaleDateString()
 
 ---
 
-**Next: Chapters 34 & 35 - Closures + setTimeout/clearTimeout**
+## 📚 Navigation
+
+<div align="center">
+
+| **Previous** | **Home** | **Next** |
+|:------------:|:--------:|:--------:|
+| [◀️ Arrays of Objects & Sorting](Chapters-30-31-Arrays-of-Objects-and-Sorting.md) | [📑 Index](../README.md) | [Closures & setTimeout ▶️](Chapters-34-35-Closures-and-setTimeout.md) |
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Back to Top](#chapters-32--33-shuffling-arrays--date-objects)**
+
+Made with ❤️ for JavaScript learners
+
+</div>

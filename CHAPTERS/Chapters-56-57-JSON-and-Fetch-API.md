@@ -928,4 +928,24 @@ const [data1, data2] = await Promise.all([
 
 ---
 
+## 📚 Navigation
+
+<div align="center">
+
+| **Previous** | **Home** | **Next** |
+|:------------:|:--------:|:--------:|
+| [◀️ Chapters 54 & 55: Promises + Async/Await](Chapters-54-55-Promises-and-Async-Await.md) | [📑 Index](../README.md) | [Chapter 58: Weather App Project (Final) ▶️](Chapter-58-Weather-App-Project.md) |
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Back to Top](#chapters-56--57-json--fetch-api)**
+
+Made with ❤️ for JavaScript learners
+
+</div>
+
 **Next: Chapter 58 - Weather App (Final Project)**

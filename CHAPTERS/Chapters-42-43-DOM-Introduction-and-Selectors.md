@@ -791,4 +791,22 @@ array.forEach(el => { /* ... */ });
 
 ---
 
-**Next: Chapters 44 & 45 - DOM Navigation + DOM Manipulation**
+## 📚 Navigation
+
+<div align="center">
+
+| **Previous** | **Home** | **Next** |
+|:------------:|:--------:|:--------:|
+| [◀️ Error Handling & Calculator](Chapters-40-41-Error-Handling-and-Calculator.md) | [📑 Index](../README.md) | [DOM Navigation & Manipulation ▶️](Chapters-44-45-DOM-Navigation-and-Manipulation.md) |
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Back to Top](#chapters-42--43-dom-introduction--element-selectors)**
+
+Made with ❤️ for JavaScript learners
+
+</div>

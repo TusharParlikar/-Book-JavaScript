@@ -233,3 +233,25 @@ const MAX_SIZE = 100;
 ---
 
 **Next: Chapter 6 - Counter Program Project**
+
+---
+
+## 📚 Navigation
+
+<div align="center">
+
+| **Previous** | **Home** | **Next** |
+|:------------:|:--------:|:--------:|
+| [◀️ Chapter 4: Operators & Input](Chapter-04-Operators-and-User-Input.md) | [📑 Index](../README.md) | [Chapters 6-7: Counter & Math ▶️](Chapters-06-07-Counter-and-Math.md) |
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Back to Top](#chapter-5-type-conversion--constants)**
+
+Made with ❤️ for JavaScript learners
+
+</div>

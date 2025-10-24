@@ -765,4 +765,24 @@ setTimeout(() => console.log("3"), 3000);
 
 ---
 
+## 📚 Navigation
+
+<div align="center">
+
+| **Previous** | **Home** | **Next** |
+|:------------:|:--------:|:--------:|
+| [◀️ Shuffling Arrays & Date Objects](Chapters-32-33-Shuffling-Arrays-and-Date-Objects.md) | [📑 Index](../README.md) | [Digital Clock & Stopwatch ▶️](Chapters-36-37-Digital-Clock-and-Stopwatch.md) |
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Back to Top](#chapters-34--35-closures--settimeoutcleartimeout)**
+
+Made with ❤️ for JavaScript learners
+
+</div>
+
 **Next: Chapters 36 & 37 - Digital Clock Project + Stopwatch Project**

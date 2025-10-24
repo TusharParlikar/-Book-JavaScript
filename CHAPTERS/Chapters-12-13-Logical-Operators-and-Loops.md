@@ -827,3 +827,25 @@ break;
 ---
 
 **Next: Chapters 14 & 15 - Number Guessing Game + Functions**
+
+---
+
+## 📚 Navigation
+
+<div align="center">
+
+| **Previous** | **Home** | **Next** |
+|:------------:|:--------:|:--------:|
+| [◀️ Chapters 10-11: String Methods](Chapters-10-11-String-Methods-and-Chaining.md) | [📑 Index](../README.md) | [Chapters 14-15: Number Game & Functions ▶️](Chapters-14-15-Number-Game-and-Functions.md) |
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Back to Top](#chapters-12--13-logical-operators--loops)**
+
+Made with ❤️ for JavaScript learners
+
+</div>

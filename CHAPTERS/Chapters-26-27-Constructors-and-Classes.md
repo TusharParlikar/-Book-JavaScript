@@ -692,4 +692,22 @@ const student = new Student("Jane", "A");
 
 ---
 
-**Next: Chapters 28 & 29 - this Keyword + Nested Objects**
+## 📚 Navigation
+
+<div align="center">
+
+| **Previous** | **Home** | **Next** |
+|:------------:|:--------:|:--------:|
+| [◀️ Arrow Functions & Objects](Chapters-24-25-Arrow-Functions-and-Objects.md) | [📑 Index](../README.md) | [this Keyword & Nested Objects ▶️](Chapters-28-29-this-Keyword-and-Nested-Objects.md) |
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Back to Top](#chapters-26--27-constructors--classes)**
+
+Made with ❤️ for JavaScript learners
+
+</div>

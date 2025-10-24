@@ -779,3 +779,25 @@ Math.floor(Math.random() * (max - min + 1)) + min
 ---
 
 **Next: Chapters 8 & 9 - Control Flow (If Statements) & Ternary/Switch Statements**
+
+---
+
+## 📚 Navigation
+
+<div align="center">
+
+| **Previous** | **Home** | **Next** |
+|:------------:|:--------:|:--------:|
+| [◀️ Chapter 5: Type Conversion](Chapter-05-Type-Conversion-and-Constants.md) | [📑 Index](../README.md) | [Chapters 8-9: Control Flow ▶️](Chapters-08-09-Control-Flow-and-Switches.md) |
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Back to Top](#chapters-6--7-counter-program-project--math-object--random-numbers)**
+
+Made with ❤️ for JavaScript learners
+
+</div>

@@ -931,4 +931,24 @@ function calculate() {
 
 ---
 
-**Next: Chapters 42 & 43 - DOM Introduction + DOM Selectors**
+---
+
+## 📚 Navigation
+
+<div align="center">
+
+| **Previous** | **Home** | **Next** |
+|:------------:|:--------:|:--------:|
+| [◀️ ES6 Modules & Async Code](Chapters-38-39-ES6-Modules-and-Async-Code.md) | [📑 Index](../README.md) | [JSON & Fetch API ▶️](Chapters-42-43-JSON-and-Fetch-API.md) |
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Back to Top](#chapters-40--41-error-handling--calculator-project)**
+
+Made with ❤️ for JavaScript learners
+
+</div>

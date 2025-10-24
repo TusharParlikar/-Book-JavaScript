@@ -669,3 +669,25 @@ result.textContent = "Result";
 ---
 
 **Next: Chapters 18 & 19 - Arrays + Spread/Rest Operators**
+
+---
+
+## 📚 Navigation
+
+<div align="center">
+
+| **Previous** | **Home** | **Next** |
+|:------------:|:--------:|:--------:|
+| [◀️ Chapters 14-15: Number Game & Functions](Chapters-14-15-Number-Game-and-Functions.md) | [📑 Index](../README.md) | [Chapters 18-19: Arrays & Spread/Rest ▶️](Chapters-18-19-Arrays-and-Spread-Rest-Operators.md) |
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Back to Top](#chapters-16--17-variable-scope--temperature-conversion-project)**
+
+Made with ❤️ for JavaScript learners
+
+</div>

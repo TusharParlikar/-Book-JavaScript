@@ -725,3 +725,25 @@ greet("John");
 ---
 
 **Next: Chapters 16 & 17 - Variable Scope + Temperature Conversion Project**
+
+---
+
+## 📚 Navigation
+
+<div align="center">
+
+| **Previous** | **Home** | **Next** |
+|:------------:|:--------:|:--------:|
+| [◀️ Chapters 12-13: Logical Operators & Loops](Chapters-12-13-Logical-Operators-and-Loops.md) | [📑 Index](../README.md) | [Chapters 16-17: Variable Scope & Temperature ▶️](Chapters-16-17-Variable-Scope-and-Temperature-Conversion.md) |
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Back to Top](#chapters-14--15-number-guessing-game--functions)**
+
+Made with ❤️ for JavaScript learners
+
+</div>

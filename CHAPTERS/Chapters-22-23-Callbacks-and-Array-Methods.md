@@ -872,4 +872,22 @@ let result = arr
 
 ---
 
-**Next: Chapters 24 & 25 - Arrow Functions + JavaScript Objects**
+## 📚 Navigation
+
+<div align="center">
+
+| **Previous** | **Home** | **Next** |
+|:------------:|:--------:|:--------:|
+| [◀️ Dice Roller & Password Generator](Chapters-20-21-Dice-Roller-and-Password-Generator.md) | [📑 Index](../README.md) | [Arrow Functions & Objects ▶️](Chapters-24-25-Arrow-Functions-and-Objects.md) |
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Back to Top](#chapters-22--23-callbacks--array-methods)**
+
+Made with ❤️ for JavaScript learners
+
+</div>

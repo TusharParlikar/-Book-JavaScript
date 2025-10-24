@@ -411,3 +411,25 @@ Now that you understand basic output and DOM manipulation, you're ready to learn
 ---
 
 **Continue to Chapter 3: Variables**
+
+---
+
+## 📚 Navigation
+
+<div align="center">
+
+| **Previous** | **Home** | **Next** |
+|:------------:|:--------:|:--------:|
+| [◀️ Chapter 1: Introduction](Chapter-01-Introduction-and-Setup.md) | [📑 Index](../README.md) | [Chapter 3: Variables ▶️](Chapter-03-Variables.md) |
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Back to Top](#chapter-2-javascript-basics--output)**
+
+Made with ❤️ for JavaScript learners
+
+</div>

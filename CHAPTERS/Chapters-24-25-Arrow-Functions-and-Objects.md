@@ -801,4 +801,22 @@ const { prop1, prop2 } = obj;
 
 ---
 
-**Next: Chapters 26 & 27 - Constructors + Classes**
+## 📚 Navigation
+
+<div align="center">
+
+| **Previous** | **Home** | **Next** |
+|:------------:|:--------:|:--------:|
+| [◀️ Callbacks & Array Methods](Chapters-22-23-Callbacks-and-Array-Methods.md) | [📑 Index](../README.md) | [Constructors & Classes ▶️](Chapters-26-27-Constructors-and-Classes.md) |
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Back to Top](#chapters-24--25-arrow-functions--javascript-objects)**
+
+Made with ❤️ for JavaScript learners
+
+</div>

@@ -995,3 +995,25 @@ switch (true) {
 ---
 
 **Next: Chapters 10 & 11 - String Methods/Slicing & Method Chaining**
+
+---
+
+## 📚 Navigation
+
+<div align="center">
+
+| **Previous** | **Home** | **Next** |
+|:------------:|:--------:|:--------:|
+| [◀️ Chapters 6-7: Counter & Math](Chapters-06-07-Counter-and-Math.md) | [📑 Index](../README.md) | [Chapters 10-11: String Methods ▶️](Chapters-10-11-String-Methods-and-Chaining.md) |
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Back to Top](#chapters-8--9-control-flow---if-statements--ternaryswitch-statements)**
+
+Made with ❤️ for JavaScript learners
+
+</div>

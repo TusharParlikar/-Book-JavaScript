@@ -746,4 +746,22 @@ function update() {
 
 ---
 
-**Next: Chapters 38 & 39 - ES6 Modules + Asynchronous Code**
+## 📚 Navigation
+
+<div align="center">
+
+| **Previous** | **Home** | **Next** |
+|:------------:|:--------:|:--------:|
+| [◀️ Closures & setTimeout](Chapters-34-35-Closures-and-setTimeout.md) | [📑 Index](../README.md) | [ES6 Modules & Async Code ▶️](Chapters-38-39-ES6-Modules-and-Async-Code.md) |
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Back to Top](#chapters-36--37-digital-clock--stopwatch-projects)**
+
+Made with ❤️ for JavaScript learners
+
+</div>

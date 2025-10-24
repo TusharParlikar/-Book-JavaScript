@@ -521,3 +521,25 @@ Now that you understand variables and data types, you're ready to learn about **
 ---
 
 **Continue to Chapter 4: Operators & User Input**
+
+---
+
+## 📚 Navigation
+
+<div align="center">
+
+| **Previous** | **Home** | **Next** |
+|:------------:|:--------:|:--------:|
+| [◀️ Chapter 2: JavaScript Basics](Chapter-02-JavaScript-Basics-and-Output.md) | [📑 Index](../README.md) | [Chapter 4: Operators & User Input ▶️](Chapter-04-Operators-and-User-Input.md) |
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Back to Top](#chapter-3-variables)**
+
+Made with ❤️ for JavaScript learners
+
+</div>

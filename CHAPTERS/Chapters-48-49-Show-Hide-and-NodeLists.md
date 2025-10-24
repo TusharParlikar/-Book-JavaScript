@@ -823,4 +823,22 @@ if (items.length === 0) {
 
 ---
 
-**Next: Chapters 50 & 51 - ClassList + Rock Paper Scissors Project**
+## 📚 Navigation
+
+<div align="center">
+
+| **Previous** | **Home** | **Next** |
+|:------------:|:--------:|:--------:|
+| [◀️ Mouse & Key Events](Chapters-46-47-Mouse-and-Key-Events.md) | [📑 Index](../README.md) | [ClassList & Rock Paper Scissors ▶️](Chapters-50-51-ClassList-and-Rock-Paper-Scissors.md) |
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Back to Top](#chapters-48--49-showhide-elements--nodelists)**
+
+Made with ❤️ for JavaScript learners
+
+</div>

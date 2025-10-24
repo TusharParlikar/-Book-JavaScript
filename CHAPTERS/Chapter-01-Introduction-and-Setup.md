@@ -313,3 +313,25 @@ website/
 ---
 
 **Ready to dive into JavaScript? Let's move on to Chapter 2!**
+
+---
+
+## 📚 Navigation
+
+<div align="center">
+
+| **Previous** | **Home** | **Next** |
+|:------------:|:--------:|:--------:|
+| ◀️ Start | [📑 Index](../README.md) | [Chapter 2: JavaScript Basics ▶️](Chapter-02-JavaScript-Basics-and-Output.md) |
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Back to Top](#chapter-1-introduction--setup)**
+
+Made with ❤️ for JavaScript learners
+
+</div>

@@ -502,3 +502,25 @@ let value = input.value;
 ---
 
 **Continue to Chapter 5: Type Conversion & Constants**
+
+---
+
+## 📚 Navigation
+
+<div align="center">
+
+| **Previous** | **Home** | **Next** |
+|:------------:|:--------:|:--------:|
+| [◀️ Chapter 3: Variables](Chapter-03-Variables.md) | [📑 Index](../README.md) | [Chapter 5: Type Conversion ▶️](Chapter-05-Type-Conversion-and-Constants.md) |
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Back to Top](#chapter-4-operators--user-input)**
+
+Made with ❤️ for JavaScript learners
+
+</div>

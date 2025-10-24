@@ -984,4 +984,24 @@ step1()
 
 ---
 
+## 📚 Navigation
+
+<div align="center">
+
+| **Previous** | **Home** | **Next** |
+|:------------:|:--------:|:--------:|
+| [◀️ Chapters 50 & 51: ClassList + Rock Paper Scissors](Chapters-50-51-ClassList-and-Rock-Paper-Scissors.md) | [📑 Index](../README.md) | [Chapters 54 & 55: Promises + Async/Await ▶️](Chapters-54-55-Promises-and-Async-Await.md) |
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Back to Top](#chapters-52--53-image-slider--callback-hell)**
+
+Made with ❤️ for JavaScript learners
+
+</div>
+
 **Next: Chapters 54 & 55 - Promises + Async/Await**

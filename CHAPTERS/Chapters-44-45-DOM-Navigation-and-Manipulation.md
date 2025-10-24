@@ -844,4 +844,22 @@ element.closest(".selector")
 
 ---
 
-**Next: Chapters 46 & 47 - Mouse Events + Keyboard Events**
+## 📚 Navigation
+
+<div align="center">
+
+| **Previous** | **Home** | **Next** |
+|:------------:|:--------:|:--------:|
+| [◀️ DOM Introduction & Selectors](Chapters-42-43-DOM-Introduction-and-Selectors.md) | [📑 Index](../README.md) | [Mouse & Key Events ▶️](Chapters-46-47-Mouse-and-Key-Events.md) |
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Back to Top](#chapters-44--45-dom-navigation--addigchanging-html)**
+
+Made with ❤️ for JavaScript learners
+
+</div>
