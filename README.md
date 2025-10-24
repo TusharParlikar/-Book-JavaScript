@@ -379,11 +379,6 @@ or
 
 **Happy Coding! 🚀**
 
-
-
 <sub>Made with ❤️ for JavaScript learners everywhere</sub>
 
 </div>
-#   - B o o k - J a v a S c r i p t  
- #   - B o o k - J a v a S c r i p t  
- 
